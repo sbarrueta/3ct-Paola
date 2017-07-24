@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+
+<title>Curso de Java: Sintaxis</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Este curso de Java está dirigido a quienes dominan los fundamentos de programación e incluye libro gratis en PDF para descargar." />
+
+<link rel="stylesheet" type="text/css" href="estilos.css" />
+
+</head>
+
+<body>
+
+<div id="mainBox">
+
+  <div id="topBar"><img src="images/duke.png" alt="curso de java" width="106" height="102" class="duke" />
+
+  <p class="titulo">Curso de Java<br /><span class="chica">Desde cero hasta conexiones con bases de datos MySQL</span></p></div><!-- #BeginLibraryItem "/Library/topMenu.lbi" -->
+
+<ul id="nav">
+
+  <li><a href="index.html">Inicio</a></li>
+
+  <li><a href="cursodejavaDescarga.html">Descargar</a></li>
+
+  <li><a href="vinculos.html">Vínculos</a></li>
+
+  <li><a href="acercade.html">Acerca de</a></li>
+
+  <li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+<!-- #EndLibraryItem --><div id="contenido" class="clearfix"><!-- #BeginLibraryItem "/Library/leftMenu.lbi" --><div id="columna01">
+
+    <h2>Curso de Java: Contenido</h2>
+
+      <ul id="menuIzquierda">
+
+        <li><a href="cursodejava000.html">¿Qué es Java?</a></li>
+
+        <li><a href="cursodejava001.html">Objetivos del curso</a></li>
+
+        <li><a href="cursodejava101.html">Instalación</a></li>
+
+        <li><a href="cursodejava102.html">Definición de la POO</a></li>
+
+        <li><a href="cursodejava104.html">Elementos de Java</a></li>
+
+        <li><a href="cursodejava113.html">Sintaxis</a></li>
+
+        <li><a href="cursodejava114.html">Ejecución</a></li>
+
+        <li><a href="cursodejava116.html">Tipos de datos</a></li>
+
+        <li><a href="cursodejava121.html">Estructuras de control</a></li>
+
+        <li><a href="cursodejava201.html">Antes de programar</a></li>
+
+        <li><a href="cursodejava204.html">Aplicación de ejemplo</a></li>
+
+        <li><a href="cursodejavaIndice.html">Índice</a></li>          
+
+  </ul>
+
+
+    </div><!-- #EndLibraryItem --><div id="columna02">
+
+      <p class="floatright alignright"><b>Iniciación: página 13</b><br />
+
+        [  <a href="cursodejava110.html">10</a>, <a href="cursodejava111.html">11</a>, <a href="cursodejava112.html">12</a>, 13, <a href="cursodejava114.html">14</a>, <a href="cursodejava115.html">15</a>, <a href="cursodejava116.html">16</a> ]</p>
+
+      <h1>Iniciación al lenguaje Java</h1>
+
+      <h2>Sintaxis
+
+        <br />
+
+      </h2>
+
+      <p>Para comprender mejor la sintaxis del programa debemos pensar en términos de ámbito o alcance. Primero hay que saber que los comentarios están fuera del programa, no están dentro de su ámbito, el compilador no los interpreta, son señales que el programador usa para facilitar la comprensión del código. <br />
+
+        El ámbito más externo es donde importamos los recursos que se requerirán para el programa y donde declaramos el programa mismo. Aquí está el principio de todo. En Java <strong>siempre</strong> desarrollaremos clases, y <strong>siempre</strong> usaremos clases ya hechas que importaremos. Los recursos mínimos para programar están en el paquete <em>lang</em> de la librería <em>java</em> que el compilador importa por omisión, aunque aquí (ya lo decíamos en un comentario de la clase <em>HolaMundoOO</em>) lo haremos explícitamente por razones didácticas. <br />
+
+      Así que al comenzar a desarrollar un programa debemos primero determinar <strong>las clases externas</strong> necesarias para ayudar a la clase que crearemos nosotros, y después crear ésta. Para la primera labor usamos la palabra reservada <em>import</em> y todas las clases invocadas así podrán ser utilizadas en cualquier lugar del bloque de código de la clase; para la segunda, empleamos las palabras reservadas  <em>public class</em> seguidas del nombre que deseemos asignarle; debe ser único, preferentemente un sustantivo, iniciar con mayúscula y expresar claramente su función porque será el identificador de la clase; después van dos llaves que contendrán el bloque de código, como muestra la figura siguiente. </p>
+
+      <p><img src="images/cursoDeJava05publiclcass.jpg" alt="curso de java: importar clase" width="347" height="143" /><br />
+
+        El rectángulo representa el ámbito o alcance. Los objetos del paquete lang están disponibles en todos lados. <br />
+
+        Dentro del bloque de la clase está el lugar donde deben crearse las propiedades o atributos y declararse los métodos. Las propiedades deben escribirse primero, fuera de cualquier método y su alcance será toda la clase, que es lo que significa el rectángulo interno en la siguiente figura.</p>
+
+      <p><img src="images/cursoDeJava06stringSaludo.jpg" alt="curso de java: string saludo" width="346" height="161" /><br />
+
+        Aquí hace falta hablar de la sintaxis de la creación e inicialización de las variables. En Java, toda variable se crea estableciendo su tipo seguido de un nombre, que deberá ser único en el ámbito donde se le declara; se inicializan siempre con una expresión. <em>Crear</em> significa asignarles un espacio en memoria, mientas que <em>inicializar</em> es darles un valor:<br />
+
+      </p>
+
+      <blockquote>
+
+        <p>String saludo; &#8594 Crea una variable llamada saludo.<br />
+
+          saludo= “Hola mundo”; &#8594 La inicializa <br />
+
+        </p>
+
+      </blockquote>
+
+      <p>Cuando las variables son atributos deben crearse únicamente y debe hacerse fuera de los métodos; por otro lado, serán inicializadas dentro de alguno de ellos en el que convenga. Es posible hacer ambas labores en una sola línea pero será sólo aquéllas que sirven a las tareas de los métodos:</p>
+
+      <blockquote>
+
+        <p>String muestra= “Esto es una muestra”;</p>
+
+      </blockquote>
+
+      <p>Los métodos, por su parte, se declaran estableciendo primero el nivel de acceso. En este caso <em>mostrarSaludo()</em> tiene acceso público (para eso usamos la palabra reservada <em>public</em>), que significa que cualquier objeto externo puede invocar la tarea encapsulada en el método. Hay otras posibilidades, por ejemplo <em>prívate</em>, que es también una palabra reservada, y que significa que el método sólo puede ser usado al interior de la clase en la que es declarado. Después del nivel de acceso, está el tipo de datos que el método devuelve; <em>mostrarSaludo()</em> no regresa ningún valor; para indicar esto se usa otra palabra reservada:  <em>void</em>, que, como veremos después, podrá ser sustituida por  cualquier tipo de datos. Todos los métodos deben tener su propio bloque de código, en el que, como ya dijimos, está encapsulada su tarea. El método en cuestión inicializa <em>saludo</em>, e invoca la clase <em>System</em> (que importamos del paquete <em>lang</em> al principio) cuyo atributo <em>out</em> es un objeto que tiene el método <em>println(cadena)</em> cuya tarea es imprimir una línea con el texto que recibe como parámetro en la salida estándar del sistema. El método <em>mostrarSaludo()</em> y su alcance están representados en el rectángulo más interno de la siguiente figura.</p>
+
+      <p><img src="images/cursoDeJava07elconstructor.jpg" alt="curso de java: el constructor" width="333" height="155" /><br />
+
+        En cuanto a la sintaxis, falta decir que otra de las responsabilidades de cualquier clase es autoconstruirse por lo que tendrá un método que se llamará igual que la clase misma, deberá ser público, no tiene modificador del tipo que devuelve y lo llamamos <strong>el constructor</strong>, con lo anterior la clase queda como sigue (obsérvese que en este método se inicializa el atributo):</p>
+
+      <pre>
+
+import java.lang.*;
+
+public class HolaMundoOO{
+
+	String saludo; //La clase Sring la importamos de java.lang
+
+	//Creamos el método constructor con el mismo nombre de la clase
+
+	public HolaMundoOO(){
+
+		saludo="Hola mundo";//En el constructor se inicializan las propiedades
+
+	}
+
+	public void mostrarSaludo(){		
+
+		System.out.println(saludo);//La clase System la importamos de java.lang
+
+	}
+
+}
+
+</pre>
+
+      <p>Finalmente, otro mecanismo de encapsulamiento es crear paquetes para guardar en ellos las clases que hacen labores afines. Esto se logra con la palabra reservada <em>package</em> seguida del nombre que identificará al paquete; éstos se escriben sólo con minúsculas. La versión final de la clase <em>HolaMundoOO</em> que queda encapsulada en el paquete <em>holamundo</em>, que importa de <em>java.lang</em> las clases <em>String</em> y <em>System</em>, que tiene el atributo <em>saludo</em> de tipo <em>String</em>, que se autoconstruye e inicializa la propiedad, que tiene un método que muestra saludo usando la clase <em>System</em> queda así (Atiéndanse los comentarios):      </p>
+
+      <pre>
+
+package holamundo;//Los paquetes son subdirectorios
+
+import java.lang.String;
+
+import java.lang.System;
+
+public class HolaMundoOO{
+
+	String saludo; 
+
+	//Creamos el método constructor con el mismo nombre de la clase
+
+	public HolaMundoOO(){
+
+		saludo="Hola mundo";//el constructor inicializa las propiedades
+
+	}
+
+	public void mostrarSaludo(){		
+
+		System.out.println(saludo);
+
+	}
+
+}
+
+</pre>
+
+      
+
+      <p>Si aplicamos al programa anterior los mismos pasos del apartado de instalación para probar JCreator, excepto el de ejecución; es decir, crear un nuevo documento vacío con el mismo nombre de la clase, copiar el código anterior y oprimir el botón de compilación debemos obtener algo parecido a esto:</p>
+
+      <p><img src="images/cursoDeJava08compilar.jpg" alt="curso de java: compilar" width="442" height="352" /></p>
+
+      <p>El efecto de compilar es que se crea un archivo .java y el paquete es un subdirectorio:</p>
+
+      <p><img src="images/cursoDeJava09subdirectorio.jpg" width="409" height="306" /></p>
+
+      <p>Dentro del paquete queda el archivo .class, que es el que la máquina virtual puede interpretar:</p>
+
+      <p><img src="images/cursoDeJava10interpretar.jpg" width="399" height="302" /></p>
+
+      <p class="floatright alignright">[ <a href="cursodejava112.html">Anterior</a> | <a href="cursodejava114.html">Siguiente</a> ]<br />
+
+      </p>
+
+      
+
+    </div>
+
+  </div>
+
+  <div id="footer"><small>Todos derechos reservados &copy; 2009 <a href="http://www.3ct.mx" target="_blank">3CT</a><br />
+
+  </small></div>
+
+</div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+
+<title>Curso de Java: Ejecución</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Este curso de Java está dirigido a quienes dominan los fundamentos de programación e incluye libro gratis en PDF para descargar." />
+
+<link rel="stylesheet" type="text/css" href="estilos.css" />
+
+</head>
+
+<body>
+
+<div id="mainBox">
+
+  <div id="topBar"><img src="images/duke.png" alt="curso de java" width="106" height="102" class="duke" />
+
+  <p class="titulo">Curso de Java<br /><span class="chica">Desde cero hasta conexiones con bases de datos MySQL</span></p></div><!-- #BeginLibraryItem "/Library/topMenu.lbi" -->
+
+<ul id="nav">
+
+  <li><a href="index.html">Inicio</a></li>
+
+  <li><a href="cursodejavaDescarga.html">Descargar</a></li>
+
+  <li><a href="vinculos.html">Vínculos</a></li>
+
+  <li><a href="acercade.html">Acerca de</a></li>
+
+  <li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+<!-- #EndLibraryItem --><div id="contenido" class="clearfix"><!-- #BeginLibraryItem "/Library/leftMenu.lbi" --><div id="columna01">
+
+    <h2>Curso de Java: Contenido</h2>
+
+      <ul id="menuIzquierda">
+
+        <li><a href="cursodejava000.html">¿Qué es Java?</a></li>
+
+        <li><a href="cursodejava001.html">Objetivos del curso</a></li>
+
+        <li><a href="cursodejava101.html">Instalación</a></li>
+
+        <li><a href="cursodejava102.html">Definición de la POO</a></li>
+
+        <li><a href="cursodejava104.html">Elementos de Java</a></li>
+
+        <li><a href="cursodejava113.html">Sintaxis</a></li>
+
+        <li><a href="cursodejava114.html">Ejecución</a></li>
+
+        <li><a href="cursodejava116.html">Tipos de datos</a></li>
+
+        <li><a href="cursodejava121.html">Estructuras de control</a></li>
+
+        <li><a href="cursodejava201.html">Antes de programar</a></li>
+
+        <li><a href="cursodejava204.html">Aplicación de ejemplo</a></li>
+
+        <li><a href="cursodejavaIndice.html">Índice</a></li>          
+
+  </ul>
+
+
+    </div><!-- #EndLibraryItem --><div id="columna02">
+
+      <p class="floatright alignright"><b>Iniciación: página 14</b><br />
+
+        [ <a href="cursodejava111.html">11</a>, <a href="cursodejava112.html">12</a>, <a href="cursodejava113.html">13</a>, 14, <a href="cursodejava115.html">15</a>, <a href="cursodejava116.html">16</a>, <a href="cursodejava117.html">17</a> ]</p>
+
+      <h1>Iniciación al lenguaje Java</h1>
+
+      <h2>Ejecución y flujo de datos
+
+        <br />
+
+      </h2>
+
+      <h3>Ejecución</h3>
+
+      <p>Falta decir que en toda aplicación Java debe haber una clase que tenga un método <em>main</em> que es el primero que se ejecuta. La clase que hemos creado no lo tiene porque no es su responsabilidad, si nos apegamos al proceso de abstracción según el cual la diseñamos. Para eso haremos otra clase llamada <em>EjecutorHolaMundoOO</em> cuya responsabilidad será correr el programa y que tendrá como propiedad un objeto de la clase <em>HolaMundoOO</em>. Esto nos servirá como práctica de sintaxis y para analizar el flujo de datos en Java.<br />
+
+      Hagámoslo por pasos, ámbito por ámbito:</p>
+
+      <p>1. Empaquetamos en <em>util</em>, importamos HolaMundoOO y declaramos la clase:<br />
+
+      </p>
+
+<pre>
+
+package util;
+
+import holamundo.HolaMundoOO;
+
+public class EjecutorHolaMundoOO {
+
+
+
+
+
+}      
+
+</pre>
+
+<p>2. Creamos una propiedad del tipo o clase <em>HolaMundoOO</em> con el identificador <em>hola</em>:</p>
+
+<pre>
+
+package util;
+
+import holamundo.HolaMundoOO;
+
+public class EjecutorHolaMundoOO {
+
+    HolaMundoOO hola;
+
+    
+
+}
+
+</pre>
+
+<p>3. Añadimos los métodos:</p>
+
+<p>3.1 Agregamos el constructor en el que inicializamos la propiedad <em>hola</em> e invocamos el método <em>mostrarSaludo()</em> de dicho objeto, utilizando el punto(.), que es el metacaracter que nos permite invocar los atributos y los métodos de los objetos: </p>
+
+<pre>
+
+package util;
+
+import holamundo.HolaMundoOO;
+
+public class EjecutorHolaMundoOO {
+
+    HolaMundoOO hola;
+
+    public EjecutorHolaMundoOO(){
+
+    	hola=new HolaMundoOO();
+
+    	hola.mostrarSaludo();
+
+    } 
+
+}
+
+</pre>
+
+<p>3.2 Agregamos el método <em>main</em>. Ni la palabra reservada  <em>static</em> ni lo escrito en los paréntesis del método debe inquietarnos. Por el momento, basta con saber que la sintaxis es rigurosa. El método que ejecuta la aplicación debe escribirse así, lo único que cambia es el contenido del bloque de código: </p>
+
+<pre>
+
+package util;
+
+import holamundo.HolaMundoOO;
+
+public class EjecutorHolaMundoOO {
+
+    HolaMundoOO hola;
+
+    public EjecutorHolaMundoOO(){
+
+    	hola=new HolaMundoOO();
+
+    	hola.mostrarSaludo();
+
+    }   
+
+    public static void main(String[] args) {
+
+        EjecutorHolaMundoOO ejecutor=new EjecutorHolaMundoOO();        
+
+    }
+
+}
+
+</pre>
+
+<p>En JCreator, en un archivo vacío llamado igual que la clase (<em>EjecutorHolaMundoOO</em>) y que debe estar en el mismo subdirectorio que el HolaMundoOO.java, escribimos el código; Compilamos y ejecutamos el programa, con lo que debemos obtener el siguiente resultado:</p>
+
+<p><img src="images/cursoDeJava11publicString.jpg" alt="Curso de Java: Public String" width="488" height="416" /></p>
+
+<p>La estructura de directorios debe presentar los archivos .java y los dos subdirectorios de los paquetes dentro de los cuales debe estar cada uno de los archivos .class:</p>
+
+<p><img src="images/cursoDeJava12estructuraDeSubdirectorios.jpg" alt="Curso de Java: estructura de subdirectorios" width="381" height="246" /></p>
+
+<p class="floatright alignright">[ <a href="cursodejava113.html">Anterior</a> | <a href="cursodejava115.html">Siguiente</a> ]<br />
+
+      </p>
+
+      
+
+    </div>
+
+  </div>
+
+  <div id="footer"><small>Todos derechos reservados &copy; 2009 <a href="http://www.3ct.mx" target="_blank">3CT</a><br />
+
+  </small></div>
+
+</div>
+
+</body>
+
+</html>
+

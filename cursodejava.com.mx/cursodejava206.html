@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+
+<title>Curso de Java: Consultas SQL</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Este curso de Java está dirigido a quienes dominan los fundamentos de programación e incluye libro gratis en PDF para descargar." />
+
+<link rel="stylesheet" type="text/css" href="estilos.css" />
+
+</head>
+
+<body>
+
+<div id="mainBox">
+
+  <div id="topBar"><img src="images/duke.png" alt="curso de java" width="106" height="102" class="duke" />
+
+  <p class="titulo">Curso de Java<br /><span class="chica">Desde cero hasta conexiones con bases de datos MySQL</span></p></div><!-- #BeginLibraryItem "/Library/topMenu.lbi" -->
+
+<ul id="nav">
+
+  <li><a href="index.html">Inicio</a></li>
+
+  <li><a href="cursodejavaDescarga.html">Descargar</a></li>
+
+  <li><a href="vinculos.html">Vínculos</a></li>
+
+  <li><a href="acercade.html">Acerca de</a></li>
+
+  <li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+<!-- #EndLibraryItem --><div id="contenido" class="clearfix"><!-- #BeginLibraryItem "/Library/leftMenu.lbi" --><div id="columna01">
+
+    <h2>Curso de Java: Contenido</h2>
+
+      <ul id="menuIzquierda">
+
+        <li><a href="cursodejava000.html">¿Qué es Java?</a></li>
+
+        <li><a href="cursodejava001.html">Objetivos del curso</a></li>
+
+        <li><a href="cursodejava101.html">Instalación</a></li>
+
+        <li><a href="cursodejava102.html">Definición de la POO</a></li>
+
+        <li><a href="cursodejava104.html">Elementos de Java</a></li>
+
+        <li><a href="cursodejava113.html">Sintaxis</a></li>
+
+        <li><a href="cursodejava114.html">Ejecución</a></li>
+
+        <li><a href="cursodejava116.html">Tipos de datos</a></li>
+
+        <li><a href="cursodejava121.html">Estructuras de control</a></li>
+
+        <li><a href="cursodejava201.html">Antes de programar</a></li>
+
+        <li><a href="cursodejava204.html">Aplicación de ejemplo</a></li>
+
+        <li><a href="cursodejavaIndice.html">Índice</a></li>          
+
+  </ul>
+
+
+    </div><!-- #EndLibraryItem --><div id="columna02">
+
+      <p class="floatright alignright"><b>Aplicación: página 6</b><br />
+
+        [    <a href="cursodejava203.html">3</a>, <a href="cursodejava204.html">4</a>, <a href="cursodejava205.html">5</a>, 6, <a href="cursodejava207.html">7</a>, <a href="cursodejava208.html">8</a>, <a href="cursodejava209.html">9</a> ]</p>
+
+      <h1>Aplicación de ejemplo</h1>
+
+      <h2>Aplicación de ejemplo</h2>
+
+      <h3>Consultas SQL 
+
+        <br />
+
+      </h3>
+
+      <p>Para hacer consultas a la base de datos hacen falta una serie de clases que colaboran para hacer acciones sucesivas: <em>Connection</em>,  <em>Statement</em>, <em>ResultSet</em>, <em>ResultSetMetaData</em> y la <em>SQLException</em>.</p>
+
+      <pre>
+
+ConsultasSQL.java
+
+package visorconsultas.controlador;
+
+import java.sql.Connection;
+
+import java.sql.Statement;
+
+import java.sql.ResultSet;
+
+import java.sql.ResultSetMetaData;
+
+import java.sql.SQLException;
+
+public class ConsultaSQL {
+
+	private Connection conexion; 
+
+	private ResultSet resultadoConsulta;
+
+	private ResultSetMetaData metaDatos;
+
+	private String consulta;
+
+	//Crea dos arreglos
+
+	private String[][] datosDevueltos;
+
+	private String [] nombresColumnas;
+
+	private String error;
+
+    public ConsultaSQL(Connection conRecibida, String consultaRecibida){
+
+    	conexion=conRecibida;
+
+    	consulta=consultaRecibida;
+
+    	try {		
+
+			//Crea una instancia para mandar sentencias al servidor MySQL
+
+			Statement sentencia=conexion.createStatement();
+
+			//Ejecuta la consulta y devuelve el ResultSet
+
+			resultadoConsulta=sentencia.executeQuery(consulta);
+
+			//Obtiene los metadatos del ResultSet	
+
+			metaDatos=resultadoConsulta.getMetaData();
+
+			error=null;
+
+		}
+
+		catch (SQLException e) {
+
+			error=e.getMessage();
+
+		}  	
+
+    }
+
+    public String[][] getDatosDevueltos(){
+
+	    if(error==null){	    
+
+	    	try {	
+
+			//Devuelve el número de columnas del resultset
+
+		    	int columnas=metaDatos.getColumnCount();
+
+			//Lleva el cursor a la última fila del resultset
+
+		    	resultadoConsulta.last();
+
+			//Obtiene el número de fila actual( que aquí es la última)
+
+		    	int filas=resultadoConsulta.getRow();
+
+			//Dimensiona el arreglo datosDevueltos con los enteros obtenidos 	
+
+		    	datosDevueltos=new String[filas][columnas];
+
+			//Ubica el cursor antes del a primera fila
+
+		    	resultadoConsulta.beforeFirst();
+
+		    	for(int i=0;i&lt;filas;i++){
+
+				//Va a la siguiente fila
+
+			    	resultadoConsulta.next();
+
+		    		for(int j=0;j&lt;columnas;j++){
+
+				//Obtiene el valor de cada una de las columnas en la fila actual
+
+		    			datosDevueltos[i][j]=resultadoConsulta.getString(j+1);			    		}
+
+		    	}
+
+		}
+
+		catch (Exception e){
+
+		}
+
+	}
+
+    	return datosDevueltos;
+
+    }
+
+    public String[] getNombresColumnas(){
+
+    	if(error==null){
+
+    	  	try{    	
+
+			//Devuelve el número de columnas
+
+	    		int columnas=metaDatos.getColumnCount();	    	
+
+		    	nombresColumnas=new String[columnas];
+
+		    	for(int i=0;i&lt;columnas;i++){
+
+				//Obtiene el nombre de cada una de las columna 
+
+		    		nombresColumnas[i]=metaDatos.getColumnLabel(i+1);
+
+		    	}
+
+	    	}catch(SQLException ex){
+
+	    	}
+
+	    }	
+
+    	return nombresColumnas;
+
+    }
+
+    public String getMensajeError(){
+
+    	return error;
+
+    } 
+
+}
+
+</pre>
+
+      <p>El constructor de la clase ConsultaSQL recibe como parámetro un objeto de tipo <em>Connection</em> y otro de <em>String</em>; éste contendrá una sentencia SELECT; <em>Statement</em> es una interfaz que puede ejecutar sentencias en lenguaje SQL a través de una conexión; su método <em>executeQuery()</em> recibe la cadena <em>SELECT</em> y devuelve un objeto de tipo <em>ResultSet</em>, que contiene una imagen de los datos devueltos por el servidor MySQL en formato de tabla, es decir, filas y columnas; además los <em>ResultSet</em> tienen un apuntador o cursor que sirve para recorrer los registros de la tabla; el recorrido se hace con métodos como <em>next()</em>. No obstante, no toda la información necesaria está en los datos que ya se obtuvieron (por ejemplo, falta el nombre de las columnas); para obtener dicha información se usan los objetos del tipo <em>ResultSetMetaData</em>.<br />
+
+        En la clase que acabamos de escribir, hay dos métodos: <em>getDatosDevueltos()</em> y <em>getNombresColumnas()</em> que darán la información solicitada con la consulta en dos arreglos, uno contiene la tabla y el otro la lista de los nombres de los atributos de dicha tabla. Con ellos se podrán mostrar los datos. <br />
+
+        Aquí debemos hablar de los arreglos en Java. Para obtener una colección de datos hay variantes en la declaración y el manejo respecto de las variables individuales. Para empezar, se usan paréntesis cuadrados para su declaración:<br />
+
+      </p>
+
+      <blockquote>
+
+        <p>String [] nombresColumnas<br />
+
+        </p>
+
+      </blockquote>
+
+      <p>Si se requiere un arreglo bidimensional se indica desde la creación:<br />
+
+      </p>
+
+      <blockquote>
+
+        <p>String[][] datosDevueltos<br />
+
+        </p>
+
+      </blockquote>
+
+      <p>Una vez que el arreglo ha sido declarado, se debe dimensionar:<br />
+
+      </p>
+
+      <blockquote>
+
+        <p>datosDevueltos= new String[5][4];<br />
+
+        </p>
+
+      </blockquote>
+
+      <p>Hecho lo cual, se debe inicializar cada uno de los elementos agregando el índice correspondiente en los corchetes:<br />
+
+      </p>
+
+      <blockquote>
+
+        <p>datosDevueltos[0][0]=“Hola” <br />
+
+        </p>
+
+      </blockquote>
+
+      <p>Como en todos los lenguajes de programación, los arreglos se leen o escriben casi siempre usando el bucle <em>for</em> como lo hicimos en el código anterior.</p>
+
+      <p class="floatright alignright">[ <a href="cursodejava205.html">Anterior</a> | <a href="cursodejava207.html">Siguiente</a> ]<br />
+
+      </p>
+
+      
+
+    </div>
+
+  </div>
+
+  <div id="footer"><small>Todos derechos reservados &copy; 2009 <a href="http://www.3ct.mx" target="_blank">3CT</a><br />
+
+  </small></div>
+
+</div>
+
+</body>
+
+</html>
+

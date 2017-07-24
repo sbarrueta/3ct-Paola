@@ -1,0 +1,112 @@
+body{text-align: center;}
+div#contenedor
+{
+	width:1024px;
+	margin:auto;
+}
+div#logo
+{
+	position:relative;
+	margin:0;
+	width:374px;
+	height:366px;
+	padding-top:110px;
+	left:0;
+	top:0;
+	background-image:url(imagenes/fondos/fondo-sectores_01.png);
+	background-repeat:no-repeat;
+	}
+div#izquierda
+{
+	position:relative;
+	margin:0;
+	width:374px;
+	height:191px;	
+	left:0;
+	top:-120px;
+	background-image:url(imagenes/fondos/fondo-sectores_02.png);
+	background-repeat:repeat-y;	
+	}
+div#baseizquierda
+{
+	position:relative;
+	margin:0;
+	width:374px;
+	height:211px;
+	left:0;
+	top:-120px;
+	background-image:url(imagenes/fondos/fondo-sectores_03.png);
+	background-repeat:no-repeat;	
+}	
+div#vacio1
+{
+	position:relative;
+	margin:0;
+	width:55px;
+	height:255px;
+	left:374px;
+	top:-881px;
+	background-image:url(imagenes/fondos/fondo-sectores_04.png);
+	background-repeat:no-repeat;	
+}
+div#encabezado
+{
+	position:relative;
+	margin:0;
+	width:531px;
+	height:255px;
+	left:429px;
+	top:-1139px;
+	background-image:url(imagenes/fondos/fondo-sectores_05.png);
+	background-repeat:no-repeat;
+	padding-top:62px;
+}
+div#vacio2
+{
+	position:relative;
+	margin:0;
+	width:64px;
+	height:255px;
+	left:960px;
+	top:-1456px;
+	background-image:url(imagenes/fondos/fondo-sectores_06.png);
+	background-repeat:no-repeat;	
+}
+div#contenido
+{
+	position:relative;
+	margin:0;
+	padding:20px;
+	width:650px	;
+	height:302px;
+	left:382px;
+	top:-1462px;
+	background-image:url(imagenes/fondos/fondo-sectores_07.png);
+	background-repeat:no-repeat;
+	font-size:large;	
+}
+div#pie
+{
+	text-align:left;
+	
+	position:relative;
+	margin:0;
+	width:650px;
+	height:211px;
+	left:374px;
+	top:-1500px;
+	background-image:url(imagenes/fondos/fondo-sectores_08.png);
+	background-repeat:no-repeat;	
+}
+a{display:block;}
+#baseizquierda p{
+	margin-top:77px;
+	margin-left:60px;
+	color:white;
+	font-size:small
+	}
+img{border-style:none }
+.social{display:inline; 
+		margin-left:80px; padding-top:50%;
+		}
+#contenido p{ text-align:justify; margin-right:80px; margin-left:20px}

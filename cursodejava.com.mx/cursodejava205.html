@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+
+<title>Curso de Java: Conexión</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Este curso de Java está dirigido a quienes dominan los fundamentos de programación e incluye libro gratis en PDF para descargar." />
+
+<link rel="stylesheet" type="text/css" href="estilos.css" />
+
+</head>
+
+<body>
+
+<div id="mainBox">
+
+  <div id="topBar"><img src="images/duke.png" alt="curso de java" width="106" height="102" class="duke" />
+
+  <p class="titulo">Curso de Java<br /><span class="chica">Desde cero hasta conexiones con bases de datos MySQL</span></p></div><!-- #BeginLibraryItem "/Library/topMenu.lbi" -->
+
+<ul id="nav">
+
+  <li><a href="index.html">Inicio</a></li>
+
+  <li><a href="cursodejavaDescarga.html">Descargar</a></li>
+
+  <li><a href="vinculos.html">Vínculos</a></li>
+
+  <li><a href="acercade.html">Acerca de</a></li>
+
+  <li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+<!-- #EndLibraryItem --><div id="contenido" class="clearfix"><!-- #BeginLibraryItem "/Library/leftMenu.lbi" --><div id="columna01">
+
+    <h2>Curso de Java: Contenido</h2>
+
+      <ul id="menuIzquierda">
+
+        <li><a href="cursodejava000.html">¿Qué es Java?</a></li>
+
+        <li><a href="cursodejava001.html">Objetivos del curso</a></li>
+
+        <li><a href="cursodejava101.html">Instalación</a></li>
+
+        <li><a href="cursodejava102.html">Definición de la POO</a></li>
+
+        <li><a href="cursodejava104.html">Elementos de Java</a></li>
+
+        <li><a href="cursodejava113.html">Sintaxis</a></li>
+
+        <li><a href="cursodejava114.html">Ejecución</a></li>
+
+        <li><a href="cursodejava116.html">Tipos de datos</a></li>
+
+        <li><a href="cursodejava121.html">Estructuras de control</a></li>
+
+        <li><a href="cursodejava201.html">Antes de programar</a></li>
+
+        <li><a href="cursodejava204.html">Aplicación de ejemplo</a></li>
+
+        <li><a href="cursodejavaIndice.html">Índice</a></li>          
+
+  </ul>
+
+
+    </div><!-- #EndLibraryItem --><div id="columna02">
+
+      <p class="floatright alignright"><b>Aplicación: página 5</b><br />
+
+        [   <a href="cursodejava202.html">2</a>, <a href="cursodejava203.html">3</a>, <a href="cursodejava204.html">4</a>, 5, <a href="cursodejava206.html">6</a>, <a href="cursodejava207.html">7</a>, <a href="cursodejava208.html">8</a> ]</p>
+
+      <h1>Aplicación de ejemplo</h1>
+
+      <h2>Aplicación de ejemplo</h2>
+
+      <h3>Conexión<br />
+
+      </h3>
+
+      <p>Para conectarse a cualquier servidor de base de datos hace falta una aplicación que sirva como enlace. A ese tipo de clases se les llama conectores. En el caso de MySQL, debe descargarse de su sitio web. En dicha descarga, se obtiene todo el código fuente de las clases necesarias pero sólo se requiere el archivo <em>mysql-connector-java.jar</em>. Este archivo debe ponerse en la siguiente ruta:</p>
+
+      <blockquote>
+
+        <p>[JAVA-HOME]\jre\lib\ext</p>
+
+      </blockquote>
+
+      <p>Hecho lo cual, estamos listos para escribir el siguiente código:</p>
+
+      <pre>
+
+Conector.java
+
+package visorconsultas.controlador;
+
+import java.sql.Connection;
+
+import java.sql.DriverManager;
+
+import java.sql.SQLException;
+
+public class Conector {
+
+	Connection conexion;
+
+	String error;
+
+	/*Creamos un constructor que recibe cuatro parámetros:
+
+	 *El nombre del servidor MySQL, el del usuario, la contraseña, y
+
+	 *la base de datos*/
+
+    public Conector(String host, String usuario, String pw, String base) {
+
+    	try {
+
+    		/*Esta línea crea una asociación entre nuestra aplicación
+
+    		 * y la clase Driver que está empaquetada en el  jar de conexión.*/ 
+
+	    	Class.forName("com.mysql.jdbc.Driver");
+
+	    	/*La conexón se obtiene con una cadena que usa 
+
+	    	 *los parámetros que recibe el constructor*/
+
+	    	conexion=DriverManager.getConnection("jdbc:mysql://"+host+"/"+base,usuario,pw);
+
+	    	
+
+		}
+
+		catch(ClassNotFoundException e){//Sucede si no se encuentra el driver
+
+			error=e.getMessage();	
+
+		}
+
+		catch(SQLException e){//Sucede si la conexión falla
+
+			error=e.getMessage();
+
+		}
+
+    }
+
+    //Este método devuelve la conexión
+
+    public Connection getConexion(){
+
+    	return conexion;
+
+    }
+
+    public void cierraConexion(){
+
+    	try {
+
+		conexion.close();
+
+	}
+
+	catch (Exception ex) {
+
+	}
+
+    }
+
+    //Este método devuelve el error que impide la conexión
+
+    public String getMensajeError(){
+
+    	return error;
+
+    }
+
+    
+
+    
+
+}</pre>
+
+      <p>El código anterior trata de obtener una conexión a MySQL usando las clases Class, Connection, DriverManager, ClassNotFoundException y SQLException; el mecanismo es como sigue:<br />
+
+        1.	Con el método <em>forname()</em> de Class, se crea una asociación entre nuestra clase <em>Conector</em> y el <em>driver</em> de conexión MySQL. Si no lo logra, el error es capturado con la <em>ClassNotFoundException</em><br />
+
+        2.	La conexión se realiza con el método <em>getConnection()</em> de <em>DriverManager</em>; si el servidor no está disponible o refuta la solicitud, la conexión no se consuma y se dispara la <em>SQLException</em><br />
+
+        3.	El método <em>dameConexion()</em>, es el que se encargará de poner a disposición la conexión para las clases que la requieran; mientras que <em>cierraConexión()</em> la cancela. La ejecución de los objetos de la librería <em>sql</em> exigen ser ejecutados dentro de un bloque <em>try…catch</em>, por eso está así la única línea que necesaria para el terminar la conexión.<br />
+
+        4.	Por supuesto, se debe tener acceso a una base de datos de un servidor MySQL mediante un nombre de usuario y una contraseña. Estos cuatro datos: base, servidor, usuario y <em>password</em>, los recibe como parámetro el constructor y luego los usa el método <em>getConnetion()</em> de la clase <em>DriverManager</em>.      </p>
+
+      <p class="floatright alignright">[ <a href="cursodejava204.html">Anterior</a> | <a href="cursodejava206.html">Siguiente</a> ]<br />
+
+      </p>
+
+      
+
+    </div>
+
+  </div>
+
+  <div id="footer"><small>Todos derechos reservados &copy; 2009 <a href="http://www.3ct.mx" target="_blank">3CT</a><br />
+
+  </small></div>
+
+</div>
+
+</body>
+
+</html>
+

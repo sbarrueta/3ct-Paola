@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+
+<title>Curso de Java: Panel autenticador</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Este curso de Java está dirigido a quienes dominan los fundamentos de programación e incluye libro gratis en PDF para descargar." />
+
+<link rel="stylesheet" type="text/css" href="estilos.css" />
+
+</head>
+
+<body>
+
+<div id="mainBox">
+
+  <div id="topBar"><img src="images/duke.png" alt="curso de java" width="106" height="102" class="duke" />
+
+  <p class="titulo">Curso de Java<br /><span class="chica">Desde cero hasta conexiones con bases de datos MySQL</span></p></div><!-- #BeginLibraryItem "/Library/topMenu.lbi" -->
+
+<ul id="nav">
+
+  <li><a href="index.html">Inicio</a></li>
+
+  <li><a href="cursodejavaDescarga.html">Descargar</a></li>
+
+  <li><a href="vinculos.html">Vínculos</a></li>
+
+  <li><a href="acercade.html">Acerca de</a></li>
+
+  <li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+<!-- #EndLibraryItem --><div id="contenido" class="clearfix"><!-- #BeginLibraryItem "/Library/leftMenu.lbi" --><div id="columna01">
+
+    <h2>Curso de Java: Contenido</h2>
+
+      <ul id="menuIzquierda">
+
+        <li><a href="cursodejava000.html">¿Qué es Java?</a></li>
+
+        <li><a href="cursodejava001.html">Objetivos del curso</a></li>
+
+        <li><a href="cursodejava101.html">Instalación</a></li>
+
+        <li><a href="cursodejava102.html">Definición de la POO</a></li>
+
+        <li><a href="cursodejava104.html">Elementos de Java</a></li>
+
+        <li><a href="cursodejava113.html">Sintaxis</a></li>
+
+        <li><a href="cursodejava114.html">Ejecución</a></li>
+
+        <li><a href="cursodejava116.html">Tipos de datos</a></li>
+
+        <li><a href="cursodejava121.html">Estructuras de control</a></li>
+
+        <li><a href="cursodejava201.html">Antes de programar</a></li>
+
+        <li><a href="cursodejava204.html">Aplicación de ejemplo</a></li>
+
+        <li><a href="cursodejavaIndice.html">Índice</a></li>          
+
+  </ul>
+
+
+    </div><!-- #EndLibraryItem --><div id="columna02">
+
+      <p class="floatright alignright"><b>Aplicación: página 8</b><br />
+
+        [  <a href="cursodejava205.html">5</a>, <a href="cursodejava206.html">6</a>, <a href="cursodejava208.html">7</a>, 8, <a href="cursodejava209.html">9</a>, <a href="cursodejava210.html">10</a>, <a href="cursodejava211.html">11</a> ]</p>
+
+      <h1>Aplicación de ejemplo</h1>
+
+      <h2>Aplicación de ejemplo</h2>
+
+      <h3>Autenticación </h3>
+
+      <h4>Panel autenticador
+
+        <br />
+
+      </h4>
+
+      <p>Esta clase la haremos con objetos del tipo <em>JDialog</em>, <em>JPanel</em>, <em>GridLayout</em> <em>JPasswordField</em> <em>JLabel</em>, <em>JTextField</em>  y <em>JButton</em>. Para eso, la clase será un panel que contendrá todos los componentes, y al que le asignaremos la manera como deseamos que queden acomodados: en forma de rejilla (para eso sirve <em>GridLayout</em>), y al que agregamos 2 botones y cuatro campos de texto, uno de los cuales es de tipo <em>password</em>:</p>
+
+      <pre>
+
+PanelAutenticador.java
+
+package visorconsultas.vista;
+
+import javax.swing.JPanel;
+
+import javax.swing.JLabel;
+
+import javax.swing.JTextField;
+
+import javax.swing.JPasswordField;
+
+import javax.swing.JButton;
+
+import java.awt.GridLayout;
+
+
+
+//Obsérvese que esta clase es un panel
+
+public class PanelAutenticador extends JPanel {
+
+	//Crea los componentes necesarios:
+
+	//3 cuadros de texto
+
+	public JTextField servidor, usuario, base;
+
+	//Un cuadro de texto para contraseñas
+
+	public JPasswordField password;
+
+	//Dos botones
+
+	public JButton aceptar, cancelar;
+
+    public PanelAutenticador() {
+
+    	iniciaComponentes();
+
+    	agregaComponentes();
+
+    }    
+
+    private void iniciaComponentes(){
+
+    	servidor=new JTextField();
+
+    	usuario=new JTextField();
+
+    	password=new JPasswordField();
+
+    	base=new JTextField();
+
+    	
+
+    	aceptar=new JButton("Aceptar");
+
+    	aceptar.setMnemonic('a');//Subraya la A para activar el atajo de tecla <ALT-a>
+
+    	cancelar=new JButton("Cancelar");
+
+    	cancelar.setMnemonic('c'); //Subraya la C para activar el atajo de tecla <ALT-c>
+
+    	
+
+    }
+
+    private void agregaComponentes(){
+
+    	/*Esta línea convierte al panel en una rejilla  de cinco filas y dos columnas,
+
+*que acomoda los componentes, conforme son agregados, de izquierda a 
+
+*derecha y de arriba abajo
+
+*/
+
+    	setLayout(new GridLayout(5,2));//La manera de acomodar los componentes es una rejilla de 5x2
+
+    	//Agrega los componentes al panel según la rejilla de izquierda a derecha y de arriba a abajo
+
+add(new JLabel("Servidor",JLabel.RIGHT));
+
+    	add(servidor);
+
+    	add(new JLabel("Usuario",JLabel.RIGHT));
+
+    	add(usuario);
+
+    	add(new JLabel("Contraseña",JLabel.RIGHT));
+
+    	add(password);
+
+    	add(new JLabel("Base de datos",JLabel.RIGHT));
+
+    	add(base);
+
+    	add(aceptar);
+
+    	add(cancelar);
+
+    }
+
+}      
+
+      </pre>
+
+      <p class="floatright alignright">[ <a href="cursodejava207.html">Anterior</a> | <a href="cursodejava209.html">Siguiente</a> ]<br />
+
+      </p>
+
+      
+
+    </div>
+
+  </div>
+
+  <div id="footer"><small>Todos derechos reservados &copy; 2009 <a href="http://www.3ct.mx" target="_blank">3CT</a><br />
+
+  </small></div>
+
+</div>
+
+</body>
+
+</html>
+

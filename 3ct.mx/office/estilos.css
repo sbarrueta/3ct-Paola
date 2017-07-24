@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background-image:url(Imagenes/degradado.png);
+	background-repeat:repeat;
+	/* background: #fff; */
+	margin: 0; /* es recomendable ajustar a cero el margen y el relleno del elemento body para lograr la compatibilidad con la configuración predeterminada de los diversos navegadores */
+	padding: 0;
+	text-align: center; /* esto centra el contenedor en los navegadores IE 5*. El texto se ajusta posteriormente con el valor predeterminado de alineación a la izquierda en el selector #container */
+	color: #000000;
+}
+#container {
+	width: 861px;  /* el uso de 20px menos que un ancho completo de 800px da cabida a los bordes del navegador y evita la aparición de una barra de desplazamiento horizontal */
+	height:673px;
+	background-image:url(Imagenes/Plantilla.png);
+	margin: 0 auto; /* los márgenes automáticos (conjuntamente con un ancho) centran la página */
+	
+	/*text-align: left; /* esto anula text-align: center en el elemento body. */
+	
+}
+ #mainContent {
+	padding: 0px 20px; /* recuerde que el relleno es el espacio situado dentro del cuadro div y que el margen es el espacio situado fuera del cuadro div */
+}
+.pestanas {
+	margin-right: 0px;
+	margin-bottom: 0px;
+	padding-top: 11px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	text-align:left;
+}
+.pestanas img{
+	border:none;
+}
+
+.botoninicio{
+	border:none;
+	float:right;
+	margin-top:-10px;
+}
+
+	
+.Barras {
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	text-align:left;
+}
+.Botones {
+	padding-top: 9px;
+	text-align:left;
+}
+
+.Botones img{
+	border:none;
+	margin-right:3px;
+}
+#flipbox{
+	width:600px;
+	height:370px;
+	background-color:#fff;
+	text-align:justify;
+	margin-top:50px;
+	margin-left:70px;
+	padding:40px 40px 0px 40px;
+	overflow:scroll;
+	font-size:18px;
+	
+	}
+
+h1 {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:20px;
+	font-weight:bold;
+	text-align:center;
+	border:groove;
+	margin-left:120px;
+	margin-right:120px;
+}
+
+#flipboxind
+{
+	width:600px;
+	height:370px;
+	background-color:#fff;
+	text-align:justify;
+	margin-top:75px;
+	margin-left:70px;
+	padding:40px 40px 0px 40px;
+	overflow:scroll;
+	
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Diseñado por Enrique Hernandez Castillo
+cocoya23_27@hotmail.com, marenlat@gmail.com, enrique_hdz@3ct.mx
+Publicado bajo los derechos de Centro de Capacitacion y Consultoria Tecnica (3ct)
+
+Name       : Registro de Marcas
+Description: Pagina para el registro de marcas
+Version    : 1.0
+Released   : pendiente
+Updated    : pendiente
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="keywords" content="Registro Marca" />
+        <meta name="description" content="Registra tu Marca" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Registro de Marcas</title>
+        <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+        <script type="text/javascript" src="js/prototype.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            new Ajax.Request('menuLateral.html',
+            {
+                method:'post',
+                onSuccess: function(transport){
+                    var response = transport.responseText || "no response text";
+                    
+                },
+                onFailure: function(){  }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="menu">
+                <ul>
+                    <!--<li><img src="images/write.gif" width="35px" height="35px;" alt="Inicio"/></li>-->
+                    <li><a href="index.html" class="sombra">Inicio</a></li>
+                    <li  class="current_page_item"><a href="registro.html" class="sombra">Registrar</a></li>
+                    <li><a href="servicios.html" class="sombra">Servicios</a></li>
+                    <li><a href="marcas.html" class="sombra">Marcas</a></li>
+                    <li><a href="acerca.html" class="sombra">Acerca</a></li>
+                </ul>
+            </div>
+            <!-- end #menu -->
+            <div id="header">
+                <div id="logo">
+                    <h1>Registro de Marcas</h1>
+                    <p> diseñado por <a href="http://www.3ct.mx/">3CT</a></p>
+                </div>
+            </div>
+            <!-- end #header -->
+            <div id="page">
+                <div id="page-bgtop">
+                    <div id="page-bgbtm">
+                        <div id="content">
+                            <div class="post">
+                                <h2 class="title"><a href="#">REGISTRA TU MARCA</a></h2>
+                                <p class="meta"><span class="date">Obtén tu Registro de Marca por medio de nosotros</span><span class="posted">GARANTÍA DE SERVICIO</span></p>
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class="entry">
+                                    <p>El registro de derechos de autor protege a toda creación intelectual. Por ejemplo: literatura, poesía, música, diseño gráfico, programas de cómputo. El proceso de registro es rápido y seguro.</p>
+                                    <p>Llena el formulario y dejanos tus datos y nos contactaremos contigo</p>                                    
+                                    <form action="envio.html" method="post" id="formulario">
+                                        <label>
+                                            Marca:<br/>
+                                            <input type="text" name="marca" class="texto"/>
+                                        </label>
+                                        <label>
+                                            Descripcion de la marca:<br/>
+                                            (tipo de marca, decripcion de la empresa, etc...)<br/>
+                                            <textarea name="descripcion" cols="35" rows="7"></textarea>
+                                        </label>
+                                        <label>
+                                            Nombre:<br/>
+                                            <input type="text" name="nombre" class="texto"/>
+                                        </label>
+                                        <label>
+                                            Correo:<br/>
+                                            <input type="text" name="correo" class="texto"/>
+                                        </label>
+                                        <label>
+                                            <input type="submit" value="registrar" class="boton"/>
+                                        </label>
+                                    </form>
+                                </div>
+                            </div>
+                            <div style="clear: both;">&nbsp;</div>
+                        </div>
+                        <!-- end #content -->
+                        <div id="sidebar">
+                            <ul>
+                                <li>
+                                    <div id="search" >
+                                        <a href="#">
+                                            <img src="images/register_button.png" width="248px" height="62px" alt="Registrar"/>
+                                        </a>
+                                    </div>
+                                    <div style="clear: both;">&nbsp;</div>
+                                </li>
+                                <li>
+                                    <h2>Hazte Conocer</h2>
+                                    <p>Registra tu propia marca y empieza a ganar terreno nacionalmente.</p>
+                                </li>
+                                 <li>
+                                    <h2>Contactanos</h2>
+                                    <ul>
+                                        <li><a href="mailto:correo1@servidor.com.mx">correo1@servidor.com.mx</a></li>
+                                        <li><a href="mailto:correo2@servidor.com.mx">correo2@servidor.com.mx</a></li>
+                                        <li><a href="mailto:correo3@servidor.com.mx">correo3@servidor.com.mx</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h2>Marcas</h2>
+                                    <ul>
+                                        <li><a href="marcas.html#nacional">Marca nacional</a></li>
+                                        <li><a href="marcas.html#comunitaria">Marca comunitaria</a></li>
+                                        <li><a href="marcas.html#andino">Marca en el grupo andino</a></li>
+                                        <li><a href="marcas.html#mercosur">Marca en países MERCOSUR</a></li>
+                                        <li><a href="marcas.html#internacional">Marca Internacional</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h2>Servicios</h2>
+                                    <ul>
+                                        <li><a href="servicios.html#busqueda">Búsquedas previas al registro</a></li>
+                                        <li><a href="servicios.html#registro">El Registro de su marca</a></li>
+                                        <li><a href="servicios.html#asesoramiento">Asesoramiento de Licencias</a></li>
+                                        <li><a href="servicios.html#mantenimiento">Mantenimiento y Vigilancia</a></li>
+                                        <li><a href="servicios.html#revisiones">Revisiones periódicas</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h2>Acerca</h2>
+                                    <ul>
+                                        <li><a href="acerca.html#us">Compañia</a></li>
+                                        <li><a href="acerca.html#historia">Nuestra Historia</a></li>
+                                        <li><a href="acerca.html#asociados">Asociados</a></li>
+                                        <li><a href="acerca.html#laboral">Oferta Laboral</a></li>
+                                        <li><a href="acerca.html#ubicanos">Localizacion</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end #sidebar -->
+                        <div style="clear: both;">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+            <!-- end #page -->
+        </div>
+        <div id="footer">
+            <p>Copyright (c) 2011 3ct.mx. Todos los derechos reservados. Diseñado por <a href="http://www.3ct.mx/">3CT</a>.</p>
+        </div>
+        <!-- end #footer -->
+    </body>
+</html>

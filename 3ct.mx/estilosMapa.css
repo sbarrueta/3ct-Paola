@@ -1,0 +1,36 @@
+  /* mapa de google */
+  .globoMapa{
+	  font-family:Arial;
+	  font-size:10px;
+	  color:#4466dd;
+	  text-align:justify;
+  }
+  .mapaGoogle{
+	  position:relative;
+	  top:1800px;
+	  left:200px;
+	  border:8px solid #444;
+	  width:600px;
+	  height:650px;
+	  background-color:#dedede;
+	  z-index:1000;
+	  margin:0px;
+	  padding:0px;
+  }
+  .mapaTitulo{
+	  width:100%;
+	  height:30px;
+	  background-color:#444;
+	  margin-bottom:15px;
+	  padding:5px;
+  }
+  .mapaTitulo a{
+	  padding:5px;
+	  float:right;
+  }
+  .mapa{
+	  width:500px;
+	  height:290px;
+	  margin-left:40px;
+	  margin-right:40px;
+  }

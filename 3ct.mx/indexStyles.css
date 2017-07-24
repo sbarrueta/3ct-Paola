@@ -1,0 +1,288 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	background: #4f5ea8 url(images/indexMainBackground03.jpg) repeat-x;
+}
+
+p {
+	margin: 5px 0;
+}
+
+h3 {
+	color: #FFF;
+}
+
+li {
+	margin: 0 0 0 15px;
+	list-style-image: url(images/listArrow.gif);
+}
+
+.clearfix {
+	clear: both;
+	height: 0;
+}
+
+#mainWrapper {
+	position: relative;
+	width: 960px;
+	/* [disabled]height:600px; */
+	margin: 0 auto;
+}
+
+#header {
+	height: 260px;
+	position: relative;	
+}
+
+#todosLosCursos {
+	position: absolute;
+	left: 0px;
+	top: 60px;
+	width: 890px;
+	padding: 20px;
+	background-color: #4f5ea8;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	box-shadow: 0 0 15px 3px #283054;
+	-moz-box-shadow: 0 0 15px 3px #283054;
+	-webkit-box-shadow: 0 0 15px 3px #283054;
+	visibility:hidden;		
+}
+
+#todosLosCursos li {
+	padding: 3px 0;	
+}
+
+#todosLosCursos a {
+	text-decoration: none;
+	color: #9fc5f1;
+}
+
+#todosLosCursos a:hover {
+	text-decoration: underline;
+	color: #FFF;
+}
+
+#cerrarTodosLosCursos {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 880px;
+	top: 85px;
+	z-index: 9;
+	visibility: hidden;
+}
+
+.cursosColumna {
+	width: 270px;
+	padding: 10px 1px 0 20px;	
+	float: left; 	
+}
+.cursosFila {
+	padding: 10px 1px 0 20px;
+}
+
+#mainInfo {
+	height: 260px;
+	width: 930px;
+	background: #f5f5f5 url(images/indexMainInfoEdecanBackground.gif) bottom left no-repeat;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	box-shadow: 0 0 15px 7px #283054;
+	-moz-box-shadow: 0 0 15px 7px #283054;
+	-webkit-box-shadow: 0 0 15px 7px #283054;	
+}
+
+.mInfo {
+	width: 290px;
+	margin: 8px;
+	float: left;	
+}
+
+.mInfo p {
+	color: #4f5ea8;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.mInfo hr {
+	color: #fff;	
+	background-color: #9fc5f1;
+	height: 3px;
+	margin: 10px 0 10px 0;
+}
+
+#detailedInfo {
+	height: 260px;
+	width: 900px;
+	margin-left: 15px;
+	background-color: #42506c;
+  	background: -moz-linear-gradient(100% 100% 90deg, #283054, #4f5ea8);
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#283054), to(#4f5ea8));	
+	border-bottom-right-radius: 15px;
+	-webkit-border-bottom-right-radius: 15px;
+	-moz-border-radius-bottomright: 15px;
+	border-bottom-left-radius: 15px;
+	-webkit-border-bottom-left-radius: 15px;
+	-moz-border-radius-bottomleft: 15px;
+	visibility: hidden;	
+}
+
+.dInfo {
+	width: 260px;
+	margin: 18px;
+	float: left;
+	color: #FFF;	
+}
+
+.dInfo h2 {
+	color: #f5f5f5;
+}
+
+.dInfo h3 {
+	text-align: center;
+	padding-top: 10px;	
+	height: 30px;
+	background-image: url(images/conoceEscuelaDeComputacion.png);	
+}
+
+.dInfo a {
+	color: #9fc5f1;
+	text-decoration: none;	
+}
+
+.dInfo a:hover {
+	color: #fff;
+	text-decoration: underline;	
+}
+
+#topbar {
+	background: url(images/logo100x44.png) 830px 7px no-repeat;
+	padding-right: 140px;
+	height: 50px;
+}
+
+#menuIndex {
+	float: right;
+	text-align: right;	
+}
+
+#menuIndex a {
+	color: #4f5ea8;
+	text-decoration: none;	
+}
+
+#menuIndex a:link {
+	color: #9fc5f1;
+}
+
+#menuIndex a:visited {
+	color: #9fc5f1;
+}
+
+#menuIndex a:hover {
+	color: #42506c;
+	padding-bottom: 2px;
+	border-bottom: 1px dashed #42506c;
+}
+
+#menuIndex a:active {
+	color: #283054;
+}
+
+.telefono {
+	font-size: 18px;
+	font-weight: bold;
+	color: #42506c;
+	letter-spacing: -0.1em;	
+}
+
+.telefono img {
+	margin: 0 4px 0 0;
+	vertical-align: -5%;
+}
+
+#carpetaDeCursos {
+	width: 158px;
+	height: 34px;
+	background: url(images/carpetaDeLosCursos.jpg) no-repeat;
+	color: #fff;
+	padding: 10px;
+	float: left;
+	cursor: pointer;
+}
+
+#carpetaDeCursos:hover {
+	background: url(images/carpetaDeLosCursosRO.jpg) no-repeat;	
+}
+
+.slogan {
+	width: 260px;
+	float: left;
+	margin-top: 40px;
+	padding-right: 140px;
+	text-align: left;
+	color: #4f5ea8;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	font-weight: lighter;
+	font-size: 18px;
+}
+
+.highlight {
+	color: #c3fb01;	
+}
+
+#conocenos {
+	width: 271px;
+	height: 29px;
+	background-image: url(images/conocerMasSobreCursos.png);
+	cursor: pointer;	
+}
+
+#conocenos:hover {
+	background-image: url(images/conocerMasSobreCursosRO.png);		
+}
+
+
+
+#promocion {
+	position: absolute;
+	left: 0px;
+	top: 60px;
+	width: 890px;
+	padding: 20px;
+	background-color: #4f5ea8;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	box-shadow: 0 0 15px 3px #283054;
+	-moz-box-shadow: 0 0 15px 3px #283054;
+	-webkit-box-shadow: 0 0 15px 3px #283054;
+}
+
+
+
+#wathsApp{
+	margin:0px;
+	padding-right:15px;
+	color:white;
+	font-size:16px;
+	float:center;
+}
+
+
+#wathsApp img{
+	width:25px;
+	height:25px;
+	vertical-align:middle;
+}

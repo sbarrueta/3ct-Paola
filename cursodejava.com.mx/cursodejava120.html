@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+
+<title>Curso de Java: Caso de método que sí devuelve un tipo y sí recibe parámetros</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Este curso de Java está dirigido a quienes dominan los fundamentos de programación e incluye libro gratis en PDF para descargar." />
+
+<link rel="stylesheet" type="text/css" href="estilos.css" />
+
+</head>
+
+<body>
+
+<div id="mainBox">
+
+  <div id="topBar"><img src="images/duke.png" alt="curso de java" width="106" height="102" class="duke" />
+
+  <p class="titulo">Curso de Java<br /><span class="chica">Desde cero hasta conexiones con bases de datos MySQL</span></p></div><!-- #BeginLibraryItem "/Library/topMenu.lbi" -->
+
+<ul id="nav">
+
+  <li><a href="index.html">Inicio</a></li>
+
+  <li><a href="cursodejavaDescarga.html">Descargar</a></li>
+
+  <li><a href="vinculos.html">Vínculos</a></li>
+
+  <li><a href="acercade.html">Acerca de</a></li>
+
+  <li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+<!-- #EndLibraryItem --><div id="contenido" class="clearfix"><!-- #BeginLibraryItem "/Library/leftMenu.lbi" --><div id="columna01">
+
+    <h2>Curso de Java: Contenido</h2>
+
+      <ul id="menuIzquierda">
+
+        <li><a href="cursodejava000.html">¿Qué es Java?</a></li>
+
+        <li><a href="cursodejava001.html">Objetivos del curso</a></li>
+
+        <li><a href="cursodejava101.html">Instalación</a></li>
+
+        <li><a href="cursodejava102.html">Definición de la POO</a></li>
+
+        <li><a href="cursodejava104.html">Elementos de Java</a></li>
+
+        <li><a href="cursodejava113.html">Sintaxis</a></li>
+
+        <li><a href="cursodejava114.html">Ejecución</a></li>
+
+        <li><a href="cursodejava116.html">Tipos de datos</a></li>
+
+        <li><a href="cursodejava121.html">Estructuras de control</a></li>
+
+        <li><a href="cursodejava201.html">Antes de programar</a></li>
+
+        <li><a href="cursodejava204.html">Aplicación de ejemplo</a></li>
+
+        <li><a href="cursodejavaIndice.html">Índice</a></li>          
+
+  </ul>
+
+
+    </div><!-- #EndLibraryItem --><div id="columna02">
+
+      <p class="floatright alignright"><b>Iniciación: página 20</b><br />
+
+        [ <a href="cursodejava117.html">17</a>, <a href="cursodejava118.html">18</a>, <a href="cursodejava119.html">19</a>, 20, <a href="cursodejava121.html">21</a>, <a href="cursodejava122.html">22</a>, <a href="cursodejava123.html">23</a> ]</p>
+
+      <h1>Iniciación al lenguaje Java</h1>
+
+      <h2>Tipos de datos<strong></strong></h2>
+
+      <h3>Los tipos de datos y los métodos</h3>
+
+      <h4>Caso de método que sí devuelve un tipo y sí recibe parámetros
+
+        <br />
+
+      </h4>
+
+      <p>Es fácil deducir de los ejemplos anteriores el último caso. No obstante, falta decir que mientras que los métodos pueden devolver sólo un tipo, el número de parámetros puede ser múltiple. Véase el ejemplo que calcula el área de un triángulo con la base y la altura como argumentos:</p>
+
+      <pre>
+
+DemoMetodoSiTipoSiParametros.java
+
+public class DemoMetodoSiTipoSiParametros {	
+
+     double resultado;
+
+    public DemoMetodoSiTipoSiParametros() {
+
+    	/*resultado se llena con el valor que devuelve 
+
+    	 *el método obtieneAreaTriangulo(), que a su vez
+
+    	 *recibe los dos parámetros que usa en una fórmula.
+
+    	 */ 
+
+    	resultado=obtieneAreaTriangulo(2.5,6.3);//Los parámetros se separan con comas
+
+    	System.out.println("El resultado es: "+resultado);
+
+    }    
+
+    public double obtieneAreaTriangulo(double base, double altura){
+
+    	double area =(base*altura)/2;
+
+    	return area;
+
+    }
+
+    public static void main(String[] args) {
+
+       new DemoMetodoSiTipoSiParametros();
+
+    }
+
+}      </pre>
+
+      <p>Falta decir solamente que los parámetros no deben ser necesariamente del mismo tipo y que cuando son más de uno se usa el metacaracter  coma (,).<br />
+
+      Un comentario final sobre la API. Cuando buscamos los atributos y los métodos de una clase, en la URL en cuestión se mostrará el tipo (aun si es <em>void</em>); y en el caso particular de los métodos se indicarán, también, los parámetros con su tipo. A partir de ahora, siempre que citemos una clase nueva de las JFC, será con un enlace a la API.</p>
+
+      <p class="floatright alignright">[ <a href="cursodejava119.html">Anterior</a> | <a href="cursodejava121.html">Siguiente</a> ]<br />
+
+      </p>
+
+      
+
+    </div>
+
+  </div>
+
+  <div id="footer"><small>Todos derechos reservados &copy; 2009 <a href="http://www.3ct.mx" target="_blank">3CT</a><br />
+
+  </small></div>
+
+</div>
+
+</body>
+
+</html>
+

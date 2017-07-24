@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+
+<title>Curso de Java: El bloque switch</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Este curso de Java está dirigido a quienes dominan los fundamentos de programación e incluye libro gratis en PDF para descargar." />
+
+<link rel="stylesheet" type="text/css" href="estilos.css" />
+
+</head>
+
+<body>
+
+<div id="mainBox">
+
+  <div id="topBar"><img src="images/duke.png" alt="curso de java" width="106" height="102" class="duke" />
+
+  <p class="titulo">Curso de Java<br /><span class="chica">Desde cero hasta conexiones con bases de datos MySQL</span></p></div><!-- #BeginLibraryItem "/Library/topMenu.lbi" -->
+
+<ul id="nav">
+
+  <li><a href="index.html">Inicio</a></li>
+
+  <li><a href="cursodejavaDescarga.html">Descargar</a></li>
+
+  <li><a href="vinculos.html">Vínculos</a></li>
+
+  <li><a href="acercade.html">Acerca de</a></li>
+
+  <li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+<!-- #EndLibraryItem --><div id="contenido" class="clearfix"><!-- #BeginLibraryItem "/Library/leftMenu.lbi" --><div id="columna01">
+
+    <h2>Curso de Java: Contenido</h2>
+
+      <ul id="menuIzquierda">
+
+        <li><a href="cursodejava000.html">¿Qué es Java?</a></li>
+
+        <li><a href="cursodejava001.html">Objetivos del curso</a></li>
+
+        <li><a href="cursodejava101.html">Instalación</a></li>
+
+        <li><a href="cursodejava102.html">Definición de la POO</a></li>
+
+        <li><a href="cursodejava104.html">Elementos de Java</a></li>
+
+        <li><a href="cursodejava113.html">Sintaxis</a></li>
+
+        <li><a href="cursodejava114.html">Ejecución</a></li>
+
+        <li><a href="cursodejava116.html">Tipos de datos</a></li>
+
+        <li><a href="cursodejava121.html">Estructuras de control</a></li>
+
+        <li><a href="cursodejava201.html">Antes de programar</a></li>
+
+        <li><a href="cursodejava204.html">Aplicación de ejemplo</a></li>
+
+        <li><a href="cursodejavaIndice.html">Índice</a></li>          
+
+  </ul>
+
+
+    </div><!-- #EndLibraryItem --><div id="columna02">
+
+      <p class="floatright alignright"><b>Iniciación: página 30</b><br />
+
+        [ <a href="cursodejava127.html">27</a>, <a href="cursodejava128.html">28</a>, <a href="cursodejava129.html">29</a>, 30, <a href="cursodejava201.html">1</a>, <a href="cursodejava202.html">2</a>, <a href="cursodejava203.html">3</a> ]</p>
+
+      <h1>Iniciación al lenguaje Java</h1>
+
+      <h2>Estructuras de control</h2>
+
+      <h3>El bloque <em>switch</em>        <br />
+
+      </h3>
+
+      <p>Esta es una estructura de control selectiva que elige de entre un grupo de alternativas en virtud de una variable entera. Esta aplicación solicita un valor entre cero y diez; en virtud de lo obtenido, elige el case; si se da un número distinto a los requeridos, se elige la opción <em>default</em>; gracias al bloque <em>try…catch</em>, si el usuario no ingresa un número, aparece un mensaje indicándoselo. Pruébese varias veces el siguiente programa ingresando diferentes valores para ver su funcionamiento pleno:</p>
+
+      <pre>
+
+DemoSwitch.java
+
+import javax.swing.JOptionPane;
+
+public class DemoSwitch {
+
+    String mensaje;
+
+    public DemoSwitch() {
+
+    	String califCadena=JOptionPane.showInputDialog(null, "Escriba la calificación con número");	
+
+    	try{
+
+    		int califNum=Integer.parseInt(califCadena);//Si esta línea falla entra al catch
+
+    		String calif;
+
+    		switch(califNum){
+
+    			/*Los casos se eligen en virtud del valor 
+
+    			 *de la variable califNum
+
+    			 */
+
+    			case 0: calif="NA";break;
+
+    			case 1: calif="NA";break;
+
+    			case 2: calif="NA";break;
+
+    			case 3: calif="NA";break;
+
+    			case 4: calif="NA";break;
+
+    			case 5: calif="NA";break;
+
+    			case 6: calif="S";break;
+
+    			case 7: calif="S";break;
+
+    			case 8: calif="B";break;
+
+    			case 9: calif="MB";break;
+
+    			case 10: calif="MB";break;
+
+    			default: calif="Inválida";break;
+
+    			/*El default sucede en el caso de que se de un número
+
+    			 *distinto de los casos indicados. Es decir, un número
+
+    			 *entre 0 y 10
+
+    			 */    			
+
+    		}
+
+    		mensaje="La calificación es: "+calif; 
+
+    	}catch(NumberFormatException ex){
+
+    		mensaje="No escribió un número";
+
+    	}
+
+    	JOptionPane.showMessageDialog(null,mensaje);
+
+    }    
+
+    public static void main(String[] args) {
+
+       new DemoSwitch();
+
+    }
+
+}  
+
+</pre>
+
+      <p>Con esto terminamos el tema de las estructuras de control. Téngase en cuenta que en todos los casos el flujo de datos puede cambiar en virtud de las posibles respuestas del usuario; y que todas las estructuras vistas aquí son <em>anidables</em> prácticamente sin restricciones. </p>
+
+      <p class="floatright alignright">[ <a href="cursodejava129.html">Anterior</a> | <a href="cursodejava201.html">Siguiente</a> ]<br />
+
+      </p>
+
+      
+
+    </div>
+
+  </div>
+
+  <div id="footer"><small>Todos derechos reservados &copy; 2009 <a href="http://www.3ct.mx" target="_blank">3CT</a><br />
+
+  </small></div>
+
+</div>
+
+</body>
+
+</html>
+

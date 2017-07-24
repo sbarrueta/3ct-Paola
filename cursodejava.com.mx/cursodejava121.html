@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+
+<title>Curso de Java: Estructuras de control: Introducción</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Este curso de Java está dirigido a quienes dominan los fundamentos de programación e incluye libro gratis en PDF para descargar." />
+
+<link rel="stylesheet" type="text/css" href="estilos.css" />
+
+</head>
+
+<body>
+
+<div id="mainBox">
+
+  <div id="topBar"><img src="images/duke.png" alt="curso de java" width="106" height="102" class="duke" />
+
+  <p class="titulo">Curso de Java<br /><span class="chica">Desde cero hasta conexiones con bases de datos MySQL</span></p></div><!-- #BeginLibraryItem "/Library/topMenu.lbi" -->
+
+<ul id="nav">
+
+  <li><a href="index.html">Inicio</a></li>
+
+  <li><a href="cursodejavaDescarga.html">Descargar</a></li>
+
+  <li><a href="vinculos.html">Vínculos</a></li>
+
+  <li><a href="acercade.html">Acerca de</a></li>
+
+  <li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+<!-- #EndLibraryItem --><div id="contenido" class="clearfix"><!-- #BeginLibraryItem "/Library/leftMenu.lbi" --><div id="columna01">
+
+    <h2>Curso de Java: Contenido</h2>
+
+      <ul id="menuIzquierda">
+
+        <li><a href="cursodejava000.html">¿Qué es Java?</a></li>
+
+        <li><a href="cursodejava001.html">Objetivos del curso</a></li>
+
+        <li><a href="cursodejava101.html">Instalación</a></li>
+
+        <li><a href="cursodejava102.html">Definición de la POO</a></li>
+
+        <li><a href="cursodejava104.html">Elementos de Java</a></li>
+
+        <li><a href="cursodejava113.html">Sintaxis</a></li>
+
+        <li><a href="cursodejava114.html">Ejecución</a></li>
+
+        <li><a href="cursodejava116.html">Tipos de datos</a></li>
+
+        <li><a href="cursodejava121.html">Estructuras de control</a></li>
+
+        <li><a href="cursodejava201.html">Antes de programar</a></li>
+
+        <li><a href="cursodejava204.html">Aplicación de ejemplo</a></li>
+
+        <li><a href="cursodejavaIndice.html">Índice</a></li>          
+
+  </ul>
+
+
+    </div><!-- #EndLibraryItem --><div id="columna02">
+
+      <p class="floatright alignright"><b>Iniciación: página 21</b><br />
+
+        [ <a href="cursodejava118.html">18</a>, <a href="cursodejava119.html">19</a>, <a href="cursodejava120.html">20</a>, 21, <a href="cursodejava122.html">22</a>, <a href="cursodejava123.html">23</a>, <a href="cursodejava124.html">24</a> ]</p>
+
+      <h1>Iniciación al lenguaje Java</h1>
+
+      <h2>Estructuras de control</h2>
+
+      <h3>Introducción<br />
+
+      </h3>
+
+      <p>Para terminar la sección de iniciación al lenguaje es necesario explicar cómo se controla el flujo de datos. Para empezar, es útil decir que en todos los lenguajes de programación existen tres tipos de sentencias: las secuenciales, las selectivas y las repetitivas. Hasta ahora, sólo hemos usado el primer tipo, en el que las posibilidades del flujo de datos se reducen a una secuencia de pasos; para hacer que exista más de una alternativa o que cierta tarea se repita varias veces, en Java usa un grupo de palabras reservadas para controlar el flujo y todas ellas usan un bloque de código. <br />
+
+        Para ver los ejemplos de cómo funcionan dichas estructuras usaremos la clase <em>JOptionPane</em> que sirve para mostrar cuadros de diálogo y tiene los métodos <em>showInputDialog()</em> y <em>showMessageDialog()</em>  que se usan para pedir y dar información al usuario, respectivamente; para ver cómo operan haremos una clase que será otra variante de nuestro tan traído HolaMundo, que primero pedirá el nombre del usuario y luego lo saludará.<br />
+
+        Antes de seguir, hagamos un poco de abstracción. Obsérvese que lo que queremos hacer es una demostración de cómo la clase JOptionPane sirve como mecanismo de entrada y salida de datos, por eso la llamaremos DemoIOJOptionPane (IO de Input/Ouput); sus responsabilidades serán pedirle su nombre al usuario, y saludarlo en pantalla; dicho nombre será una propiedad. Cabe aclarar que como el sentido de la clase será dar una demostración, el método <em>main</em> sí entra dentro de sus capacidades.<br />
+
+      </p>
+
+      <pre>
+
+DemoIOJOptionPane.java 
+
+package cursojava.demos; //La encapsulamos en un lugar para todos los demos
+
+import javax.swing.JOptionPane; //Importamos la clase JOptionPane
+
+public class DemoIOJOptionPane {
+
+    String nombre; //Este será la información para el I/O
+
+    public DemoIOJOptionPane() {
+
+    	//El constructor llama a sus métodos
+
+    	pideNombre();
+
+    	muestraSaludo();    	
+
+    }
+
+    /*La palabra reservada null del primer atributo en los dos métodos 
+
+     *de JOptionPane es porque, por lo común, esta clase es llamada desde una ventana
+
+     * que es su propietario como no tenemos tal ventana, lo indicamos así.
+
+     * El segundo parámetro es el mensaje que aparecerá en el cuadro de diálogo.
+
+     */
+
+    private void pideNombre(){
+
+    	nombre=JOptionPane.showInputDialog(null,"Escribe tu nombre");//Pide el nombre
+
+    }
+
+    private void muestraSaludo(){
+
+    	JOptionPane.showMessageDialog(null,"Hola "+nombre);//Saluda en pantalla
+
+    }    
+
+    public static void main(String[] args) {
+
+       new DemoIOJOptionPane();
+
+    }
+
+}
+
+</pre>
+
+      <p>Al ejecutar el programa, aparece un cuadro de diálogo con el mensaje que le mandamos como segundo parámetro al método <em>showInputDialog()</em>:</p>
+
+      <p><img src="images/cursoDeJava14showInputDialog.jpg" alt="Curso de Java: Show Input Dialog" width="296" height="121" /></p>
+
+      <p>Dentro del cuadro de texto se debe escribir un nombre y oprimir el botón &lt;aceptar&gt;:</p>
+
+      <p><img src="images/cursoDeJava15escribirUnNombre.jpg" alt="Curso de Java: Escribir un Nombre" width="296" height="121" /></p>
+
+      <p>Luego de lo cual aparecerá otro cuadro de diálogo con la cadena “Hola ” concatenada (usando el operador +) con el nombre escrito por el usuario; el valor obtenido de esta concatenación es lo que mandamos como segundo parámetro del método <em>showMessageDialog()</em>:</p>
+
+      <p><img src="images/cursoDeJava16showMessageDialog.jpg" alt="Curso de Java: Show Message Dialog" width="267" height="117" /></p>
+
+      <p>Con esto podemos empezar a trabajar con el flujo de datos. Si se ejecuta el programa y en el primer cuadro de diálogo se oprime &lt;cancelar&gt; en lugar de &lt;aceptar&gt;, la cadena que mostrará después será Hola <em>null</em>, que no es el resultado esperado, si se quisiera controlar esto, se tendría que controlar el flujo. Existen varias posibilidades para esto y las veremos en seguida.</p>
+
+      <p class="floatright alignright">[ <a href="cursodejava120.html">Anterior</a> | <a href="cursodejava122.html">Siguiente</a> ]<br />
+
+      </p>
+
+      
+
+    </div>
+
+  </div>
+
+  <div id="footer"><small>Todos derechos reservados &copy; 2009 <a href="http://www.3ct.mx" target="_blank">3CT</a><br />
+
+  </small></div>
+
+</div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,57 @@
+<html>
+	<head>		
+		<link href="estilosMapa.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/prototype.js"></script>
+		<script type="text/javascript" src="js/ubicanos.js"></script>
+		<script src="http://www.google.com/jsapi?key=ABQIAAAAhQtmC73ZnoIV5ElI-eT5_BTr6aYuIxyTAP03XQPkcJVWtXSu3xRau5ylmNnhKP8VeixxdfkIK0qUkA" type="text/javascript"></script>
+		<script type="text/javascript">
+			google.load("maps", "2");
+		</script>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Buen Fin</title>
+        <link href="../mainStyles.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+        function MM_showHideLayers() { //v9.0
+          var i,p,v,obj,args=MM_showHideLayers.arguments;
+          for (i=0; i<(args.length-2); i+=3) 
+          with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+            if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+            obj.visibility=v; }
+        }
+        </script>
+        
+        
+	</head>
+
+	<body>
+	<!-- div que contienen el mapa de 3ct sucursal chilpancingo -->
+		<div id="divMapaGoogleChilpancingo" class="mapaGoogle">
+			<div class="mapaTitulo">
+				<a href="javascript:void(null)" id="lnkCerrarMapaChilpancingo" >
+					<img src="images/closelabel.gif"/>
+				</a> 
+			</div>
+			<div  id="divMapaChilpancingo" class="mapa"></div>
+
+			<div id="panoChilpancingo" class="mapa"></div>
+      </div>
+	  <!-- div que contienen el mapa de 3ct sucursal polanco -->
+	  <div id="divMapaGooglePolanco"  class="mapaGoogle">
+			<div class="mapaTitulo">
+				<a href="javascript:void(null)" id="lnkCerrarMapaPolanco" >
+					<img src="images/closelabel.gif"/>
+				</a> 
+			</div>
+
+			<div  id="divMapaPolanco" class="mapa"></div>
+			<div id="panoPolanco" class="mapa"></div>
+      </div>
+	  
+	  <!-- las ligas pueden ir en cualquier parte y sirven para mostrar el mapa -->
+	  <a href="javascript:void(null);" id="lnkUbicacionChilpancingo">Mapa 3ct Roma</a>
+	  <br/>
+	  <a href="javascript:void(null);" id="lnkUbicacionPolanco">Mapa 3ct Polanco</a>
+	</body>
+
+</html>

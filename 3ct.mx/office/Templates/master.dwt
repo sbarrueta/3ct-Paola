@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Documento sin título</title>
+<!-- TemplateEndEditable -->
+<link rel="stylesheet" href="estilos.css" />
+<script type="text/javascript" src="../prototype.js"></script>
+<script type="text/javascript" src="../scriptaculous.js"></script>
+		<!-- TemplateBeginEditable name="head" -->
+		<!-- TemplateEndEditable -->
+</head>
+	<body onload="new Effect.Grow('texto')">
+    
+<div id="container">
+	<div style="text-align:left"><a href="http://3ct.mx" target="_blank"><img style="border-style:none; margin-left:10px; margin-top:20px" src="../Imagenes/logo2.png" width="50" height="15" alt="Logo 3ct" /></a></div>
+    
+  <div id="mainContent"><!-- TemplateBeginEditable name="pestañas" -->
+    <div class="pestanas"> <a href="winint.html"><img src="Imagenes/BotonWindows.png"/></a><a href="intint.html"><img src="Imagenes/BotonInternet.png"/></a><a href="../worint.html"><img src="Imagenes/BotonWord.png"/></a><a href="../excint.html"><img src="Imagenes/BotonExcelclic.png"/></a>
+    <div class="botoninicio"><a href="index.html"><img src="Imagenes/botoninicio.png" /></a></div> 
+     </div>
+  <!-- TemplateEndEditable -->
+  <!-- TemplateBeginEditable name="barras" -->
+  <div class="Barras"><img src="Imagenes/BHwindows.png" /> </div>
+  
+  
+  <div class="Botones"><a href="#"><img src="Imagenes/IntroduccionClic.png"/></a><a href="#"><img src="Imagenes/Objetivo.png"/></a><a href="#"><img src="Imagenes/Temario.png"/></a></div><!-- TemplateEndEditable -->
+    
+   <div id="flipbox"><div id="texto"><!-- TemplateBeginEditable name="contenido" -->
+   contenido<!-- TemplateEndEditable --></div>
+   
+   </div>
+ 
+  
+  
+  <!-- end #mainContent -->
+  </div>
+  <!-- end #container -->
+</div>
+</body>
+</html>
+

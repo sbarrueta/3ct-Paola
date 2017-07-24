@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>3CT Centro de Capacitación y Consultoría Tecnologica </title>
+<meta name="description" content="Cursos y diplomados de diseño web, programación, Java y bases de datos en México DF." />
+<link href="indexStyles.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery.js"></script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
+
+<script>
+	$(document).ready(function(e) {
+		$("#promocion").hide();
+        $("#cerrarPromocion").hide();
+        $("#carpetaDeCursos").click(function(){
+			$("#promocion").hide();
+		});
+		
+		$("#promocion").hover(
+			function(){
+				$(this).css("background-color","rgb(140,188,215)");
+			}, function() {
+    			$( this ).css( "background-color","#9fc5f1");
+ 			 }
+		);
+
+		
+		
+		$("#promocion").fadeIn(3000,
+					function() {
+						  $( "#animar" ).animate(
+						      {
+								"font-size": "1.5em",
+							  }, 3000);
+						
+		 			});
+    });
+</script>
+
+</head>
+
+<body>
+<div id="mainWrapper">
+  <div id="header">
+	<div id="topbar">
+      <div id="carpetaDeCursos" onclick="MM_showHideLayers('todosLosCursos','','show');MM_showHideLayers('cerrarTodosLosCursos','','show')">Carpeta de los cursos</div>
+      <div id="cerrarTodosLosCursos" onclick="MM_showHideLayers('todosLosCursos','','hide');MM_showHideLayers('cerrarTodosLosCursos','','hide')"><img src="images/cerrar.jpg" width="20" height="20" alt="cerrar cursos" /></div>
+	  
+	  
+      <!-- #BeginLibraryItem "/public_html/3ct.mx/Library/todosLosCursos.lbi" -->
+      <div id="todosLosCursos">
+        <div class="cursosColumna">
+          <h3>Cursos de diseño web</h3>
+          <ul>
+            <li><a href="cursos-de-diseno-web/curso-de-dreamweaver-basico.html">Dreamweaver</a></li>
+            <li><a href="cursos-de-diseno-web/curso-de-dreamweaver-intermedio.html">Dreamweaver Intermedio</a></li>
+            <li><a href="cursos-de-diseno-web/curso-de-photoshop-basico.html">Photoshop</a></li>
+            <li><a href="cursos-de-diseno-web/curso-de-photoshop-intermedio.html">Photoshop Intermedio</a></li>
+            <li><a href="escuela-de-computacion/cursos-de-diseno-web-y-programacion.html">ActionScript</a></li>
+            <li><a href="cursos-de-diseno-digital/curso-de-illustrator-basico.html">Illustrator</a></li>
+            <li><a href="escuela-de-computacion/cursos-de-diseno-web-y-programacion.html">InDesign</a></li>
+            <li><a href="escuela-de-computacion/cursos-de-diseno-web-y-programacion.html">Taller integral de diseño web</a></li>
+          </ul>
+        </div>
+        <div class="cursosColumna">
+          <h3>Diplomados</h3>
+          <ul>
+            <li><a href="cursos-de-java/diplomado-java.html">Diplomado Java</a></li>
+            <li><a href="cursos-de-java/diplomado-frameworks.html">Diplomado Frameworks </a></li>
+            <li> <a href="http://www.3ct.mx/diplomadoSQLServer/index.html"> Diplomado de Base de datos </a> </li>
+            <li><a href="certificacionjava/index.html">Certificación Java</a></li>
+            <li><a href="cursos-de-programacion/diplomado-de-visual-basic-net.html">Visual Basic .NET</a></li>
+          </ul>
+        </div>
+        <div class="cursosColumna">
+          <h3>Cursos de programación </h3>
+          <ul>
+            <li><a href="cursos-de-programacion/curso-de-ajax-con-jquery-y-scriptaculous.html">JQuery / Ajax</a></li>
+            <li><a href="cursos-de-programacion/curso-de-programacion-fundamentos.html">Fundamentos de Programación</a></li>
+            <li><a href="cursos-de-programacion/curso-de-php-basico.html">PHP</a></li>
+            <li><a href="cursos-de-programacion/curso-de-xhtml-con-css.html">XHTML y CSS</a></li>
+          </ul>
+          <h3>Cursos de bases de datos</h3>
+          <ul>
+            <li><a href="cursos-de-bases-de-datos/curso-de-bases-de-datos-basico.html">Base de datos I (MySQL)</a></li>
+            <li><a href="cursos-de-bases-de-datos/curso-de-bases-de-datos-intermedio.html">Bases de datos II (SQL Server)</a></li>
+            <li><a href="cursos-de-bases-de-datos/curso-de-bases-de-datos-avanzado.html">Bases de datos III (SQL Server)</a></li>
+            <li><a href="cursos-de-bases-de-datos/curso-oracle-sql-plus.html">Oracle SQL Plus</a></li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+        <div class="cursosFila">
+          <h3><span>Diplomados:</span></h3>
+          <ul>
+            <li>
+              <h3><span class="highlight"> Webmaster </span> &nbsp;con Certificación de <img src="images/logo11.png" width="36" height="11" alt="logo de centro de capacitacion" /></h3>
+              <ul>
+                <li>Diplomado de desarrollo de páginas web 2.0 con la paquetería Adobe CS5, XHTML, CSS, DHTML, Ajax, jQuery, XAMPP, PHP, MySQL y técnicas SEO. &nbsp; <img src="images/listArrow.gif" width="8" height="9" alt="diplomado" /><a href="http://www.diplomadowebmaster.com.mx">Conoce más</a> </li>
+              </ul>
+            </li>
+            <li>
+              <h3><span class="highlight"> Informatica para la oficina</span></h3>
+              <ul>
+                <li>Aprende el uso correcto de las aplicaciones más usadas en la oficina: Windows, Internet, Word y Excel <img src="images/listArrow.gif" width="8" height="9" alt="diplomadoOffice" /><a href="http://www.office.3ct.mx/">Conoce más</a> </li>
+              </ul>
+            </li>
+            <li>
+              <h3><span class="highlight">Web 2.0 &quot;Sólo código&quot; </span></h3>
+              <ul>
+                <li>El objetivo principal del diplomado es mostrar cada una de las tecnologías involucradas en el desarrollo de aplicaciones para la Internet sin el uso de herramientas de diseño, es decir, &quot;sólo código": PHP, JavaScript, AJAX, Publicación Web&nbsp; <img src="images/listArrow.gif" width="8" height="9" alt="diplomado" /><a href="http://diplomadoweb.3ct.mx/">Conoce más</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div id="cerrarTodosLosCursos" onclick="MM_showHideLayers('todosLosCursos','','hide')">&nbsp;</div>
+      </div>
+      <!-- #EndLibraryItem -->
+<div id="menuIndex">
+        <p class="telefono"><img src="images/cursosWeb.gif" width="18" height="18" alt="Llamános para seber más acerca de cursos de diseño web y programación." />5264 4719 y 5564 7993</p>
+        <p style="font-size:14px">
+       <!-- <a href="#" id="muestraPromocion">Promoción</a> |-->
+        <a href="inscripcion.html"  >Inscripción</a> |  <a href="escuela-de-computacion/escuela-de-cursos-de-computacion-ubicacion.html">Ubicanos</a> | <a href="escuela-de-computacion/privacidad.html">Privacidad</a> |
+        
+        <a href="https://www.facebook.com/tresct" target="_blank"><img style="border: 0px; margin:0px 5px; width:85px; height:40px;" src="images/siguenos.jpg" alt="" border="0"></a>
+        
+        </p>
+
+
+
+     </div>
+
+    </div>
+    <div>
+    <div class="clearfix">&nbsp;</div>
+
+<!--
+    <img src="images/cursosConDescuento.jpg" width="26%" height="26%">-->
+    <div class="slogan">
+      <h3>¡Actualízate hoy!</h3>
+      <p>¡Nunca la capacitación de calidad y vanguardia había estado tan cerca de tu alcance!</p>
+    </div>
+    
+
+
+<a href="diplomadoSQLServer/index.html">
+    <div id="promocion" class="slogan" 
+	  style="
+        border:1px solid #999;
+        padding:10px;
+        position: relative;
+        left: 0px;
+        top: 10px;
+        height:100px; 
+        width:150px;
+        
+
+        width: 280px;
+        height: 100px;
+        background-color: #9fc5f1;
+        color:white;
+        box-shadow: 10px 10px 5px #888888;
+
+
+
+        text-align:center;
+        
+        
+        
+        z-index:2 ;">
+<!--        <p>
+           ¡ Haz tu primer pago con una semana de anticipación y obtén el
+            <span id="porcentajeDescuento" style="color: #2B3C6A">10%
+            </span> de descuento!
+        </p>-->
+        <p>
+            <p> Ya está AQUÍ
+            </p>
+            <p id="animar" style="color: #2B3C6A">
+            
+           ¡El diplomado que tú necesitas! 
+           </p>
+           
+        </p>
+
+
+        <p id="cerrarPromocion" style="float:right">Cerrar</p>
+        
+    </div>
+
+	</a>
+
+
+    </div>
+  </div>
+  <div id="mainInfo">
+  	<div class="mInfo">
+    <p>&nbsp;</p>
+    </div>
+    <div class="mInfo">
+    <p>3ct, un centro de capacitación en tecnología de vanguardia para el desarrollo de aplicaciones y diseño web, ubicado en México, D.F.</p>
+    <hr />
+    <p>En la colonia Roma, varias opciones de acceso.</p>
+    <p>&nbsp;</p>
+    <p id="conocenos" onclick="MM_showHideLayers('detailedInfo','','show')">&nbsp;</p>    
+    </div>
+    <div class="mInfo">
+    <p>Absolutamente a tu alcance, <strong>desde $300.00 semanal</strong>, cursos de <strong>Java</strong>, <strong>Oracle</strong> y paquetería <strong>Adobe</strong>, además de diplomados en programación y diseño web.</p>
+    <hr />
+<p>Con instalaciones adecuadas y profesores que se desempeñan en proyectos para clientes nacionales y extranjeros, 3ct es en donde <strong>SI aprendes a programar y diseñar aplicaciones web</strong> y no tienes que pagar altos precios por ello.</p>
+    </div>
+  </div>
+  <div id="detailedInfo">
+  	<div class="dInfo">
+    <h2>Aprender <span class="highlight">Programación</span></h2>
+    <p>Que es programación</p>
+<ul>
+  <li><a href="cursos-de-java/diplomado-java.html">Diplomado Java</a></li>
+  <li><a href="cursos-de-java/diplomado-frameworks.html">Diplomado de Frameworks</a></li>
+  <li><a href="cursos-de-programacion/curso-de-visual-basic-NET.html">Curso de .NET</a></li>
+</ul>
+<p>... más cursos de programación</p>
+<p>&nbsp;</p>
+<h3><a href="escuela-de-computacion/escuela-de-cursos-de-computacion.html">Conoce las instalaciones</a></h3>
+    </div>
+    <div class="dInfo">
+<h2>Estudiar <span class="highlight">Diseño Web</span></h2>
+<p>Que es <a href="#">diseño web</a></p>
+<ul>
+  <li><a href="cursos-de-diseno-web/curso-de-dreamweaver-basico.html">Curso de Dreamweaver</a></li>
+  <li><a href="cursos-de-diseno-web/curso-de-photoshop-basico.html">Curso de Photoshop</a></li>
+  <li><a href="cursos-de-diseno-web/curso-de-flash-basico.html">Curso de Flash</a></li>
+</ul>
+<p>... más<a href="#"> cursos de diseño web</a></p>
+<p>&nbsp;</p>
+<h3><a href="escuela-de-computacion/escuela-de-cursos-de-computacion-ubicacion.html">Ubica los planteles</a></h3>
+    </div>
+    <div class="dInfo">
+<h2>Dominar <span class="highlight">Bases de datos</span></h2>
+<p>Que es bases de datos</p>
+<ul>
+  <li><a href="cursos-de-bases-de-datos/curso-de-bases-de-datos-basico.html">Curso de MySQL</a></li>
+  <li><a href="cursos-de-bases-de-datos/curso-de-bases-de-datos-intermedio.html">Curso de SQL Server</a></li>
+  <li>Curso de Oracle</li>
+</ul>
+<p>... más cursos de bases de datos</p>
+<p>&nbsp;</p>
+<h3>
+            <span id="wathsApp">
+                 <img src="imagenes/whatsapp"/>
+                 <a href="tel:5554061437">55 54-06-14-37</a>
+          </span>
+
+</h3>
+    </div>
+  </div>
+  
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+
+<title>Curso de Java: Instalación</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Este curso de Java está dirigido a quienes dominan los fundamentos de programación e incluye libro gratis en PDF para descargar." />
+
+<link rel="stylesheet" type="text/css" href="estilos.css" />
+
+</head>
+
+<body>
+
+<div id="mainBox">
+
+  <div id="topBar"><img src="images/duke.png" alt="curso de java" width="106" height="102" class="duke" />
+
+  <p class="titulo">Curso de Java<br /><span class="chica">Desde cero hasta conexiones con bases de datos MySQL</span></p></div><!-- #BeginLibraryItem "/Library/topMenu.lbi" -->
+
+<ul id="nav">
+
+  <li><a href="index.html">Inicio</a></li>
+
+  <li><a href="cursodejavaDescarga.html">Descargar</a></li>
+
+  <li><a href="vinculos.html">Vínculos</a></li>
+
+  <li><a href="acercade.html">Acerca de</a></li>
+
+  <li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+<!-- #EndLibraryItem --><div id="contenido" class="clearfix"><!-- #BeginLibraryItem "/Library/leftMenu.lbi" --><div id="columna01">
+
+    <h2>Curso de Java: Contenido</h2>
+
+      <ul id="menuIzquierda">
+
+        <li><a href="cursodejava000.html">¿Qué es Java?</a></li>
+
+        <li><a href="cursodejava001.html">Objetivos del curso</a></li>
+
+        <li><a href="cursodejava101.html">Instalación</a></li>
+
+        <li><a href="cursodejava102.html">Definición de la POO</a></li>
+
+        <li><a href="cursodejava104.html">Elementos de Java</a></li>
+
+        <li><a href="cursodejava113.html">Sintaxis</a></li>
+
+        <li><a href="cursodejava114.html">Ejecución</a></li>
+
+        <li><a href="cursodejava116.html">Tipos de datos</a></li>
+
+        <li><a href="cursodejava121.html">Estructuras de control</a></li>
+
+        <li><a href="cursodejava201.html">Antes de programar</a></li>
+
+        <li><a href="cursodejava204.html">Aplicación de ejemplo</a></li>
+
+        <li><a href="cursodejavaIndice.html">Índice</a></li>          
+
+  </ul>
+
+
+    </div><!-- #EndLibraryItem --><div id="columna02">
+
+      <p class="floatright alignright"><b>Iniciación: página 1</b><br />
+
+        [ 1, <a href="cursodejava102.html">2</a>, <a href="cursodejava103.html">3</a>, <a href="cursodejava104.html">4</a>, <a href="cursodejava105.html">5</a>, <a href="cursodejava106.html">6</a>, <a href="cursodejava107.html">7</a> ]</p>
+
+      <h1>Iniciación al lenguaje Java</h1>
+
+      <h2>Instalación</h2>
+
+      <p>Java funciona mediante un <em>software</em> conocido como la máquina virtual (JVM por sus siglas en inglés), que es el corazón del entorno de ejecución y que debe estar instalado en el sistema operativo para que las aplicaciones Java se ejecuten. En Windows está en una ruta semejante a esta:</p>
+
+      <blockquote>
+
+        <p>C:\Program Files\Java\jre[versión]</p>
+
+      </blockquote>
+
+      <p>En la que la versión es una sucesión de números como 1.4.5.6 , 1.6.0_07, etc.</p>
+
+      <p>Para que los programas puedan ejecutarse hay que asegurarse que el JRE (<em>java run enviroment</em>) esté instalado (que es lo más probable); si no, se descarga de <a href="http://www.java.com" target="_blank">www.java.com</a> que es un sitio dedicado exclusivamente a la disponibilidad de la máquina virtual de Java.<br />
+
+        Para programar es necesario el <em>kit</em> de desarrollo (JDK) que sirve para crear y probar las aplicaciones y que ya incluye el JRE. En el momento de la escritura de este curso la <em>URL</em> de descarga es: <a href="http://java.sun.com/javase/downloads/index.jsp" target="_blank">http://java.sun.com/javase/downloads/index.jsp</a><br />
+
+      En la que debe elegirse la presentación sencilla que dice:</p>
+
+      <blockquote>
+
+        <p>Java SE Development Kit (JDK)<br />
+
+          JDK Update [versión]</p>
+
+      </blockquote>
+
+      <p>En la que, de la misma manera, versión es un número como 12, 14, 15, etc.<br />
+
+        Hay otras descargas que tienen JFX, JEE o NetBeans pero son más grandes y los complementos que ofrecen no son necesarios para los objetivos de este curso, aunque cualquiera de ellas sirve igual.<br />
+
+      Una vez instalado el JDK estará en un subdirectorio semejante a este al que se le conoce como [JAVA-HOME]:</p>
+
+      <blockquote>
+
+        <p>C:\Program Files\Java\jdk[versión]</p>
+
+      </blockquote>
+
+      <p>En cuanto al desarrollo de aplicaciones, aunque es posible trabajar los archivos de Java con cualquier editor de texto plano, aquí lo haremos con la versión LE de JCreator cuya página de descarga es: <a href="http://www.jcreator.com/download.htm" target="_blank">http://www.jcreator.com/download.htm</a></p>
+
+      <p>        JCreator no debe instalarse antes del JDK  porque no funcionará.<br />
+
+        Para probar que todo está como se espera debemos ejecutar JCreator y crear un archivo nuevo vacío:</p>
+
+      <p><img src="images/cursoDeJava01JCreator.jpg" alt="curso de java: JCReator" width="560" height="371" /></p>
+
+      <p>Oprimimos &lt;Next&gt; y en el <em>Name</em> escribimos <em>HolaMundo</em>, así, todo junto y respetando las mayúsculas. Además, elegimos el subdirectorio donde se debe guardar el archivo y oprimimos &lt;Finish&gt;:</p>
+
+      <p><img src="images/cursoDeJava02HolaMundo.jpg" alt="curso de java: hola mundo" width="560" height="402" /><br />
+
+        En seguida, copiamos y pegamos el siguiente programa:</p>
+
+      <pre>public class HolaMundo{<br />  	public static void main(String[] args){<br />    		System.out.println(&quot;Hola mundo&quot;);<br />  	}<br />}</pre>
+
+      <p>Obsérvese que el nombre de la clase y el del archivo son el mismo. Ejecutamos y compilamos con los botones que indica la figura siguiente y debe aparecer el mensaje “Hola mundo” en la ventana <em>General Output</em>:</p>
+
+      <p><img src="images/cursoDeJava03clase.jpg" alt="curso de java: clase" width="560" height="531" /></p>
+
+      <p>Si no se obtiene este resultado, es inútil seguir adelante. Los errores los marcará JCreator y pueden deberse a que no está instalado el JDK o a que el programa se escribió a mano y tiene errores. El compilador crea un archivo llamado HolaMundo.class que es el que contiene el programa y el que la máquina virtual puede interpretar.</p>
+
+      <p class="floatright alignright">[ <a href="cursodejava001.html">Anterior</a> | <a href="cursodejava102.html">Siguiente</a> ]<br />
+
+      </p>
+
+      
+
+    </div>
+
+  </div>
+
+  <div id="footer"><small>Todos derechos reservados &copy; 2009 <a href="http://www.3ct.mx" target="_blank">3CT</a><br />
+
+  </small></div>
+
+</div>
+
+</body>
+
+</html>
+

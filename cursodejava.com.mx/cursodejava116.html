@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+
+<title>Curso de Java: Generalidades</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Este curso de Java está dirigido a quienes dominan los fundamentos de programación e incluye libro gratis en PDF para descargar." />
+
+<link rel="stylesheet" type="text/css" href="estilos.css" />
+
+</head>
+
+<body>
+
+<div id="mainBox">
+
+  <div id="topBar"><img src="images/duke.png" alt="curso de java" width="106" height="102" class="duke" />
+
+  <p class="titulo">Curso de Java<br /><span class="chica">Desde cero hasta conexiones con bases de datos MySQL</span></p></div><!-- #BeginLibraryItem "/Library/topMenu.lbi" -->
+
+<ul id="nav">
+
+  <li><a href="index.html">Inicio</a></li>
+
+  <li><a href="cursodejavaDescarga.html">Descargar</a></li>
+
+  <li><a href="vinculos.html">Vínculos</a></li>
+
+  <li><a href="acercade.html">Acerca de</a></li>
+
+  <li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+<!-- #EndLibraryItem --><div id="contenido" class="clearfix"><!-- #BeginLibraryItem "/Library/leftMenu.lbi" --><div id="columna01">
+
+    <h2>Curso de Java: Contenido</h2>
+
+      <ul id="menuIzquierda">
+
+        <li><a href="cursodejava000.html">¿Qué es Java?</a></li>
+
+        <li><a href="cursodejava001.html">Objetivos del curso</a></li>
+
+        <li><a href="cursodejava101.html">Instalación</a></li>
+
+        <li><a href="cursodejava102.html">Definición de la POO</a></li>
+
+        <li><a href="cursodejava104.html">Elementos de Java</a></li>
+
+        <li><a href="cursodejava113.html">Sintaxis</a></li>
+
+        <li><a href="cursodejava114.html">Ejecución</a></li>
+
+        <li><a href="cursodejava116.html">Tipos de datos</a></li>
+
+        <li><a href="cursodejava121.html">Estructuras de control</a></li>
+
+        <li><a href="cursodejava201.html">Antes de programar</a></li>
+
+        <li><a href="cursodejava204.html">Aplicación de ejemplo</a></li>
+
+        <li><a href="cursodejavaIndice.html">Índice</a></li>          
+
+  </ul>
+
+
+    </div><!-- #EndLibraryItem --><div id="columna02">
+
+      <p class="floatright alignright"><b>Iniciación: página 16</b><br />
+
+        [ <a href="cursodejava113.html">13</a>, <a href="cursodejava114.html">14</a>, <a href="cursodejava115.html">15</a>, 16, <a href="cursodejava117.html">17</a>, <a href="cursodejava118.html">18</a>, 19 ]</p>
+
+      <h1>Iniciación al lenguaje Java</h1>
+
+      <h2>Tipos de datos<strong></strong></h2>
+
+      <h3>Generalidades
+
+        <br />
+
+      </h3>
+
+      <p>En Java, las variables podrán ser de dos tipos: objetos y tipos primitivos. Hay diferencias entre unos y otros. En realidad las primeras clases que conforman la plataforma están hechas sólo de tipos primitivos. Estos se obtienen con las palabras reservadas: <em>byte</em>, <em>short</em>, <em>int</em>, <em>long</em>, <em>float</em>, <em>double</em>, <em>char</em> y <em>bolean</em>. En este curso usaremos solamente <em>int</em> para enteros, <em>double</em> para números con punto decimal, y <em>bolean</em> para los valores lógicos. Por su parte, los objetos siempre son tomados de una clase que lo mismo puede estar en alguna librería del JDK o en algún archivo creado por nosotros. <br />
+
+        Siempre que se necesite una variable <strong>debe</strong> ser declarada especificando su tipo seguido de su identificador (ya habíamos mostrado esto):<br />
+
+        int valor; Declara una variable para números enteros<br />
+
+        valor=12; &rarr; Le asigna un valor<br />
+
+        String cadena; &rarr; Declara una variable que es un objeto de tipo String<br />
+
+        cadena= “palabras” &rarr; Le asigna un valor<br />
+
+        Ya antes dijimos que ambas tareas se pueden hacer en la misma línea:<br />
+
+        int valor=12<br />
+
+        La diferencia central entre los tipos primitivos y los objetos es que éstos disponen de los atributos y los métodos que les confieren las clases a las que pertenecen; como también ya dijimos, para acceder a ellos se usa el metacaracter (.):<br />
+
+        cadena.length()<br />
+
+        Aquí debemos hablar de las <em>Java Fundation Classes</em> (JFC) y de su <em>Application Programming Interface</em> (API); es decir, de las <strong>clases base de Java</strong> y <strong>su interfaz de programación de aplicaciones</strong>. La descripción de los métodos, de los atributos y de las propias clases base con las que programaremos están en la API, que está publicada en: <br />
+
+      </p>
+
+      <p><a href="http://java.sun.com/javase/api/" target="_blank">http://java.sun.com/javase/api/</a></p>
+
+      <p>        Las JFC en sí están en el JDK y por eso lo descargamos e instalamos. Hemos usado dos de ellas: <em>String</em> y <em>System</em>; sólo hemos invocado la propiedad out de ésta; no obstante, cada una tiene muchos métodos y muchas propiedades que están descritas en la API; de cuyo conocimiento dependen las alternativas de programación de las que disponemos. Cada método o propiedad mencionados aquí serán explicados sencillamente. La profundización en todas las posibilidades de cada clase es responsabilidad del destinatario de este curso. Visitar el <em>site</em> de la API no es una elección para el programador de Java, es una exigencia obligatoria. Se puede decir que del mayor conocimiento de la API depende la capacidad de programación en el lenguaje.</p>
+
+      <p class="floatright alignright">[ <a href="cursodejava115.html">Anterior</a> | <a href="cursodejava117.html">Siguiente</a> ]<br />
+
+      </p>
+
+      
+
+    </div>
+
+  </div>
+
+  <div id="footer"><small>Todos derechos reservados &copy; 2009 <a href="http://www.3ct.mx" target="_blank">3CT</a><br />
+
+  </small></div>
+
+</div>
+
+</body>
+
+</html>
+

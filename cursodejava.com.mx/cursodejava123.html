@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+
+<title>Curso de Java: if.. else anidado</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Este curso de Java está dirigido a quienes dominan los fundamentos de programación e incluye libro gratis en PDF para descargar." />
+
+<link rel="stylesheet" type="text/css" href="estilos.css" />
+
+</head>
+
+<body>
+
+<div id="mainBox">
+
+  <div id="topBar"><img src="images/duke.png" alt="curso de java" width="106" height="102" class="duke" />
+
+  <p class="titulo">Curso de Java<br /><span class="chica">Desde cero hasta conexiones con bases de datos MySQL</span></p></div><!-- #BeginLibraryItem "/Library/topMenu.lbi" -->
+
+<ul id="nav">
+
+  <li><a href="index.html">Inicio</a></li>
+
+  <li><a href="cursodejavaDescarga.html">Descargar</a></li>
+
+  <li><a href="vinculos.html">Vínculos</a></li>
+
+  <li><a href="acercade.html">Acerca de</a></li>
+
+  <li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+<!-- #EndLibraryItem --><div id="contenido" class="clearfix"><!-- #BeginLibraryItem "/Library/leftMenu.lbi" --><div id="columna01">
+
+    <h2>Curso de Java: Contenido</h2>
+
+      <ul id="menuIzquierda">
+
+        <li><a href="cursodejava000.html">¿Qué es Java?</a></li>
+
+        <li><a href="cursodejava001.html">Objetivos del curso</a></li>
+
+        <li><a href="cursodejava101.html">Instalación</a></li>
+
+        <li><a href="cursodejava102.html">Definición de la POO</a></li>
+
+        <li><a href="cursodejava104.html">Elementos de Java</a></li>
+
+        <li><a href="cursodejava113.html">Sintaxis</a></li>
+
+        <li><a href="cursodejava114.html">Ejecución</a></li>
+
+        <li><a href="cursodejava116.html">Tipos de datos</a></li>
+
+        <li><a href="cursodejava121.html">Estructuras de control</a></li>
+
+        <li><a href="cursodejava201.html">Antes de programar</a></li>
+
+        <li><a href="cursodejava204.html">Aplicación de ejemplo</a></li>
+
+        <li><a href="cursodejavaIndice.html">Índice</a></li>          
+
+  </ul>
+
+
+    </div><!-- #EndLibraryItem --><div id="columna02">
+
+      <p class="floatright alignright"><b>Iniciación: página 23</b><br />
+
+        [ <a href="cursodejava120.html">20</a>, <a href="cursodejava121.html">21</a>, <a href="cursodejava122.html">22</a>, 23, <a href="cursodejava124.html">24</a>, <a href="cursodejava125.html">25</a>, <a href="cursodejava126.html">26</a> ]</p>
+
+      <h1>Iniciación al lenguaje Java</h1>
+
+      <h2>Estructuras de control</h2>
+
+      <h3>if.. else anidado
+
+        <br />
+
+      </h3>
+
+      <p>Aunque hemos avanzado, el programa sigue teniendo problemas. Si el usuario no escribe el nombre pero oprime el botón aceptar, la cadena mostrada será <em>Hola</em> solamente; si queremos que aparezca otro mensaje para este caso, hay más de una solución; una de ellas es anidar un <em>if…else</em> dentro del que ya hicimos:<br />
+
+      </p>
+
+      <pre>
+
+DemoIfElseAnidado.java
+
+package cursojava.demos; //La encapsulamos en un lugar para todos los demos
+
+import javax.swing.JOptionPane; //Importamos la clase JOptionPane
+
+public class DemoIfElseAnidado{
+
+    String nombre; //Este será la información para el I/O
+
+    public DemoIfElseAnidado() {
+
+    	//El constructor llama a sus métodos
+
+    	pideNombre();
+
+    	muestraSaludo();    	
+
+    }
+
+    /*La palabra reservada null del primer atributo en los dos métodos 
+
+     *de JOptionPane es porque, por lo común, esta clase es llamada desde una ventana
+
+     * que es su propietario como no tenemos tal ventana, lo indicamos así
+
+     */
+
+    private void pideNombre(){
+
+    	nombre=JOptionPane.showInputDialog(null,"Escribe tu nombre");//Pide el nombre
+
+    }
+
+    private void muestraSaludo(){
+
+    	//Inicio de la estructura de control if…else	
+
+    	if(nombre==null)  {
+
+    	   JOptionPane.showMessageDialog(null,"Oprimiste cancelar");//Mensaje por la cancelación
+
+    	}else
+
+    	    if(nombre.equals("")){//Las cadenas no se comparan con == sino con el método equals()
+
+    		JOptionPane.showMessageDialog(null,"Oprimiste aceptar sin escribir tu nombre");
+
+    		}else{    		{
+
+    		       JOptionPane.showMessageDialog(null,"Hola "+nombre);//Saluda en pantalla
+
+    		}
+
+    	}
+
+    }    
+
+    public static void main(String[] args) {
+
+       new DemoIfElseAnidado();
+
+    }
+
+}
+
+</pre>
+
+      <p>En este caso, el programa podrá enviar tres respuestas distintas: <br />
+
+        1.	Mandar el saludo<br />
+
+        2.	Indicar que se oprimió cancelar <br />
+
+      3.	Indicar que no se escribió el nombre</p>
+
+      <p class="floatright alignright">[ <a href="cursodejava122.html">Anterior</a> | <a href="cursodejava124.html">Siguiente</a> ]<br />
+
+      </p>
+
+      
+
+    </div>
+
+  </div>
+
+  <div id="footer"><small>Todos derechos reservados &copy; 2009 <a href="http://www.3ct.mx" target="_blank">3CT</a><br />
+
+  </small></div>
+
+</div>
+
+</body>
+
+</html>
+

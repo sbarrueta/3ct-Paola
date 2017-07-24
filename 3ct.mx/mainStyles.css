@@ -1,0 +1,440 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	background: #FFF url(images/bodyBackground.png) repeat-x;
+}
+
+p {
+	margin: 5px 0;
+}
+
+li {
+	margin: 0 0 0 15px;
+	list-style-image: url(images/listArrow.gif);
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	padding: 100px 80px 0 0;
+	font-size: 25px;
+	font-weight: lighter;
+	text-align: right;
+	color: #FFF;
+}
+.titulo{
+	background-image:url(images/logo100x44.png);
+	background-position:right;
+	background-repeat:no-repeat;
+	
+}
+
+
+h2 {
+	color: #fff;
+	background: url(images/h2background.png) no-repeat;
+	font-size: 18px;
+	font-weight: lighter;
+	height: 25px;
+	padding: 5px 0 0 0;
+}
+
+h3 {
+	color: #FFF;
+	font-weight: lighter;
+}
+
+.longh2 {
+	background: url(images/h2backgroundLong.png) no-repeat;
+	padding: 5px 0 0 10px;
+}
+
+ul {
+	margin: 5px 0 15px 0;
+}
+
+em {
+	color: #4f5ea8;
+	font-style: normal;
+	font-family: "Courier New", Courier, monospace;
+}
+
+#mainWrapper {
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+}
+
+#todosLosCursos {
+	position: absolute;
+	left: 20px;
+	top: 28px;
+	width: 920px;
+	height: 530px;
+	background: url(images/todos-los-cursos.png) no-repeat;
+	z-index: 1;
+	visibility: hidden;
+}
+
+#contacto {
+	position:absolute;
+	left: 20px;
+	top: 28px;
+	width: 920px;
+	height: 400px;
+	background: url(images/todos-los-cursos.png) no-repeat;
+	z-index: 1;	
+	visibility: hidden;
+}
+
+#contacto p {
+	color: #FFF;
+	line-height: 18px;
+	padding-left: 80px;	
+	padding-bottom: 10px;
+}
+
+#contactoPhone {
+	position:absolute;
+	width:260px;
+	height:280px;
+	z-index:6;
+	left: 20px;
+	top: 15px;
+	padding-right: 20px;
+	background-image: url(images/contactIconPhone.png);
+	background-repeat: no-repeat;
+	background-position: 0 40px;
+	border-right: 1px dotted #9fc5f1;
+}
+
+#contactoMail {
+	position:absolute;
+	width:260px;
+	height:280px;
+	z-index:7;
+	left: 320px;
+	top: 15px;
+	padding-right: 20px;	
+	background-image: url(images/contactIconMail.png);
+	background-repeat: no-repeat;
+	background-position: 0 40px;
+	border-right: 1px dotted #9fc5f1;		
+}
+
+#contactoPerson {
+	position:absolute;
+	width:280px;
+	height:280px;
+	z-index:8;
+	left: 620px;
+	top: 15px;
+	background-image:
+url(images/contactIconPerson.png);
+	background-repeat: no-repeat;
+	background-position: 0 40px;		
+}
+
+.cursosColumna {
+	width: 280px;
+	padding: 10px 1px 0 20px;	
+	float: left; 	
+}
+.cursosFila {
+	padding: 10px 1px 0 20px;	
+}
+
+#cerrarTodosLosCursos {
+	position:absolute;
+	width:90px;
+	height:32px;
+	z-index:11;
+	left: 420px;
+	top: 480px;
+}
+
+#cerrarContacto {
+	position:absolute;
+	width:68px;
+	height:32px;
+	z-index:12;
+	left: 425px;
+	top: 365px;
+}
+
+#todosLosCursos li {
+	padding: 3px 0;	
+}
+
+#header {
+	background: #4f5ea8 url(images/header-background.png) no-repeat;
+}
+
+#contact {
+	position:fixed;
+	top:2;
+	left:2;
+	color: #FFF;
+	background-color:#000;
+	height:20px;
+	width:600px;
+	padding:5px;
+	/*
+	float: left;*/
+	margin: 5px 0 0 10px;
+	font-size: 11px;
+	border-radius:2em;
+	
+}
+
+
+
+#fichaTecnica {
+	width: 930px;
+	margin: 50px 15px 0 15px;
+}
+
+#fichaTecnicaEnd {
+	height: 36px;
+	background: url(images/header-background-bottom.png) no-repeat center bottom;
+}
+
+#header a, #todosLosCursos a, #contacto a {
+	color: #9fc5f1;
+}
+
+#header a:hover, #todosLosCursos a:hover, #contacto a:hover {
+	color: #FFF;
+}
+
+#proximosIncios {
+	height: 255px;
+	background: url(images/proximosInicios.png) no-repeat 0 5px;
+}
+#proximosIncios iframe{
+	width: 287px;
+	height: 350px;
+	border-width: 0px;
+}
+
+#mainContent {
+	color: #555;
+	line-height: 18px;
+}
+
+#mainContent li {
+	list-style-image: url(images/listArrowBlue.gif);
+}
+
+#mainContent a {
+	color: #4f5ea8;
+}
+
+#mainContent a:hover {
+	color: #9fc5f1;
+}
+
+#footer {
+	background-color: #222;
+	color: #FFF;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.clearfix {
+	clear: both;
+	height: 0;
+}
+
+.splitA {
+	width: 440px;
+	float: left;
+	margin: 10px;
+}
+
+.columnaA {
+	width: 440px;
+	margin: 0px;
+	height:450px;
+	overflow:auto;
+}
+
+
+#fichaTecnica .splitA p {
+	font-size: 15px;
+	line-height: 21px;
+	color: #283054;
+	padding: 5px 0 0 10px;
+}
+
+.splitB {
+	width: 290px;
+	float: left;
+	margin: 10px;
+	
+}
+
+.splitB p, .splitB ul {
+	color: #FFF;
+	line-height: 20px;
+	padding: 5px 0 0 10px;
+}
+
+#mainContent .splitA p, #mainContent .splitA ul, dl {
+	line-height: 25px;
+	color: #283054;
+	padding: 5px 25px 0 0;
+}
+
+.first {
+	float: left;
+	color: #9fc5f1;
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 600%;
+	line-height: 0.85em;
+	margin: 0 0.1em -0.1em 0;
+}
+
+.floatingIcon {
+	float: left;
+	margin: 5px;
+}
+
+.highlight {
+	color: #003;
+	background-color: #9fc5f1;
+	font-weight: bold;
+	padding: 3px 3px 3px 10px;
+	border-radius: 9px;
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;	
+}
+
+.fechaInicio {
+	background-color: #fff;
+	color: #4f5ea8;
+	font-weight: bold;
+	padding: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;	
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	padding: 0 0 0 15px;
+}
+#divGoogleMap{
+    width: 960px;
+    height: 541px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    color: black;
+}
+#divGoogleMap .botonInterno{
+    background-color: #bcf209;
+    /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FEFEFE), to(#F3F3F3));*/
+    border-style: solid;
+    border-color: #A9BBDF;
+    border-width: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    opacity: 0.8;
+    cursor: pointer;
+    text-align: center;
+    border-top-left-radius: 2px 2px;
+    border-top-right-radius: 0px 0px;
+    border-bottom-right-radius: 0px 0px;
+    border-bottom-left-radius: 2px 2px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 3px;
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 3px;
+}
+#divGoogleMap .botonInterno:hover{
+    -webkit-box-shadow: rgba(0, 0, 0, 0.7) 4px 4px 3px;
+    box-shadow: rgba(0, 0, 0, 0.7) 4px 4px 3px;
+}
+#divGoogleMap .botonInterno div{
+    font-family: arial,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 4px;
+    padding-right: 4px;
+    opacity: 1;
+}
+#divRadios {
+    background-color: #bcf209;
+    /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FEFEFE), to(#F3F3F3));*/
+    border-style: solid;
+    border-color: #A9BBDF;
+    border-width: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-top-left-radius: 2px 2px;
+    border-top-right-radius: 0px 0px;
+    border-bottom-right-radius: 0px 0px;
+    border-bottom-left-radius: 2px 2px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 3px;
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 3px;
+    opacity: 0.8;
+}
+#divRadios label{
+    display: block;
+}
+#divRadios .radioRuta{
+    cursor: pointer;
+}
+
+#navigation {
+	color: #FFF;
+	float: left;
+	font-size: 22px;
+	font-weight: lighter;
+	padding:5px 0px 0px 5px;
+/*	font-family: arial,sans-serif;
+	font-family: "Arial Black", Gadget, sans-serif;*/
+}
+
+.contenedorPrecio{
+	background-image:url(images/costo.png);
+    background-repeat:no-repeat;
+    height:96px;
+    width:206px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    cursor:pointer;
+    float:left;
+}
+.presentacionPrecio{
+	color:white;
+    font-size: 300%;
+    margin-left:90px;
+}
+.presentacionFrecuencia{
+	color:#96bf02;
+	font-size:250%;
+    margin-left:90px;
+}

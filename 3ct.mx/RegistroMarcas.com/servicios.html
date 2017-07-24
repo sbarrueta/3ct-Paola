@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Diseñado por Enrique Hernandez Castillo
+cocoya23_27@hotmail.com, marenlat@gmail.com, enrique_hdz@3ct.mx
+Publicado bajo los derechos de Centro de Capacitacion y Consultoria Tecnica (3ct)
+
+Name       : Registro de Marcas
+Description: Pagina para el registro de marcas
+Version    : 1.0
+Released   : pendiente
+Updated    : pendiente
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="keywords" content="Registro Marca" />
+        <meta name="description" content="Registra tu Marca" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Registro de Marcas</title>
+        <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+        <script type="text/javascript" src="js/prototype.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            new Ajax.Request('menuLateral.html',
+            {
+                method:'post',
+                onSuccess: function(transport){
+                    var response = transport.responseText || "no response text";
+                    
+                },
+                onFailure: function(){  }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="menu">
+                <ul>
+                    <!--<li><img src="images/write.gif" width="35px" height="35px;" alt="Inicio"/></li>-->
+                    <li><a href="index.html" class="sombra">Inicio</a></li>
+                    <li><a href="registro.html" class="sombra">Registrar</a></li>
+                    <li class="current_page_item"><a href="servicios.html" class="sombra">Servicios</a></li>
+                    <li><a href="marcas.html" class="sombra">Marcas</a></li>
+                    <li><a href="acerca.html" class="sombra">Acerca</a></li>
+                </ul>
+            </div>
+            <!-- end #menu -->
+            <div id="header">
+                <div id="logo">
+                    <h1>Registro de Marcas</h1>
+                    <p> diseñado por <a href="http://www.3ct.mx/">3CT</a></p>
+                </div>
+            </div>
+            <!-- end #header -->
+            <div id="page">
+                <div id="page-bgtop">
+                    <div id="page-bgbtm">
+                        <div id="content">
+                            <div class="post" id="busqueda">
+                                <h2 class="title"><a href="#">Búsquedas previas al registro de una marca</a></h2>
+                                <p class="meta"><span class="date">Tanto fonéticas como figurativas</span></p>
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class="entry">
+                                    <p>Para conocer sus posibilidades de éxito y evitar incrementos de coste y tiempo. A través de un informe detallado le asesoramos sobre las posibilidades de registro de su marca en México, con las recomendaciones jurídicas pertinentes para incrementar las oportunidades.</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="post" id="registro">
+                                <h2 class="title"><a href="#">El Registro de su marca</a></h2>
+                                <p class="meta"><span class="date">Con los resultados de búsqueda</span></p>
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class="entry">
+                                    <p>Elaboramos un minucioso análisis de la mejor opción de registro teniendo en cuenta los productos y servicios, así como los mercados de interés.</p>
+                                    <p>En México, preparamos y presentamos tanto la solicitud de registro ante el Instituto Mexicano de la Propiedad Industrial (IMPI), como cualquier otro tipo de promoción o escrito dentro del proceso de registro, en respuesta, por ejemplo, a oficios administrativos de requisitos de forma, de citas de anterioridades o de impedimentos legales.</p>
+                                    <p>De igual forma, intervenimos en los procesos de negociación para la obtención de cartas consentimiento, acuerdos de coexistencia o cesiones marcarias, y en sí, en cualquier trámite tendiente a la concesión del registro.</p>
+
+                                </div>
+                            </div>
+                            <div class="post" id="asesoramiento">
+                                <h2 class="title"><a href="#">Asesoramiento en la concesión de Licencias a terceros</a></h2>
+                                <p class="meta"><span class="date"></span></p>
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class="entry">
+                                    <p>Con el fin de que pueda explotar los derechos de sus marcas, le llevamos a cabo desde la revisión y redacción de contratos, hasta el estudio de los documentos a aportar y su presentación ante las oficinas públicas correspondientes.</p>
+
+                                </div>
+                            </div>
+                            <div class="post" id="mantenimiento">
+                                <h2 class="title"><a href="#">Mantenimiento y Vigilancia de su marca</a></h2>
+                                
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class="entry">
+                                    <p>Nuestro servicio de vigilancia detecta la publicación de cualquier registro de marca, en la Gaceta de la Propiedad Industrial del Instituto Mexicano de la Propiedad Industrial (IMPI), o en los boletines oficiales de cualquier país. Le avisamos puntualmente de las renovaciones de los derechos, de las declaraciones de uso y en caso de vulneración podemos presentar observaciones de un tercero ante el IMPI u oposición ante el organismo correspondiente en cualquier país del mundo.</p>
+
+                                </div>
+                            </div>
+                            <div class="post" id="revisiones">
+                                <h2 class="title"><a href="#">Revisiones periódicas</a></h2>
+
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class="entry">
+                                    <p>En las que analizamos los nuevos riesgos a los que se enfrenta la empresa por no tener registrada sus marca en áreas de negocio y países de futuro interés.</p>
+                                    <p>Asimismo elaboramos estudios de uso efectivo de sus marcas para evitar que una posible utilización incorrecta, origine la caducidad de los derechos de su marca.</p>
+
+                                </div>
+                            </div>
+                            
+                            <div style="clear: both;">&nbsp;</div>
+                        </div>
+                        <!-- end #content -->
+                        <div id="sidebar">
+                            <ul>
+                                <li>
+                                    <div id="search" >
+                                        <a href="registro.html">
+                                            <img src="images/register_button.png" width="248px" height="62px" alt="Registrar"/>
+                                        </a>
+                                    </div>
+                                    <div style="clear: both;">&nbsp;</div>
+                                </li>
+                                <li>
+                                    <h2>Hazte Conocer</h2>
+                                    <p>Registra tu propia marca y empieza a ganar terreno nacionalmente.</p>
+                                </li>
+                                 <li>
+                                    <h2>Contactanos</h2>
+                                    <ul>
+                                        <li><a href="mailto:correo1@servidor.com.mx">correo1@servidor.com.mx</a></li>
+                                        <li><a href="mailto:correo2@servidor.com.mx">correo2@servidor.com.mx</a></li>
+                                        <li><a href="mailto:correo3@servidor.com.mx">correo3@servidor.com.mx</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h2>Marcas</h2>
+                                    <ul>
+                                        <li><a href="marcas.html#nacional">Marca nacional</a></li>
+                                        <li><a href="marcas.html#comunitaria">Marca comunitaria</a></li>
+                                        <li><a href="marcas.html#andino">Marca en el grupo andino</a></li>
+                                        <li><a href="marcas.html#mercosur">Marca en países MERCOSUR</a></li>
+                                        <li><a href="marcas.html#internacional">Marca Internacional</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h2>Servicios</h2>
+                                    <ul>
+                                        <li><a href="servicios.html#busqueda">Búsquedas previas al registro</a></li>
+                                        <li><a href="servicios.html#registro">El Registro de su marca</a></li>
+                                        <li><a href="servicios.html#asesoramiento">Asesoramiento de Licencias</a></li>
+                                        <li><a href="servicios.html#mantenimiento">Mantenimiento y Vigilancia</a></li>
+                                        <li><a href="servicios.html#revisiones">Revisiones periódicas</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h2>Acerca</h2>
+                                    <ul>
+                                        <li><a href="acerca.html#us">Compañia</a></li>
+                                        <li><a href="acerca.html#historia">Nuestra Historia</a></li>
+                                        <li><a href="acerca.html#asociados">Asociados</a></li>
+                                        <li><a href="acerca.html#laboral">Oferta Laboral</a></li>
+                                        <li><a href="acerca.html#ubicanos">Localizacion</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end #sidebar -->
+                        <div style="clear: both;">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+            <!-- end #page -->
+        </div>
+        <div id="footer">
+            <p>Copyright (c) 2011 3ct.mx. Todos los derechos reservados. Diseñado por <a href="http://www.3ct.mx/">3CT</a>.</p>
+        </div>
+        <!-- end #footer -->
+    </body>
+</html>

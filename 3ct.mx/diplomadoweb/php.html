@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/principal.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Diplomado Web 2.0 en 3CT</title>
+<!-- InstanceEndEditable -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/interface.js"></script>
+<script src="js/ajax.js" type="text/javascript"></script>
+<script src="js/jquery-easing.1.2.pack.js" type="text/javascript"></script>
+<script src="js/jquery-easing-compatibility.1.2.pack.js" type="text/javascript"></script>
+<script src="js/coda-slider.1.1.1.pack.js" type="text/javascript"></script>
+<script type="text/javascript">
+		jQuery(window).bind("load", function() {
+			jQuery("div#slider1").codaSlider()
+			// jQuery("div#slider2").codaSlider()
+			// etc, etc. Beware of cross-linking difficulties if using multiple sliders on one page.
+		});
+	</script>
+
+<!--[if lt IE 7]>
+ <style type="text/css">
+ div, img { behavior: url(iepngfix.htc) }
+ </style>
+<![endif]-->
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+<body>
+	<a title="Visita nuestro sitio en Facebook" href="http://www.facebook.com/pages/Diplomado-web-20-Solo-codigo/180353088643785?v=info"><img src="images/fb.png" style="position:absolute; left:100px; top:580px"/></a>
+<div class="cabecera"><a href="http://3ct.com.mx" target="_blank"><img class="logo" src="images/logoChico.png" /></a>
+
+  <h1>Diplomado web 2.0 <em>&laquo;s&oacute;lo c&oacute;digo</em>&raquo;</h1>
+
+ 
+</div>
+<!--<div style="position:absolute; left:80%; top:10%" >
+	<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=APP_ID&amp;xfbml=1"></script><fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+</div>-->
+<div class="dock" id="dock">
+  <div class="dock-container">
+  
+  <a class="dock-item"  href="index.html"><img src="images/inicio.png" alt="Inicio" /></a>     
+  <a class="dock-item" href="js.html"><img src="images/JS.png" alt="Capa del cliente" /></a> 
+  <a class="dock-item" href="php.html"><img src="images/PHP.png" alt="Capa del servidor" /></a> 
+  <a class="dock-item" href="ajax.html"><img src="images/AJAX.png" alt="Interacción entre capas" /></a> 
+  <a class="dock-item" href="integracion.html"><img src="images/integracion.png" alt="Integración" /></a> 
+  <a class="dock-item" href="contacto.html"><img src="images/contacto.png" alt="Contacto" /></a>
+  <a class="dock-item" href="temario.pdf"><img src="images/temario.png" alt="Temario" /></a>
+  </div>
+  
+</div>
+<script type="text/javascript">
+	
+	$(document).ready(
+		function()
+		{
+			$('#dock').Fisheye(
+				{
+					maxWidth: 50,
+					items: 'a',
+					itemsText: 'span',
+					container: '.dock-container',
+					itemWidth: 75,
+					proximity: 30,
+					halign : 'center'
+				}
+			)
+		}
+	);
+
+</script>
+<div class="contenido">
+	<!-- InstanceBeginEditable name="EditRegion3" -->
+    <div class="slider-wrap" >
+    <h1>La capa del servidor</h1>
+        <div id="slider1" class="csw">
+          <div class="panelContainer">
+            <div class="panel" title="¿Qué es?">
+              <div class="wrapper">
+              <h3>Servicios <em>web</em></h3>
+              <p>Detrás de las páginas que se consultan en la Internet, frecuentemente están funcionando servicios que hacen consultas o procedimientos según las necesidades de los usuarios; estas acciones se realizan con los lenguajes de servidor. Hay varios: ASP, JSP, Perl, etc. El que se usa en la mayoria de los sitios <em>web</em> es PHP. </p>
+                <div class="navegante"><p><a href="#4" class="cross-link" title="Alcance">&#171; Previo</a> <span class="pipe">|</span> <a href="#2" class="cross-link" title="¿Cómo funciona?">Siguiente &#187;</a></p></div>
+              </div>
+            </div>
+            <div class="panel" title="¿Cómo funciona?">
+              <div class="wrapper">
+              <h3>Consultas y procesos</h3>
+              <p>Cuando los usuarios hacen clic en los botones de los formularios, envían los contenidos de los campos para que los lenguajes como PHP hagan consultas a una base de datos y/o procesen la información por una necesidad específica; cuando se cumple la solución requerida, se crea una respuesta y se envía de vuelta.</p>
+                <div class="navegante"><p><a href="#1" class="cross-link" title=" ¿Qué es?">&#171; Previo</a> <span class="pipe">|</span> <a href="#3" class="cross-link" title=" Utilidad">Siguiente &#187;</a></p></div>
+              </div>
+            </div>
+            <div class="panel" title="Utilidad">
+              <div class="wrapper">
+              <h3>Importancia de los servicios <em>web</em></h3>
+              <p>Para comprender la significiación de los lenguajes de servidor en la Internet actual, basta con saber que sin ellos no existirían ni buscadores ni redes sociales. Pongamos un sólo ejemplo: portales como Facebook trabajan con PHP. </p>
+               <div class="navegante"> <p><a href="#2" class="cross-link" title=" ¿Cómo funciona?">&#171; Previo</a> <span class="pipe">|</span> <a href="#4" class="cross-link" title=" Alcance">Siguiente &#187;</a></p></div>
+              </div>
+            </div>
+            <div class="panel" title="Alcance">
+              <div class="wrapper">
+              <h3>La capa del servidor en el diplomado</h3>
+              <p>Para comprender esta capa se dedicarán siete semanas del diplomado. Durante este tiempo se aprenderán los mecanismos principales de los sevicios <em>web</em>: procesamiento de formularios, conexión a base de datos. creación y control de sesiones y manipulación de <em>cookies</em>. Además, se aprenderá a instalar el servidor Apache y PHP.</p>
+                <div class="navegante"><p><a href="#3" class="cross-link" title=" Utilidad">&#171; Previo</a> <span class="pipe">|</span> <a href="#1" class="cross-link" title=" ¿Qué es?">Siguiente &#187;</a></p></div>
+              </div>
+            </div>
+          </div>
+          <!-- .panelContainer -->
+        <!-- InstanceEndEditable --></div>
+      <!-- #slider1 -->
+<!-- .slider-wrap -->
+    
+    <!-- 
+    	Aquí termina el Slider
+    -->
+  <div class="pie"><p>Desarrollado por <a href="http://consultoria.3ct.mx" title="Consultoría en 3CT" target="_blank">3CT-Consultoría</a></p></div>
+
+</body>
+<!-- InstanceEnd --></html>

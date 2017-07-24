@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>OCA SE 8 Programmer</title>
+<meta name="description" content="Oracle Certified Associate Java SE 8 Programmer I">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700,500" rel="stylesheet" type="text/css" /> 
+<link rel="stylesheet" href="../css/normalize.css">
+<link rel="stylesheet" href="../css/estilos.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+
+
+<script>
+	var myApp = angular.module("myApp",[]);
+	myApp.controller("myController",function($scope,$http){
+		$scope.saludo="Hola desde Angular";
+		$scope.JavaBuildingBlocks=
+
+	 		[
+    				{"subtema": "Understanding the Java Class Structure"},
+      				{"subtema": "Fields and Methods"},
+      				{"subtema": "Comments"},
+      				{"subtema": "Classes vs. Files"},
+      				{"subtema": "Writing a main() Method"},
+      				{"subtema": "Understanding Package Declarations and Imports"},
+      				{"subtema": "Wildcards"},
+      				{"subtema": "Redundant Imports"},
+      				{"subtema": "Naming Conflicts"},
+      				{"subtema": "Creating a New Package"},
+      				{"subtema": "Creating Objects"},
+      				{"subtema": "Constructors"},
+      				{"subtema": "Reading and Writing Object Fields"},
+      				{"subtema": "Instance Initializer Blocks"},
+      				{"subtema": "Order of Initialization"},
+      				{"subtema": "Distinguishing Between Object References and Primitives"},
+      				{"subtema": "Primitive Types"},
+      				{"subtema": "Reference Types"},
+      				{"subtema": "Key Differences"},
+      				{"subtema": "Declaring and Initializing Variables"},
+      				{"subtema": "Declaring Multiple Variables"},
+      				{"subtema": "Identifiers"},
+      				{"subtema": "Understanding Default Initialization of Variables"},
+      				{"subtema": "Local Variables"},
+      				{"subtema": "Instance and Class Variables"},
+      				{"subtema": "Understanding Variable Scope"},
+      				{"subtema": "Ordering Elements in a Class"},
+      				{"subtema": "Destroying Objects"},
+      				{"subtema": "Garbage Collection"},
+      				{"subtema": "finalize()"},
+      				{"subtema": "Benefits of Java"},
+      				{"subtema": "Exam Essentials"},
+      				{"subtema": "Summary"},
+      				{"subtema": "Review Questions"},
+    		];
+
+		$scope.OperatorsandStatements=
+	 		[
+      				{"subtema": "Understanding Java Operators"},
+      				{"subtema": "Working with Binary Arithmetic Operators"},
+      				{"subtema": "Arithmetic Operators"},
+      				{"subtema": "Numeric Promotion"},
+      				{"subtema": "Working with Unary Operators"},
+      				{"subtema": "Logical Complement and Negation Operators"},
+      				{"subtema": "Increment and Decrement Operators"},
+      				{"subtema": "Using Additional Binary Operators"},
+      				{"subtema": "Assignment Operators"},
+      				{"subtema": "Compound Assignment Operators"},
+      				{"subtema": "Relational Operators"},
+      				{"subtema": "Logical Operators"},
+      				{"subtema": "Equality Operators"},
+      				{"subtema": "Understanding Java Statements"},
+      				{"subtema": "The if-then Statement"},
+      				{"subtema": "The if-then-else Statement"},
+      				{"subtema": "The switch Statement"},
+      				{"subtema": "The while Statement"},
+      				{"subtema": "The do-while Statement"},
+      				{"subtema": "The for Statement"},
+      				{"subtema": "Understanding Advanced Flow Control"},
+      				{"subtema": "Nested Loops"},
+      				{"subtema": "Adding Optional Labels"},
+      				{"subtema": "The break Statement"},
+      				{"subtema": "The continue Statement"},
+      				{"subtema": "Summary"},
+      				{"subtema": "Exam Essentials"},
+      				{"subtema": "Review Questions"},
+
+];
+
+		$scope.CoreJavaAPIs=
+		[
+      				{"subtema": "Creating and Manipulating Strings"},
+      				{"subtema": "Concatenation"},
+      				{"subtema": "Immutability"},
+      				{"subtema": "The String Pool"},
+      				{"subtema": "Important String Methods"},
+      				{"subtema": "Method Chaining"},
+      				{"subtema": "Using the StringBuilder Class"},
+      				{"subtema": "Mutability and Chaining"},
+      				{"subtema": "Creating a StringBuilder"},
+      				{"subtema": "Important StringBuilder Methods"},
+      				{"subtema": "StringBuilder vs. StringBuffer"},
+      				{"subtema": "Understanding Equality"},
+      				{"subtema": "Understanding Java Arrays"},
+      				{"subtema": "Creating an Array of Primitives"},
+      				{"subtema": "Creating an Array with Reference Variables"},
+      				{"subtema": "Using an Array"},
+      				{"subtema": "Sorting"},
+      				{"subtema": "Searching"},
+      				{"subtema": "Varargs"},
+      				{"subtema": "Multidimensional Arrays"},
+      				{"subtema": "Understanding an ArrayList"},
+      				{"subtema": "Creating an ArrayList"},
+      				{"subtema": "Using an ArrayList"},
+      				{"subtema": "Wrapper Classes"},
+      				{"subtema": "Autoboxing"},
+      				{"subtema": "Converting Between array and List"},
+      				{"subtema": "Sorting"},
+      				{"subtema": "Working with Dates and Times"},
+      				{"subtema": "Creating Dates and Times"},
+      				{"subtema": "Manipulating Dates and Times"},
+      				{"subtema": "Working with Periods"},
+      				{"subtema": "Formatting Dates and Times"},
+      				{"subtema": "Parsing Dates and Times"},
+      				{"subtema": "Summary"},
+      				{"subtema": "Exam Essentials"},
+      				{"subtema": "Review Questions"},
+
+
+		];
+
+
+
+	$scope.MethodsandEncapsulation=
+	[
+      				{"subtema": "Designing Methods"},
+      				{"subtema": "Optional Specifiers"},
+      				{"subtema": "Return Type"},
+      				{"subtema": "Method Name"},
+      				{"subtema": "Parameter List"},
+      				{"subtema": "Optional Exception List"},
+      				{"subtema": "Method Body"},
+      				{"subtema": "Working with Varargs"},
+      				{"subtema": "Applying Access Modifiers"},
+      				{"subtema": "Private Access"},
+      				{"subtema": "Default (Package Private) Access"},
+      				{"subtema": "Protected Access"},
+      				{"subtema": "Public Access"},
+      				{"subtema": "Designing Static Methods and Fields"},
+      				{"subtema": "Calling a Static Variable or Method"},
+      				{"subtema": "Static vs. Instance"},
+      				{"subtema": "Static Variables"},
+      				{"subtema": "Static Initialization"},
+      				{"subtema": "Static Imports"},
+      				{"subtema": "Passing Data Among Methods"},
+      				{"subtema": "Overloading Methods"},
+      				{"subtema": "Creating Constructors"},
+      				{"subtema": "Default Constructor"},
+      				{"subtema": "Overloading Constructors"},
+      				{"subtema": "Final Fields"},
+      				{"subtema": "Order of Initialization"},
+      				{"subtema": "Encapsulating Data"},
+      				{"subtema": "Creating Immutable Classes"},
+      				{"subtema": "Writing Simple Lambdas"},
+      				{"subtema": "Lambda Example"},
+      				{"subtema": "Lambda Syntax"},
+      				{"subtema": "Predicates"},
+      				{"subtema": "Summary"},
+      				{"subtema": "Exam Essentials"},
+      				{"subtema": "Review Questions"},
+
+	];
+
+	$scope.ClassDesign=
+
+	[
+      				{"subtema": "Introducing Class Inheritance"},
+      				{"subtema": "Extending a Class"},
+      				{"subtema": "Applying Class Access Modifiers"},
+      				{"subtema": "Creating Java Objects"},
+      				{"subtema": "Defining Constructors"},
+      				{"subtema": "Calling Inherited Class Members"},
+      				{"subtema": "Inheriting Methods"},
+      				{"subtema": "Inheriting Variables"},
+      				{"subtema": "Creating Abstract Classes"},
+      				{"subtema": "Defining an Abstract Class"},
+      				{"subtema": "Creating a Concrete Class"},
+      				{"subtema": "Extending an Abstract Class"},
+      				{"subtema": "Implementing Interfaces"},
+      				{"subtema": "Defining an Interface"},
+      				{"subtema": "Inheriting an Interface"},
+      				{"subtema": "Interface Variables"},
+      				{"subtema": "Default Interface Methods"},
+      				{"subtema": "Static Interface Methods"},
+      				{"subtema": "Understanding Polymorphism"},
+      				{"subtema": "Object vs. Reference"},
+      				{"subtema": "Casting Objects"},
+      				{"subtema": "Virtual Methods"},
+      				{"subtema": "Polymorphic Parameters"},
+      				{"subtema": "Polymorphism and Method Overriding"},
+
+
+      				{"subtema": "Summary"},
+      				{"subtema": "Exam Essentials"},
+      				{"subtema": "Review Questions"},
+
+
+	];
+
+
+
+	$scope.Exceptions=
+
+	[
+
+	   				{"subtema": "Understanding Exceptions"},
+	   				{"subtema": "The Role of Exceptions"},
+	   				{"subtema": "Understanding Exception Types"},
+	   				{"subtema": "Throwing an Exception"},
+	   				{"subtema": "Using a try Statement"},
+	   				{"subtema": "Adding a finally Block"},
+	   				{"subtema": "Catching Various Types of Exceptions"},
+	   				{"subtema": "Throwing a Second Exception"},
+
+
+	   				{"subtema": "Recognizing Common Exception Types"},
+	   				{"subtema": "Runtime Exceptions"},
+	   				{"subtema": "Checked Exceptions"},
+	   				{"subtema": "Errors"},
+	   				{"subtema": "Calling Methods That Throw Exceptions"},
+	   				{"subtema": "Subclasses"},
+	   				{"subtema": "Printing an Exception"},
+
+
+	   				{"subtema": "Summary"},
+      				{"subtema": "Exam Essentials"},
+      				{"subtema": "Review Questions"},
+
+
+	];
+	
+
+
+
+/*
+		$http.get("renglones.json").success(function(data){
+			$scope.renglones=data;
+		});*/
+	});
+</script>
+
+</head>
+<body ng-app="myApp" ng-controller="myController">
+<div class="container temarios">
+<header class="row"> <a href="../index.html"><img src="../pic/logo100x44.png" alt="Logo 3CT"/></a>
+	<hgroup>
+		<h1 class="title">Oracle Certified Associate Java SE 8 Programmer I</h1>
+		<h3>Temario</h3>
+	</hgroup>
+</header>
+
+<h2 id="JavaBuildingBlocks">Java Building Blocks.</h2>
+
+<section class="row">
+
+	<ul ng-repeat="linea in JavaBuildingBlocks">
+				<li>{{linea.subtema}} </li>
+	</ul>
+
+</section>
+ 
+<h2 id="OperatorsandStatements">Operators and Statements.</h2>
+
+<section class="row">
+
+	<ul ng-repeat="linea in OperatorsandStatements">
+				<li>{{linea.subtema}} </li>
+	</ul>
+
+</section>
+
+ 
+<h2 id="CoreJavaAPIs">Core Java APIs.</h2>
+
+	<ul ng-repeat="linea in CoreJavaAPIs">
+				<li>{{linea.subtema}} </li>
+	</ul>
+
+
+
+<h2 id="MethodsandEncapsulation">Methods and Encapsulation.</h2>
+
+<section class="row">
+
+
+	<ul ng-repeat="linea in MethodsandEncapsulation">
+				<li>{{linea.subtema}} </li>
+	</ul>
+
+
+</section>
+ 
+<h2 id="ClassDesign">Class Design.</h2>
+
+<section class="row">
+
+	<ul ng-repeat="linea in ClassDesign">
+				<li>{{linea.subtema}} </li>
+	</ul>
+
+</section>	
+
+
+<h2 id="Exceptions">Exceptions.</h2>
+
+<section class="row">
+	<ul ng-repeat="linea in Exceptions">
+				<li>{{linea.subtema}} </li>
+	</ul>
+</section>
+
+
+	<footer class="row">
+		<p>3CT Teléfonos: 5264 4719 y 5564 7993 o <a href="http://www.3ct.mx" target="_blank">www.3ct.mx</a></p>
+	</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+
+<title>Curso de Java: Captura de eventos</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Este curso de Java está dirigido a quienes dominan los fundamentos de programación e incluye libro gratis en PDF para descargar." />
+
+<link rel="stylesheet" type="text/css" href="estilos.css" />
+
+</head>
+
+<body>
+
+<div id="mainBox">
+
+  <div id="topBar"><img src="images/duke.png" alt="curso de java" width="106" height="102" class="duke" />
+
+  <p class="titulo">Curso de Java<br /><span class="chica">Desde cero hasta conexiones con bases de datos MySQL</span></p></div><!-- #BeginLibraryItem "/Library/topMenu.lbi" -->
+
+<ul id="nav">
+
+  <li><a href="index.html">Inicio</a></li>
+
+  <li><a href="cursodejavaDescarga.html">Descargar</a></li>
+
+  <li><a href="vinculos.html">Vínculos</a></li>
+
+  <li><a href="acercade.html">Acerca de</a></li>
+
+  <li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+<!-- #EndLibraryItem --><div id="contenido" class="clearfix"><!-- #BeginLibraryItem "/Library/leftMenu.lbi" --><div id="columna01">
+
+    <h2>Curso de Java: Contenido</h2>
+
+      <ul id="menuIzquierda">
+
+        <li><a href="cursodejava000.html">¿Qué es Java?</a></li>
+
+        <li><a href="cursodejava001.html">Objetivos del curso</a></li>
+
+        <li><a href="cursodejava101.html">Instalación</a></li>
+
+        <li><a href="cursodejava102.html">Definición de la POO</a></li>
+
+        <li><a href="cursodejava104.html">Elementos de Java</a></li>
+
+        <li><a href="cursodejava113.html">Sintaxis</a></li>
+
+        <li><a href="cursodejava114.html">Ejecución</a></li>
+
+        <li><a href="cursodejava116.html">Tipos de datos</a></li>
+
+        <li><a href="cursodejava121.html">Estructuras de control</a></li>
+
+        <li><a href="cursodejava201.html">Antes de programar</a></li>
+
+        <li><a href="cursodejava204.html">Aplicación de ejemplo</a></li>
+
+        <li><a href="cursodejavaIndice.html">Índice</a></li>          
+
+  </ul>
+
+
+    </div><!-- #EndLibraryItem --><div id="columna02">
+
+      <p class="floatright alignright"><b>Aplicación: página 3</b><br />
+
+        [ <a href="cursodejava130.html">30</a>, <a href="cursodejava201.html">1</a>, <a href="cursodejava202.html">2</a>, 3, <a href="cursodejava204.html">4</a>, <a href="cursodejava205.html">5</a>, <a href="cursodejava206.html">6</a> ]</p>
+
+      <h1>Aplicación de ejemplo</h1>
+
+      <h2>Antes de programar</h2>
+
+      <h3>Captura de eventos</h3>
+
+      <p>Desde el apartado anterior hemos estado tratando conceptos que son del entorno de las interfaces gráficas: ventanas, componentes, etc., que usan privilegiadamente los sistemas operativos comunes de la actualidad. Junto con estos conceptos, que se relacionan con objetos visuales, está el tema de los eventos que se desencadenan por las acciones del usuario sobre éstos con los dispositivos de entrada tales como el teclado y el <em>Mouse</em> entre otros.<br />
+
+        De dichos eventos el más usado es, precisamente, el clic del <em>Mouse</em>, de cuya programación se pueden obtener muchos beneficios; de hecho, en nuestra aplicación de ejemplo sólo usaremos este caso. Para hacer que una clase capture los eventos es necesario usar otra palabra reservada: <em>implements</em>, que sirve para agregar interfaces a las clases, y que se usa también en la línea de la declaración de éstas, después de la sentencia <em>extends</em> (si existe); es útil decir que se puede implementar más de una interfaz. Todos los programas que requieran responder al clic del <em>Mouse</em> usarán la interfaz <em>ActionListener</em> que nos obliga a agregar el método actionPerformed() a nuestra clase (Las interfaces son clases especiales que es inútil explicar aquí y que casi siempre exigen que se agreguen métodos específicos). Los clics capturados remitirán el flujo del programa al método <em>actionPerformed()</em> que recibe como parámetro objetos de la clase <em>ActionEvent</em> .<br />
+
+      Para mostrar esto haremos una clase que sea un <em>JFrame</em>, que contenga un <em>JButton</em> y que al recibir un clic mande un mensaje:</p>
+
+      <pre>
+
+DemoEventoCapturado.java
+
+import javax.swing.JFrame;
+
+import javax.swing.JPanel;
+
+import javax.swing.JButton;
+
+import javax.swing.JOptionPane;
+
+/*Las clases ActionListener y ActionEvent
+
+ *son de la librería awt (Abstract Windows Toolkit)*/
+
+ import java.awt.event.ActionListener;
+
+ import java.awt.event.ActionEvent;
+
+ /*Las interfaces se implementan 
+
+  *después de la definición de extends */
+
+public class DemoEventoCapturado extends JFrame implements ActionListener{    
+
+    JButton elBoton;//Es atributo porque se usa en organizaComponentes() y en el actionPerformed()
+
+    public DemoEventoCapturado() {
+
+    	organizaComponentes();
+
+    	pack();
+
+    	setVisible(true);
+
+    }
+
+    private void organizaComponentes(){
+
+    	JPanel panel=new JPanel();    	
+
+    	elBoton=new JButton("Haz clic");
+
+    	/*A los objetos que pueden recibir el clic
+
+    	 *debe agregárseles un ActionListener
+
+    	 *que lo reciben de la implementación de 
+
+    	 *la clase actual (this)*/    	 
+
+    	elBoton.addActionListener(this);
+
+    	add(panel);
+
+    	panel.add(elBoton);    	
+
+    }
+
+    /*Todos los objetos que tienen un ActionListener de la clase
+
+     *remitirán el flujo del programa a este método
+
+     *que es obligatorio y su sintaxis es así como se muestra
+
+     */
+
+    public void actionPerformed(ActionEvent evt){
+
+    	JOptionPane.showMessageDialog(this,"Gracias");
+
+    	
+
+    }    	
+
+    public static void main(String[] args) {
+
+        new DemoEventoCapturado();
+
+    }
+
+}      
+
+</pre>
+
+      <p class="floatright alignright">[ <a href="cursodejava202.html">Anterior</a> | <a href="cursodejava204.html">Siguiente</a> ]<br />
+
+      </p>
+
+      
+
+    </div>
+
+  </div>
+
+  <div id="footer"><small>Todos derechos reservados &copy; 2009 <a href="http://www.3ct.mx" target="_blank">3CT</a><br />
+
+  </small></div>
+
+</div>
+
+</body>
+
+</html>
+

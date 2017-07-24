@@ -1,0 +1,41 @@
+body {
+	background-color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #666666;
+	padding: 0px;
+	margin-top: 0px;
+	text-align:center;
+	background-image: url(imagenes/bodyBackground.jpg);
+	background-repeat: repeat-x;
+}
+#mainBox {
+	width: 980px;
+	margin: 0px auto;
+	
+	text-align:left
+}
+#topBar {
+	background-color: #FFFFFF;
+	height: 120px;
+	background-image: url(imagenes/masthead2.jpg);
+    background-repeat:no-repeat;
+}
+
+
+ a {
+	
+	color: #009999;
+	text-decoration: none;
+	
+
+}
+
+ a:hover {	
+
+	font-weight:bold
+}
+
+
+
+

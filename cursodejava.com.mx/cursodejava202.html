@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+
+<title>Curso de Java: Herencia y polimorfismo</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Este curso de Java está dirigido a quienes dominan los fundamentos de programación e incluye libro gratis en PDF para descargar." />
+
+<link rel="stylesheet" type="text/css" href="estilos.css" />
+
+</head>
+
+<body>
+
+<div id="mainBox">
+
+  <div id="topBar"><img src="images/duke.png" alt="curso de java" width="106" height="102" class="duke" />
+
+  <p class="titulo">Curso de Java<br /><span class="chica">Desde cero hasta conexiones con bases de datos MySQL</span></p></div><!-- #BeginLibraryItem "/Library/topMenu.lbi" -->
+
+<ul id="nav">
+
+  <li><a href="index.html">Inicio</a></li>
+
+  <li><a href="cursodejavaDescarga.html">Descargar</a></li>
+
+  <li><a href="vinculos.html">Vínculos</a></li>
+
+  <li><a href="acercade.html">Acerca de</a></li>
+
+  <li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+<!-- #EndLibraryItem --><div id="contenido" class="clearfix"><!-- #BeginLibraryItem "/Library/leftMenu.lbi" --><div id="columna01">
+
+    <h2>Curso de Java: Contenido</h2>
+
+      <ul id="menuIzquierda">
+
+        <li><a href="cursodejava000.html">¿Qué es Java?</a></li>
+
+        <li><a href="cursodejava001.html">Objetivos del curso</a></li>
+
+        <li><a href="cursodejava101.html">Instalación</a></li>
+
+        <li><a href="cursodejava102.html">Definición de la POO</a></li>
+
+        <li><a href="cursodejava104.html">Elementos de Java</a></li>
+
+        <li><a href="cursodejava113.html">Sintaxis</a></li>
+
+        <li><a href="cursodejava114.html">Ejecución</a></li>
+
+        <li><a href="cursodejava116.html">Tipos de datos</a></li>
+
+        <li><a href="cursodejava121.html">Estructuras de control</a></li>
+
+        <li><a href="cursodejava201.html">Antes de programar</a></li>
+
+        <li><a href="cursodejava204.html">Aplicación de ejemplo</a></li>
+
+        <li><a href="cursodejavaIndice.html">Índice</a></li>          
+
+  </ul>
+
+
+    </div><!-- #EndLibraryItem --><div id="columna02">
+
+      <p class="floatright alignright"><b>Aplicación: página 2</b><br />
+
+        [ <a href="cursodejava129.html">29</a>, <a href="cursodejava130.html">30</a>, <a href="cursodejava201.html">1</a>, 2, <a href="cursodejava203.html">3</a>, <a href="cursodejava204.html">4</a>, <a href="cursodejava205.html">5</a> ]</p>
+
+      <h1>Aplicación de ejemplo</h1>
+
+      <h2>Antes de programar</h2>
+
+      <h3>Herencia y polimorfismo</h3>
+
+      <p>Para facilitar el diseño de una aplicación, se debe usar la herencia de la programación orientada a objetos. Para explicar este término, haremos otro Hola Mundo que usará una ventana, que contendrá una etiqueta; esto requiere tres clases de la librería <em>swing</em>: <em>JFrame</em>, <em>JPanel</em> y <em>JLabel</em>. Veamos la primera versión, sin orientación a objetos ni herencia, en la que las clases colaboran para lograr los objetivos:</p>
+
+      <pre>
+
+DemoClasesColaborando.java
+
+
+
+import javax.swing.JFrame;
+
+import javax.swing.JPanel;
+
+import javax.swing.JLabel;
+
+public class DemoClasesColaborando {    
+
+    public DemoClasesColaborando() {
+
+    	JFrame ventana= new JFrame();
+
+    	JPanel panel=new JPanel();
+
+    	JLabel etiqueta= new JLabel();
+
+    	//Asigna un texto a la etiqueta
+
+    	etiqueta.setText("Hola Mundo");
+
+    	//Agrega la etiqueta al panel
+
+    	panel.add(etiqueta);
+
+    	//Agrega el panel a la ventana
+
+    	ventana.add(panel);
+
+    	//Ajusta el tamaño de la ventana al mínimo necesario
+
+    	ventana.pack();
+
+    	//Asigna el estado de visibilidad de la ventana a verdadero
+
+    	ventana.setVisible(true);
+
+    }
+
+    public static void main(String[] args) {
+
+        new DemoClasesColaborando();
+
+    }
+
+}</pre>
+
+      <p>Después de compilar y ejecutar el código anterior,  se presenta la siguiente ventana en la esquina superior derecha de la pantalla:</p>
+
+      <p><img src="images/cursoDeJava18ejecutar.jpg" alt="Curso de Java: Ejecutar" width="117" height="52" /></p>
+
+      <p>Cada una de las clases que estamos usando pertenece a tres ámbitos distintos: <em>JFrame</em> es una ventana que sirve como contenedor principal; <em>JPanel</em> es un contenedor de propósito general que se usará para albergar a los componentes como <em>JLabel</em>, o los botones, los campos de texto, etc. Todas están colaborando con la clase que acabamos de compilar (de ahí su nombre) para lograr el objetivo de mostrar en la etiqueta la cadena “Hola mundo”. Es posible continuar en este camino y agregar otros componentes al panel, más paneles a la ventana y, por supuesto, más componentes a cada uno de éstos nuevos contenedores. No obstante, esto es una mala práctica. Muy frecuentemente, es conveniente crear clases que al momento de declararlas obtengan todos los métodos y las propiedades de otra; a esto se le conoce como ‘herencia’ en la POO. De hecho, todas las clases (aun las que creamos nosotros) heredan de la clase Object si no se indica otra cosa; dicha clase tiene casi una docena de métodos que están disponibles incluso antes de que escribamos miembros con nuestra propia programación. Una de las ventajas de la herencia es que las clases se pueden ir especializando. Como ejemplo, presentamos enseguida todo el linaje de la clase JFrame:</p>
+
+      <pre>
+
+Object
+
+  &perp; Component
+
+     &perp;  Container
+
+         &perp;  Window
+
+             &perp;  Frame
+
+                 &perp;  JFrame    
+
+</pre>
+
+
+
+      <p>De tal manera que esta clase tiene todos los métodos de las que le anteceden, además de los propios (que, en total, resultan ser cientos). Este beneficio lo tienen todas las instancias de JFrame (incluida la que colabora en el programa anterior). Pero las ventajas de la herencia van más lejos. Sucede que si yo quiero tratar al objeto <em>ventana</em> como <em>Object</em> lo puede hacer, como se muestra en el siguiente código:</p>
+
+      <pre>
+
+DemoVentanaComoObjeto.java
+
+import javax.swing.JFrame;
+
+import javax.swing.JPanel;
+
+import javax.swing.JLabel;
+
+public class DemoVentanaComoObjeto {    
+
+    public DemoVentanaComoObjeto() {
+
+    	JFrame ventana= new JFrame();//ventana es un JFrame
+
+    	JPanel panel=new JPanel();
+
+    	JLabel etiqueta= new JLabel();
+
+    	//Tratamos a la ventana como Object
+
+    	Object objetoVentana=ventana;//ventana también es un Object
+
+    	/*Usamos el método getClass() de la clase Object 
+
+    	 *y el getString () de Class para obtener 
+
+    	 *el nombre de la clase a la que pertenece ventana
+
+    	 */
+
+    	String claseObjeto=objetoVentana.getClass().toString();    	
+
+    	etiqueta.setText(claseObjeto);    	
+
+    	panel.add(etiqueta);    	
+
+    	ventana.add(panel);    	
+
+    	ventana.pack();    	
+
+    	ventana.setVisible(true);
+
+    }
+
+    public static void main(String[] args) {
+
+        new DemoVentanaComoObjeto();
+
+    }
+
+}          </pre>
+
+      <p>Este programa usa los métodos de la clase <em>Object</em> para obtener el nombre de la clase a la que pertenece el objeto <em>ventana</em>. Lo anterior significa que la herencia vuelve polimórficas a las clases: se les puede tratar como si fueran cualquiera de aquellas que están en su linaje (y de hecho <em>son</em> cada una de ellas). <br />
+
+        Muy frecuentemente será conveniente hacer clases que hereden de otra. En un buen diseño, si necesitamos usar una ventana, conviene que la clase sea un JFrame. La herencia se logra con la palabra reservada <em>extends</em> escrita a reglón seguido después del nombre de la clase y sólo se puede heredar de otra. El código siguiente es nuestro tan traído Hola Mundo pero ahora usando los conceptos que estamos explicando.      </p>
+
+      <pre>
+
+DemoHeredaJFrame.java
+
+import javax.swing.JFrame;
+
+import javax.swing.JPanel;
+
+import javax.swing.JLabel;
+
+//Obsérvese la sintaxis de extends
+
+public class DemoHeredaJFrame extends JFrame {    
+
+    public DemoHeredaJFrame() {
+
+    	/*Obsérvese que a estos tres métodos los usamos igual
+
+    	 *aunque solo organizaComponentes()está escrito en
+
+    	 *el bloque de código de la clase.
+
+    	 *Los otros dos los heredamos de alguna de las clases
+
+    	 *del linaje de JFrame
+
+    	 */
+
+    	organizaComponentes();    	
+
+    	pack();    	
+
+    	setVisible(true);
+
+    }
+
+    private void organizaComponentes(){
+
+    	JPanel panel=new JPanel();    	
+
+    	JLabel etiqueta= new JLabel();    	
+
+    	etiqueta.setText("Hola mundo");
+
+    	add(panel);
+
+    	panel.add(etiqueta);    	
+
+    }
+
+    	
+
+    public static void main(String[] args) {
+
+        new DemoHeredaJFrame();
+
+    }
+
+}</pre>
+
+      <p>En este caso hemos encapsulado la tarea de agregar los componentes de la ventana en un método para mostrar que, en términos de sintaxis, los métodos propios de las clases se portan igual que los heredados. Por otro lado, al haber extendido los alcances de nuestra clase para heredar los de JFrame, se convierte en parte su linaje; ahora es polimórfica  porque es cada una de las que presentamos a continuación:</p>
+
+      <pre>
+
+Object
+
+  &perp; Component
+
+      &perp; Container
+
+          &perp; Window
+
+              &perp; Frame
+
+                  &perp; JFrame
+
+	                  &perp; DemoHeredaJFrame      
+
+      </pre>
+
+      <p class="floatright alignright">[ <a href="cursodejava201.html">Anterior</a> | <a href="cursodejava203.html">Siguiente</a> ]<br />
+
+      </p>
+
+      
+
+    </div>
+
+  </div>
+
+  <div id="footer"><small>Todos derechos reservados &copy; 2009 <a href="http://www.3ct.mx" target="_blank">3CT</a><br />
+
+  </small></div>
+
+</div>
+
+</body>
+
+</html>
+

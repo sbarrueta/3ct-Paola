@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+
+<title>Curso de Java: Tabla para mostrar los resultados</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Este curso de Java está dirigido a quienes dominan los fundamentos de programación e incluye libro gratis en PDF para descargar." />
+
+<link rel="stylesheet" type="text/css" href="estilos.css" />
+
+</head>
+
+<body>
+
+<div id="mainBox">
+
+  <div id="topBar"><img src="images/duke.png" alt="curso de java" width="106" height="102" class="duke" />
+
+  <p class="titulo">Curso de Java<br /><span class="chica">Desde cero hasta conexiones con bases de datos MySQL</span></p></div><!-- #BeginLibraryItem "/Library/topMenu.lbi" -->
+
+<ul id="nav">
+
+  <li><a href="index.html">Inicio</a></li>
+
+  <li><a href="cursodejavaDescarga.html">Descargar</a></li>
+
+  <li><a href="vinculos.html">Vínculos</a></li>
+
+  <li><a href="acercade.html">Acerca de</a></li>
+
+  <li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+<!-- #EndLibraryItem --><div id="contenido" class="clearfix"><!-- #BeginLibraryItem "/Library/leftMenu.lbi" --><div id="columna01">
+
+    <h2>Curso de Java: Contenido</h2>
+
+      <ul id="menuIzquierda">
+
+        <li><a href="cursodejava000.html">¿Qué es Java?</a></li>
+
+        <li><a href="cursodejava001.html">Objetivos del curso</a></li>
+
+        <li><a href="cursodejava101.html">Instalación</a></li>
+
+        <li><a href="cursodejava102.html">Definición de la POO</a></li>
+
+        <li><a href="cursodejava104.html">Elementos de Java</a></li>
+
+        <li><a href="cursodejava113.html">Sintaxis</a></li>
+
+        <li><a href="cursodejava114.html">Ejecución</a></li>
+
+        <li><a href="cursodejava116.html">Tipos de datos</a></li>
+
+        <li><a href="cursodejava121.html">Estructuras de control</a></li>
+
+        <li><a href="cursodejava201.html">Antes de programar</a></li>
+
+        <li><a href="cursodejava204.html">Aplicación de ejemplo</a></li>
+
+        <li><a href="cursodejavaIndice.html">Índice</a></li>          
+
+  </ul>
+
+
+    </div><!-- #EndLibraryItem --><div id="columna02">
+
+      <p class="floatright alignright"><b>Aplicación: página 12</b><br />
+
+        [ <a href="cursodejava209.html">9</a>, <a href="cursodejava210.html">10</a>, <a href="cursodejava211.html">11</a>, 12, <a href="cursodejava213.html">13</a>, <a href="cursodejava214.html">14</a>, <a href="cursodejava215.html">15</a> ]</p>
+
+      <h1>Aplicación de ejemplo</h1>
+
+      <h2>Aplicación de ejemplo</h2>
+
+      <h3>Vista de resultados</h3>
+
+      <h4>Tabla para mostrar los resultados<br />
+
+      </h4>
+
+      <p>Las <em>JTable</em> también deben estar dentro de un <em>JScrollPane</em>  y su función principal es mostrar los datos guardados en objetos del tipo <em>DefaultTableModel</em>; éstos almacenan los valores de las celdas y dimensionan la tabla. En general, conviene que las tablas estén separadas de su modelo, por eso haremos dos clases.</p>
+
+      <h3>Modelo</h3>
+
+      <pre>
+
+ModeloTabla.java
+
+package visorconsultas.modelo;
+
+import javax.swing.table.DefaultTableModel;
+
+public class ModeloTabla extends DefaultTableModel {//Hereda de DefaultTableModel
+
+    public ModeloTabla() {
+
+    	//Dimensiona la tabla para la presentación inicial
+
+    	setColumnCount(7);
+
+    	setRowCount(30);
+
+    }    
+
+}   
+
+</pre>
+
+      <h3>Tabla</h3>
+
+      <pre>
+
+TablaResultados.java
+
+package visorconsultas.vista;
+
+import javax.swing.JTable;
+
+import javax.swing.JScrollPane;
+
+import visorconsultas.modelo.ModeloTabla;
+
+import javax.swing.table.TableModel;
+
+public class TablaResultados extends JScrollPane {
+
+	public ModeloTabla modelo;//Crea una instancia del modelo
+
+	public JTable tabla;
+
+    public TablaResultados() {
+
+    	modelo=new ModeloTabla();
+
+    	tabla=new JTable(modelo);//Se asigna el modelo a la tabla al momento de construirla 
+
+    	//Las columnas se autoajustan
+
+tabla.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
+
+    	setViewportView(tabla); //La tabla se verá dentro del panel de barras de desplazamiento   	
+
+    }   
+
+}  
+
+</pre>
+
+      <p class="floatright alignright">[ <a href="cursodejava211.html">Anterior</a> | <a href="cursodejava213.html">Siguiente</a> ]<br />
+
+      </p>
+
+      
+
+    </div>
+
+  </div>
+
+  <div id="footer"><small>Todos derechos reservados &copy; 2009 <a href="http://www.3ct.mx" target="_blank">3CT</a><br />
+
+  </small></div>
+
+</div>
+
+</body>
+
+</html>
+

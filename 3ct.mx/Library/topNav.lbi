@@ -1,0 +1,17 @@
+<p id="contact">
+<a href="#" 
+ onclick="MM_showHideLayers('contacto','','hide','todosLosCursos','','show')">Todos los 		cursos
+</a> |  
+<a href="#" 
+	onclick="MM_showHideLayers('contacto','','show','todosLosCursos','','hide')">Contacto
+</a> | 
+<!--
+<a href="#" onclick="MM_showHideLayers('promocion','','show','promocion','','hide')">promocion</a>
+-->
+
+<a href="../index.html">
+ Inicio
+</a>
+<strong> 5264 4719</strong>
+</p>
+

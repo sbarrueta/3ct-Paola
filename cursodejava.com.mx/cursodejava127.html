@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+
+<title>Curso de Java: La estructura de control while</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Este curso de Java está dirigido a quienes dominan los fundamentos de programación e incluye libro gratis en PDF para descargar." />
+
+<link rel="stylesheet" type="text/css" href="estilos.css" />
+
+</head>
+
+<body>
+
+<div id="mainBox">
+
+  <div id="topBar"><img src="images/duke.png" alt="curso de java" width="106" height="102" class="duke" />
+
+  <p class="titulo">Curso de Java<br /><span class="chica">Desde cero hasta conexiones con bases de datos MySQL</span></p></div><!-- #BeginLibraryItem "/Library/topMenu.lbi" -->
+
+<ul id="nav">
+
+  <li><a href="index.html">Inicio</a></li>
+
+  <li><a href="cursodejavaDescarga.html">Descargar</a></li>
+
+  <li><a href="vinculos.html">Vínculos</a></li>
+
+  <li><a href="acercade.html">Acerca de</a></li>
+
+  <li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+<!-- #EndLibraryItem --><div id="contenido" class="clearfix"><!-- #BeginLibraryItem "/Library/leftMenu.lbi" --><div id="columna01">
+
+    <h2>Curso de Java: Contenido</h2>
+
+      <ul id="menuIzquierda">
+
+        <li><a href="cursodejava000.html">¿Qué es Java?</a></li>
+
+        <li><a href="cursodejava001.html">Objetivos del curso</a></li>
+
+        <li><a href="cursodejava101.html">Instalación</a></li>
+
+        <li><a href="cursodejava102.html">Definición de la POO</a></li>
+
+        <li><a href="cursodejava104.html">Elementos de Java</a></li>
+
+        <li><a href="cursodejava113.html">Sintaxis</a></li>
+
+        <li><a href="cursodejava114.html">Ejecución</a></li>
+
+        <li><a href="cursodejava116.html">Tipos de datos</a></li>
+
+        <li><a href="cursodejava121.html">Estructuras de control</a></li>
+
+        <li><a href="cursodejava201.html">Antes de programar</a></li>
+
+        <li><a href="cursodejava204.html">Aplicación de ejemplo</a></li>
+
+        <li><a href="cursodejavaIndice.html">Índice</a></li>          
+
+  </ul>
+
+
+    </div><!-- #EndLibraryItem --><div id="columna02">
+
+      <p class="floatright alignright"><b>Iniciación: página 27</b><br />
+
+        [ <a href="cursodejava124.html">24</a>, <a href="cursodejava125.html">25</a>, <a href="cursodejava126.html">26</a>, 27, <a href="cursodejava128.html">28</a>, <a href="cursodejava129.html">29</a>, <a href="cursodejava130.html">30</a> ]</p>
+
+      <h1>Iniciación al lenguaje Java</h1>
+
+      <h2>Estructuras de control</h2>
+
+      <h3>La estructura de control <em>while</em>        <br />
+
+      </h3>
+
+      <p>Si suponemos que en el programa anterior el usuario <em>debe</em> escribir su nombre, podemos hacer que el flujo de datos repita la operación de solicitarlo <em>mientras</em> el usuario no proporcione la información. Para eso usamos <em>while</em>:</p>
+
+      <pre>
+
+DemoWhile.java
+
+package cursojava.demos; //La encapsulamos en un lugar para todos los demos
+
+import javax.swing.JOptionPane; //Importamos la clase JOptionPane
+
+public class DemoWhile{
+
+    String nombre; 
+
+    public DemoWhile() {    	
+
+    	pideNombre();
+
+    	muestraSaludo();	
+
+    }
+
+    private void pideNombre(){
+
+    	nombre=JOptionPane.showInputDialog(null,"Escribe tu nombre");//Pide el nombre
+
+    }
+
+    private void muestraSaludo(){
+
+    	//Inicio del bucle while			
+
+		while(nombre==null||nombre.equals("")){
+
+			nombre=JOptionPane.showInputDialog(null,"Debes escribir tu nombre");
+
+		}		
+
+		JOptionPane.showMessageDialog(null,"Hola "+nombre);//Saluda en pantalla
+
+    }    
+
+    public static void main(String[] args) {
+
+       new DemoWhile();
+
+    }
+
+}   
+
+</pre>
+
+      <p>El programa anterior mostrará reiterativamente el cuadro de diálogo que solicita el nombre, mientras el usuario no escriba una cadena.</p>
+
+      <p class="floatright alignright">[ <a href="cursodejava126.html">Anterior</a> | <a href="cursodejava128.html">Siguiente</a> ]<br />
+
+      </p>
+
+      
+
+    </div>
+
+  </div>
+
+  <div id="footer"><small>Todos derechos reservados &copy; 2009 <a href="http://www.3ct.mx" target="_blank">3CT</a><br />
+
+  </small></div>
+
+</div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+
+<title>Curso de Java: Ventana de consultas</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Este curso de Java está dirigido a quienes dominan los fundamentos de programación e incluye libro gratis en PDF para descargar." />
+
+<link rel="stylesheet" type="text/css" href="estilos.css" />
+
+</head>
+
+<body>
+
+<div id="mainBox">
+
+  <div id="topBar"><img src="images/duke.png" alt="curso de java" width="106" height="102" class="duke" />
+
+  <p class="titulo">Curso de Java<br /><span class="chica">Desde cero hasta conexiones con bases de datos MySQL</span></p></div><!-- #BeginLibraryItem "/Library/topMenu.lbi" -->
+
+<ul id="nav">
+
+  <li><a href="index.html">Inicio</a></li>
+
+  <li><a href="cursodejavaDescarga.html">Descargar</a></li>
+
+  <li><a href="vinculos.html">Vínculos</a></li>
+
+  <li><a href="acercade.html">Acerca de</a></li>
+
+  <li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+<!-- #EndLibraryItem --><div id="contenido" class="clearfix"><!-- #BeginLibraryItem "/Library/leftMenu.lbi" --><div id="columna01">
+
+    <h2>Curso de Java: Contenido</h2>
+
+      <ul id="menuIzquierda">
+
+        <li><a href="cursodejava000.html">¿Qué es Java?</a></li>
+
+        <li><a href="cursodejava001.html">Objetivos del curso</a></li>
+
+        <li><a href="cursodejava101.html">Instalación</a></li>
+
+        <li><a href="cursodejava102.html">Definición de la POO</a></li>
+
+        <li><a href="cursodejava104.html">Elementos de Java</a></li>
+
+        <li><a href="cursodejava113.html">Sintaxis</a></li>
+
+        <li><a href="cursodejava114.html">Ejecución</a></li>
+
+        <li><a href="cursodejava116.html">Tipos de datos</a></li>
+
+        <li><a href="cursodejava121.html">Estructuras de control</a></li>
+
+        <li><a href="cursodejava201.html">Antes de programar</a></li>
+
+        <li><a href="cursodejava204.html">Aplicación de ejemplo</a></li>
+
+        <li><a href="cursodejavaIndice.html">Índice</a></li>          
+
+  </ul>
+
+
+    </div><!-- #EndLibraryItem --><div id="columna02">
+
+      <p class="floatright alignright"><b>Aplicación: página 14</b><br />
+
+        [ <a href="cursodejava211.html">11</a>, <a href="cursodejava212.html">12</a>, <a href="cursodejava213.html">13</a>, 14, <a href="cursodejava215.html">15</a>, <a href="cursodejava216.html">16</a>, <a href="cursodejava217.html">17</a> ]</p>
+
+      <h1>Aplicación de ejemplo</h1>
+
+      <h2>Aplicación de ejemplo</h2>
+
+      <h3>Vista de resultados</h3>
+
+      <h4>Ventana de consultas<br />
+
+      </h4>
+
+      <p>La ventana para mostrar las consultas contiene al área de texto, a los botones y a la tabla que acabamos de hacer. Es pertinente decir aquí que los objetos del tipo <em>JFrame</em> usan el manejador de diseño <em>BorderLayout</em> que usa los bordes de los contendores para su ordenamiento. Por eso, el método <em>add()</em> recibe como segundo parámetro cuál borde usarán los componentes para agruparse en la ventana: <em>North</em> para arriba, East para la derecha, etc. Obsérvese que uno de los beneficios de haber creado las demás clases heredadas de algún panel facilita su asimilación al contenedor principal. <br />
+
+        Es responsabilidad de la ventana capturar sus eventos; así que implementa la interfaz <em>ActionListener</em>, sobrescribe el método <em>acctionPerformed()</em> y agrega los <em>listener</em> a los componentes que reciben eventos del Mouse: los dos botones del panel autenticador, y los que controlan la consulta y la salida del programa.<br />
+
+        El método <em>inicio()</em> hace visible a la ventana pero le sobrepone al diálogo autenticador, que es modal, es decir, que toma el control de la aplicación. Será la intervención del usuario la que determinará el flujo del sistema.<br />
+
+        Por el último es de notar que las líneas que se refieren al <em>Controlador</em> están comentadas porque esta clase no existe todavía.<br />
+
+      </p>
+
+      <pre>
+
+VentanaConsultas.java
+
+package visorconsultas.vista;
+
+import javax.swing.JFrame;
+
+import java.awt.event.ActionEvent;
+
+import java.awt.event.ActionListener;
+
+//import visorconsultas.controlador.Controlador;
+
+public class VentanaConsultas extends JFrame implements ActionListener {
+
+	public DialogoAutenticador autenticador;
+
+	public TablaResultados resultados;
+
+	public AreaConsulta area;
+
+	public PanelBotonesConsulta botones;
+
+//	public Controlador controlDe;
+
+    public VentanaConsultas() {
+
+    	iniciaComponentes();
+
+    	agregaComponentes();
+
+    	agregaListeners();    	
+
+    	inicio();
+
+    }
+
+    private void iniciaComponentes(){
+
+    	autenticador=new DialogoAutenticador();
+
+    	resultados=new TablaResultados();
+
+    	area=new AreaConsulta();
+
+    	botones=new PanelBotonesConsulta();
+
+    }
+
+    private void agregaComponentes(){
+
+    	add(resultados,"South");
+
+    	add(area,"West");
+
+    	add(botones,"East");
+
+    	pack();
+
+    	setLocation(100,100);
+
+    }
+
+    private void agregaListeners(){    	
+
+    	this.autenticador.panel.aceptar.addActionListener(this);
+
+    	this.autenticador.panel.cancelar.addActionListener(this);
+
+    	botones.consultar.addActionListener(this);
+
+    	botones.salir.addActionListener(this);    	
+
+    }
+
+    public void inicio(){
+
+//    	controlDe=new Controlador();
+
+    	setVisible(true);
+
+    	autenticador.setLocationRelativeTo(this);
+
+    	autenticador.setModal(true);
+
+    	autenticador.setVisible(true);	
+
+    }
+
+    public void actionPerformed(ActionEvent evt){    	
+
+     	//controlDe.acciones(this,evt);    	
+
+    }       
+
+}  
+
+</pre>
+
+      <p class="floatright alignright">[ <a href="cursodejava213.html">Anterior</a> | <a href="cursodejava215.html">Siguiente</a> ]<br />
+
+      </p>
+
+      
+
+    </div>
+
+  </div>
+
+  <div id="footer"><small>Todos derechos reservados &copy; 2009 <a href="http://www.3ct.mx" target="_blank">3CT</a><br />
+
+  </small></div>
+
+</div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Diseñado por Enrique Hernandez Castillo
+cocoya23_27@hotmail.com, marenlat@gmail.com, enrique_hdz@3ct.mx
+Publicado bajo los derechos de Centro de Capacitacion y Consultoria Tecnica (3ct)
+
+Name       : Registro de Marcas
+Description: Pagina para el registro de marcas
+Version    : 1.0
+Released   : pendiente
+Updated    : pendiente
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="keywords" content="Registro Marca" />
+        <meta name="description" content="Registra tu Marca" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Registro de Marcas</title>
+        <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+        <script type="text/javascript" src="js/prototype.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            new Ajax.Request('menuLateral.html',
+            {
+                method:'post',
+                onSuccess: function(transport){
+                    var response = transport.responseText || "no response text";
+                    
+                },
+                onFailure: function(){  }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="menu">
+                <ul>
+                    <!--<li><img src="images/write.gif" width="35px" height="35px;" alt="Inicio"/></li>-->
+                    <li><a href="index.html" class="sombra">Inicio</a></li>
+                    <li><a href="registro.html" class="sombra">Registrar</a></li>
+                    <li><a href="servicios.html" class="sombra">Servicios</a></li>
+                    <li><a href="marcas.html" class="sombra">Marcas</a></li>
+                    <li class="current_page_item"><a href="acerca.html" class="sombra">Acerca</a></li>
+                </ul>
+            </div>
+            <!-- end #menu -->
+            <div id="header">
+                <div id="logo">
+                    <h1>Registro de Marcas</h1>
+                    <p> diseñado por <a href="http://www.3ct.mx/">3CT</a></p>
+                </div>
+            </div>
+            <!-- end #header -->
+            <div id="page">
+                <div id="page-bgtop">
+                    <div id="page-bgbtm">
+                        <div id="content">
+                            <div class="post" id="us">
+                                <h2 class="title"><a href="registro.html">Acerca de Nosotros</a></h2>
+                                <p class="meta"><span class="date">Conocenos mas a fondo</span></p>
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class="entry">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="post" id="historia">
+                                <h2 class="title"><a href="#">Nuestra Historia</a></h2>
+                                <p class="meta"><span class="date">Sigue nuestra trayectoria</span></p>
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class="entry">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="post" id="asociados">
+                                <h2 class="title"><a href="#">Asociados</a></h2>
+                                <p class="meta"><span class="date">Tenemos contactos...</span></p>
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class="entry">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="post" id="laboral">
+                                <h2 class="title"><a href="#">Oferta laboral</a></h2>
+                                <p class="meta"><span class="date">Unete a la familia</span></p>
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class="entry">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="post" id="ubicanos">
+                                <h2 class="title"><a href="#">Localización</a></h2>
+                                <p class="meta"><span class="date">Ven a visitarnos</span></p>
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class="entry">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <img src="images/mapa.PNG" width="600"/>
+                                </div>
+                            </div>
+                            <div style="clear: both;">&nbsp;</div>
+                        </div>
+                        <!-- end #content -->
+                        <div id="sidebar">
+                            <ul>
+                                <li>
+                                    <div id="search" >
+                                        <a href="#">
+                                            <img src="images/register_button.png" width="248px" height="62px" alt="Registrar"/>
+                                        </a>
+                                    </div>
+                                    <div style="clear: both;">&nbsp;</div>
+                                </li>
+                                <li>
+                                    <h2>Hazte Conocer</h2>
+                                    <p>Registra tu propia marca y empieza a ganar terreno nacionalmente.</p>
+                                </li>
+                                 <li>
+                                    <h2>Contactanos</h2>
+                                    <ul>
+                                        <li><a href="mailto:correo1@servidor.com.mx">correo1@servidor.com.mx</a></li>
+                                        <li><a href="mailto:correo2@servidor.com.mx">correo2@servidor.com.mx</a></li>
+                                        <li><a href="mailto:correo3@servidor.com.mx">correo3@servidor.com.mx</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h2>Marcas</h2>
+                                    <ul>
+                                        <li><a href="marcas.html#nacional">Marca nacional</a></li>
+                                        <li><a href="marcas.html#comunitaria">Marca comunitaria</a></li>
+                                        <li><a href="marcas.html#andino">Marca en el grupo andino</a></li>
+                                        <li><a href="marcas.html#mercosur">Marca en países MERCOSUR</a></li>
+                                        <li><a href="marcas.html#internacional">Marca Internacional</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h2>Servicios</h2>
+                                    <ul>
+                                        <li><a href="servicios.html#busqueda">Búsquedas previas al registro</a></li>
+                                        <li><a href="servicios.html#registro">El Registro de su marca</a></li>
+                                        <li><a href="servicios.html#asesoramiento">Asesoramiento de Licencias</a></li>
+                                        <li><a href="servicios.html#mantenimiento">Mantenimiento y Vigilancia</a></li>
+                                        <li><a href="servicios.html#revisiones">Revisiones periódicas</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h2>Acerca</h2>
+                                    <ul>
+                                        <li><a href="acerca.html#us">Compañia</a></li>
+                                        <li><a href="acerca.html#historia">Nuestra Historia</a></li>
+                                        <li><a href="acerca.html#asociados">Asociados</a></li>
+                                        <li><a href="acerca.html#laboral">Oferta Laboral</a></li>
+                                        <li><a href="acerca.html#ubicanos">Localizacion</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end #sidebar -->
+                        <div style="clear: both;">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+            <!-- end #page -->
+        </div>
+        <div id="footer">
+            <p>Copyright (c) 2011 3ct.mx. Todos los derechos reservados. Diseñado por <a href="http://www.3ct.mx/">3CT</a>.</p>
+        </div>
+        <!-- end #footer -->
+    </body>
+</html>
