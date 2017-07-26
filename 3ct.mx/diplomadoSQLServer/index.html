@@ -1,464 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Diplomado Base de Datos SQL </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="http://webthemez.com" />
+<!-- css -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet"> 
+<link href="css/flexslider.css" rel="stylesheet" /> 
+<link href="css/style.css" rel="stylesheet" />
+ 
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-    <head>
-
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="google-site-verification" content="6EMFqLbKXPp8q89OYG2K4VVWBHa5UWWUDniuQjCb-1s" />
-
-    <title>Diplomado SQL Server con Certificación de 3CT</title>
-
-    <link href="diplomadoStyles.css" rel="stylesheet" type="text/css" />
-
-    <link href="estilosDeslizador.css" rel="stylesheet" type="text/css" />
-
-    <link rel="shortcut icon" href="http://www.diplomadowebmaster.com.mx/favicon.ico" />
-
-    <script type="text/javascript" src="js/prototype.js"></script>
-
-    <script type="text/javascript" src="js/scriptaculous.js"></script>
-
-    <script type="text/javascript" src="js/deslizador.js"></script>
-
-    <script src="http://www.google.com/jsapi?key=ABQIAAAAhQtmC73ZnoIV5ElI-eT5_BTr6aYuIxyTAP03XQPkcJVWtXSu3xRau5ylmNnhKP8VeixxdfkIK0qUkA" type="text/javascript"></script>
-
-    <script type="text/javascript">
-
-        google.load("maps", "2");
-
-    </script>
-
-    <meta name="Description" content="El Diplomado SQL Server con Certificación 3CT: programación, administración y optimización en el servior de bases de datos MS SQL Server" />
-
-    </head>
-
-
-
-    <body>
-
-<div id="principal">
-
-      <div id="topnav">
-
-    <h1>El más completo diplomado para modelar, programar, administrar y optimizar bases de datos con SQL Server</h1>
-
-  </div>
-
-      <div id="header">
-
-    <h1>&nbsp;</h1>
-
-  </div>
-
-      <div id="content">
-
-    <div id="slider">
-
-      <p class="tallerButton" id="taller01">Aprendiendo a diseñar, relacionar y consultar bases de datos</p>
-
-     
-      <p class="tallerButton" id="taller02">Programando con transact-SQL en la capa de la base de datos</p>
-
-      <p class="tallerButton" id="taller03">Administrando usuarios y organizando datos</p>
-     
-
-      <p class="tallerButton" id="taller04">Optimizando y monitoreando los procesos transaccionales</p>
-
-
-          <div id="divBarra">
-
-        <div id="divPerilla"><img src="images/perilla.png" width="45" height="45" /></div>
-
+</head>
+<body>
+<div id="wrapper" class="home-page">
+<div class="topbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12"> 	  
+        <p class="pull-left hidden-xs"><i class="fa fa-clock-o"></i><span>3CT Centro de Capacitación</span></p>
+        <p class="pull-right"><i class="fa fa-phone"></i>Telefonos: 5264-4719, 5564-7993</p>
       </div>
-
+    </div>
+  </div>
+</div>
+	<!-- start header -->
+	<header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="img/3ct.png" alt="logo"/></a>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Inicio</a></li> 
+						 <li class="dropdown">     
+                    </li> 
+						<li><a href="#ventajas">Ventajas</a></li>
+                     	<!-- <li><a href="portfolio.html">Portfolio</a></li> --> 
+                      <!--  <li><a href="pricing.html">Pricing</a></li> -->
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
-    <h4>En el avance de temas en esta etapa del diplomado habrás conocido:</h4>
-
-    <div id="divTemario">
-
-          <div  id="t0">
-
-        <ul>
-
-              <li>Aún no has iniciado</li>
-
+	</header>
+	<!-- end header -->
+	<section id="banner">
+	 
+	<!-- Slider -->
+        <div id="main-slider" class="flexslider">
+            <ul class="slides">
+              <li>
+                <img src="img/slides/2.jpg" alt="" />
+                <div class="flex-caption">
+                    <h3>Especialízate</h3> 
+					<p>Conviértete en un profesional del SQL</p> 
+					 
+                </div>
+              </li>
             </ul>
+        </div>
+	<!-- end slider -->
+ 
+	</section> 
+	<section id="call-to-action-2">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-sm-9">
+					<h3>El Diplomado más completo de BD SQL</h3>
+					<p>El Diplomado SQL Server con Certificación de 3CT es el más completo, didáctico, practico y eficaz diplomado en México DF, especialmente diseñado para convertirte en un especialista de bases de datos SQL Server. Los profesionales te enseñaran el alcance y capacidad de las herramientas de SQL Server para lograr resultados importantes en el tratamiento de los datos en poco tiempo.</p>
+				</div>
+				<div class="col-md-2 col-sm-3">
+				<!--	<a href="#" class="btn btn-primary">Read More</a>  -->
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="content">
+	
+	
+	<!--<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">Ventajas de nuestro Diplomado</h2>
+			</div>
+		</div>
+	</div>
+	</section> --> 
+	<section id="content">
+		<div class="container content">		
+        <!-- Service Blcoks -->
+			<A name="ventajas"></a>
+						<div class="row"> 
+							<div class="col-md-12">
+								<div class="about-logo">
+									<h3>Ventajas de nuestro <span class="color">Diplomado</span></h3>
+									<p>A diferencia de muchos competidores, nosotros no nos dedicamos solamente a dar cursos, sino que diario estamos desarrollando actividades en el campo real con las empresas. Resolvemos problemas reales y por ello sabemos lo que quieren ver tus clientes o la empresa con la que trabajas. Asi mismo sabemos cual es el perfil laboral técnico que buscan las empresas para sus vacantes en el área de bases de datos y de esa forma conducimos loel diplomado para lograr objetiivos que te permitan ser más competitivo que otros.</p>
+                                    	<p></p>
+								</div>  
+							</div>
+						</div>
+						 
+						 			<div class="row">
+		<div class="skill-home"> <div class="skill-home-solid clearfix"> 
+		<div class="col-md-3 text-center"> 
+		<span class="icons c3"><i class="fa fa-trophy"></i></span> <div class="box-area">
+		<h3>Instructores altamente calificados</h3> <p> Nuestros instructores se caracterizan por estar certificados y tener una alta experiencia laboral tanto en el sector público como privado. </p></div>
+		</div>
+		<div class="col-md-3 text-center">
+		<span class="icons c1"><i class="fa fa-book"></i></span> <div class="box-area">
+		<h3>Temarios actualizados</h3> <p>Nuestros temarios estan en constante proceso de actualización para así asegurarnos que se cubren las necesidades actuales del mercado laboral.</p></div>
+		</div>
+		<div class="col-md-3 text-center"> 
+		<span class="icons c2"><i class="fa fa-users"></i></span> <div class="box-area">
+		<h3>Más de 8000 egresados</h3> <p>A lo largo de nuestros más de 15 años en el servicio de capacitación especializada más de 8,000 estudiantes han terminado sus estudios de especialidad con nosotros, logrando sus metas planeadas. Nuestros ex-alumnos nos recomiendan ampliamente. </p></div>
+		</div>
+		
+		<div class="col-md-3 text-center"> 
+		<span class="icons c4"><i class="fa fa-globe"></i></span> <div class="box-area">
+		<h3>Excelente ubicación</h3> <p>A sólo una calle del metro y metrobús Chilpancingo para que llegues sin inconvenientes. Tambíen a una calle de Insurgentes y frente a una estación de Eco-bici.</p>
+		</div></div>
+		</div></div>
+		</div> 
+	<section class="section-padding gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title text-center">
+						<h2>¿Por qué estudiar Base de Datos en 3CT? </h2>
+						<p>Somos verdaderos profecionales dedicados a la capacitación y consultoria de las más modernas tecnologías aplicadas al mundo empresarial.  <p> Nuestro Diplomado es muy completo y tiene como objetivo aprender a diseñar, programar, administrar y optimizar bases de datos con MS SQL Server. </p>
+				</br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="about-text">
+						<p>El diplomado SQL Server es profesional y práctico: en cada clase se observa un avance tangible.</p>
 
-      </div>
+						<ul class="withArrow">
+							<li><span class="fa fa-angle-right"></span>No se requieren conocimientos previos. </li>
+							<li><span class="fa fa-angle-right"></span>Utilizamos el gestor preferido por las empresas.</li>
+				            <li><span class="fa fa-angle-right"></span>Nuestros cursos te enseñaran a resolver problemas que se te presentaran en el mundo laboral.</li>  
+							<li><span class="fa fa-angle-right"></span>En sólo cinco meses te convertiras en un verdadero especialista en Bases de Datos.</li>
+							<li><span class="fa fa-angle-right"></span>Por tan sólo cinco mesualidades de $1,600.00</li>
+						</ul>
+						<a class="btn btn-primary"><h4>¡Pregunta por nuestras promociones y descuentos! </h4></a>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="about-image">
+						<img src="img/about.jpg" alt="About Images">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>	  
+	</br>
+	</br>
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle"> Temas que se ven en el Diplomado. </h2>
+			</div>
+		</div>
+	</div>
+	</section>
+	</br>
+	</br>
+	
+	
+						    <!-- Info Blcoks -->
+        <div class="row">
+            <div class="col-sm-4 info-blocks">
+                <i class="icon-info-blocks fa fa-bell-o"></i>
+                <div class="info-blocks-in">
+                    <h3>Creación de Base de Datos</h3>
+                    <p>Diseño de Bases de Datos, aplicando ampliamente el modelo entidad-relación. Queries utilizando operadores comúnes</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <i class="icon-info-blocks fa fa-hdd-o"></i>
+                <div class="info-blocks-in">
+                    <h3>Backup/ Restore </h3>
+                    <p>Carga de información masiva, actualización y eliminación de registros.</p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <i class="icon-info-blocks fa fa-lightbulb-o"></i>
+                <div class="info-blocks-in">
+                    <h3>Subconsultas avanzadas</h3>
+                    <p>Uso de consultas avanzadas y uniones complejas, así como la aplicación de vistas.</p>
+                </div>
+            </div>
+        </div>
+        <!-- End Info Blcoks -->
 
-          <div id="t1">
-
-        <ul>
-
-              <li>Conceptos básicos de diseño de base de datos</li>
-
-              <li>Como crear relaciones</li>
-
-              <li>Crear consultas avanzadas</li>
-
-              <li>Crear consultas de agrupamiento</li>
-
-              <li>Crear vistas</li>
-
-              <li>Desarrollar consultas con uniones de diversos tipos</li>
-            </ul>
-
-      </div>
-
-          <div id="t2">
-
-        <ul>
-
-              <li>Crear funciones</li>
-
-              <li>El uso de cursores</li>
-
-              <li>Implementar procedimientos almacenados</li>
-
-              <li>Establecer triggers</li>
-
-            </ul>
-
-      </div>
-
-       <div id="t3">
-
-        <ul>
-        
-                <li>Diferenciar entre usuarios windows y usuarios SQL</li>
-                <li>Crear inicios de sesión y usuarios de bases de datos</li>
-                <li>Definir y asignar esquemas</li>
-                <li>Implementar políticas de seguridad</li>
-                <li>Asignar permisos y roles</li>
-                <li>Crear respaldos completos y diferenciales</li>       
-            </ul>
-
-      </div>
-
-          <div id="t4">
-
-        <ul>
-
-              <li>Conocer la estructura de almacenamiento lógico y físico de SQL Server</li>
-
-              <li>Particionar tablas</li>
-
-              <li>Alinear índices</li>
-
-              <li>Interpretar planes de ejecución</li>
-
-              <li>Monitorear procesos</li>
-
-              <li>Desfragmentar</li>
-
-              <li>Detectar bloqueos</li>
-
-            </ul>
-
-      </div>
        
-
+        <!-- Info Blcoks -->
+        <div class="row">
+            <div class="col-sm-4 info-blocks">
+                <i class="icon-info-blocks fa fa-code"></i>
+                <div class="info-blocks-in">
+                    <h3>Trancac SQL Server</h3>
+                    <p>Creación de Store Procedures, funciones y triggers. Programación en la capa de Base de Datos. </p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <i class="icon-info-blocks fa fa-compress"></i>
+                <div class="info-blocks-in">
+                    <h3>Administración</h3>
+                    <p>Recuperación de información, implementación de seguridad, administración de acceso, creación de perfiles, aplicación de repaldos. </p>
+                </div>
+            </div>
+            <div class="col-sm-4 info-blocks">
+                <i class="icon-info-blocks fa fa-html5"></i>
+                <div class="info-blocks-in">
+                    <h3>Introducción a Tuning y Optimización</h3>
+                    <p>Conocer la estructura de almacenamiento lógico y físico de SQL Server, particionar tablas, alinear índices, interpretar planes de ejecución, monitorear procesos, desfragmentar, detectar bloqueos</p>
+                </div>
+            </div>
         </div>
-
-    <div class="intro">
-
-          <p>El <span class="textColor">Diplomado SQL Server con Certificación de 3CT</span> es el más completo, didáctico, practico y eficaz diplomado en México DF, especialmente diseñado para convertirte en un especialista de bases de datos SQL Server. Los  profesionales te enseñaran el alcance y capacidad de las herramientas de SQL Server para lograr resultados importantes en el tratamiento de los datos en poco tiempo. </p>
-
+        <!-- End Info Blcoks -->
+        <div class="row service-v1 margin-bottom-40">
+            <div class="col-md-4 md-margin-bottom-40">
+               <img class="img-responsive" src="img/service1.jpg" alt="">   
+                <h3>Analista SQL</h3>
+                <p>Se cubren los conocimientos necesarios para extracción de información, creación de consultas y reportes, funciones y herramientas necesarias para el analisis de las bases de datos</p>        
+            </div>
+            <div class="col-md-4">
+                <img class="img-responsive" src="img/service2.jpg" alt="">            
+                <h3>Diseño de Bases de Datos</h3>
+                <p>Crearas una base de datos desde cero, pasando por las mejores tecnicas y convenciones de desarrollo correcto de una base de datos relacional. </p>        
+            </div>
+            <div class="col-md-4 md-margin-bottom-40">
+              <img class="img-responsive" src="img/service3.jpg" alt="">  
+                <h3>Administración</h3>
+                <p>Si te interesa hacer la administración de una base de datos también en este diplomado aprenderas a crear permisos, dar alta de nuevos usuarios y respaldos de información necesarios para una buena administración de información</p>        
+            </div>
         </div>
-
-    <div class="textBox">
-
-          <h3>Objetivo</h3>
-
-          <h4>Aprender a diseñar, programar, administrar y optimizar bases de datos con MS SQL Server</h4>
-
-          <h3>Características</h3>
-
-          <h4>El diplomado SQL Server es sumamente profesional y práctico: en cada clase se observa un  avance tangible. </h4>
-
-          <p>Está compuesto de una serie de prácticas y sugerencias que han sido acuñados a través de la  experiencia de los instructores que imparten el diplomado, de tal forma que se vuelve una valiosa herramienta de aprendizaje y  de aplicación inmediata a través de la guía paso a paso, para lograr los objetivos deseados.</p>
-
-          <p>Los instructores que imparten el diplomado SQL Server han participado en proyectos que involcran todo el recorrido de soluciones para plataformas con gestores de bases de datos y pueden enseñarte posibilidades de solución para incrementar el valor de tu comocimiento.</p>
-
-        </div>
-
-    <div class="textBox">
-
-          <h3>A quien va dirigido</h3>
-
-          <h4>Este diplomado no discrimina a nadie y contempla un vasto ámbito de posibles integrantes. La ventaja es que se plantea considerando la curva de aprendizaje desde cero</h4>
-
-          <ul>
-<li>Cualquier persona interesada en introducirse al mundo de las bases de datos a fin de proponer soluciones académicas o en el campo de práctica laboral</li>
-
-        <li>Programadores en SQL deseosos de aprovechar las capacidades de la tecnología SQL Server de forma más óptima</li>
-
-        <li>Desarrolladores de software que involucra persistencia de datos mediante el uso de servidores locales o remótos.</li>
-
-        <li>Alumnos de 3CT que hayan acreditado el curso de base de datos I (MySql) y deseen avanzar en el amplio campo de conocimiento de las bases de datos</li>
-
-      </ul>
-
-          
-        </div>
-
-    <div class="textBox">
-
-          <h3>Porque este diplomado es mejor</h3>
-
-          <h4>Somos profesionistas</h4>
-
-          <p>A diferencia de muchos competidores, nosotros no nos dedicamos solamente a dar cursos, sino que diario estamos desarrollando actividades en el campo real con las empresas         
-Resolvemos problemas reales y por ello sabemos lo que quieren ver tus clientes o la empresa  con la que trabajas. Asi mismo sabemos cual es el perfil laboral técnico que buscan las empresas para sus vacantes en el área de bases de datos y de esa forma conducimos loel diplomado para lograr objetiivos que te permitan ser más competitivo que otros.</p>
-
-         
-          
-
-          <h4>&nbsp; </h4>
-
-         
-
-        </div>
-
-    <div class="clearfix">&nbsp;</div>
-
-  </div>
-
-    </div>
-
-<div id="contactoWrapper">
-
-      <div id="contacto">
-
-    <div>
-
-          <h1>Inscríbete en el Diplomado SQL Server  y aprende del mundo de las bases de datos, con profesionales del ramo</h1>
-
-          <p>Si te parece que este diplomado es de tu interés y quieres apartar un lugar o si tienes  dudas, te invitamos que escojas una de las siguientes opciones para conocer más acerca de nosotros y de lo que  ofrecemos:</p>
-
-        </div>
-
-    <div class="clearfix">&nbsp;</div>
-
-    <div class="textBox">
-<!--AQUI-->
-          <h3>Lee más acerca de condiciones</h3>
-
-          <p><img src="images/condiciones.png" width="48" height="48" />Información sobre el diplomado, costos económicos, horarios flexibles, duración, prerrequisitos y consulta de respuestas a las preguntas frecuentes acerca del Diplomado Webmaster.</p>
-
-          <p><a href="../cursos-de-bases-de-datos/curso-oracle-sql-plus.html"><img src="images/masinfo.png" width="280" height="45" class="masinfo" /></a></p>
-
-          <p>O lee los detalles de cada uno de los cursos que también puedes estudiar por separado:</p>
-
-          <ul>
-
-        <li><a href="../cursos-de-bases-de-datos/curso-de-bases-de-datos-basico.html">Introduccion a las bases de datos de datos I con MySQL</a></li>
-
-        <li><a href="../cursos-de-bases-de-datos/curso-de-bases-de-datos-intermedio.html">Microsoft SQL Server</a></li>
-
-        <li><a href="../cursos-de-bases-de-datos/curso-de-bases-de-datos-avanzado.html">Transact-SQL (SQL Server)
-      
-      </a>
-        </li>
-
-
-        <li><a href="../cursos-de-bases-de-datos/curso-admon-sql-server.html">Administración de bases de datos (SQL Server)</a></li>
-        
-        
-         
-         <li><a href="../cursos-de-bases-de-datos/curso-oracle-sql-plus.html">Oracle SQL Plus </a></li>
-
-      </ul>
-
-        </div>
-
-    <div class="textBox">
-
-          <h3>Contacto</h3>
-
-          <p> <img src="images/contacto.png" width="48" height="48" />Para saber más puedes ponerte en contacto con nosotros de las siguientes maneras:</p>
-
-          <ul>
-
-        <li>
-
-              <h4>Llamar por teléfono</h4>
-
-            </li>
-
-      </ul>
-
-          <h2>5264 4719 y 5564 7993</h2>
-
-          <ul>
-
-        <li>
-
-              <h4>Enviar un e-mail </h4>
-
-            </li>
-
-      </ul>
-
-          <h2>contacto@3ct.mx </h2>
-
-          <ul>
-
-        <li>
-
-              <h4>Visitar </h4>
-
-            </li>
-
-      </ul>
-
-          <p><img src="images/3ctLogo.png" width="100" height="31" class="masinfo" />Calle Tuxpan #2, Esquina con Av. Insurgentes, Col. Roma Sur (muy cerca de metro y metrobús Chilpancingo). <a href="javascript:void(null);" id="lnkUbicacion">Aprende como llegar (mapa google)</a></p>
-
-          <div id="divMapaGoogle">
-
-        <div id="divMapaTitulo"> <a href="javascript:void(null)" id="lnkCerrarMapa" ><img src="images/closelabel.gif"/></a> </div>
-
-        <div  id="divMapa" class="mapa"></div>
-
-        <div id="pano" class="mapa"></div>
-
-      </div>
-
-        </div>
-
-    <div class="textBox">
-
-          <h3>Conoce en persona</h3>
-          <ul>
-                <li>Conocer las instalaciones</li>
-                <li> Platicar con los instructores</li>
-                <li>Realizar preguntas sobre temarios</li>
-	      </ul>
-    </div>
-
-    <div class="clearfix">&nbsp;</div>
-
-<div>
-             <h3>Temario</h3>
-            
-            
-            <p>1.Diseño y explotación SQL básico 
-            </p> 
-
-            <ul>
-                <li>Introducción </li> 
-                <li>¿Qué es un servidor de bases de datos? </li> 
-                <li>¿Qué es un gestor de bases de datos? </li> 
-                <li>¿Qué es SQL? </li> 
-                <li>DDL, DML, DCL </li> 
-                <li>Crear y eliminar una Base de datos </li> 
-                <li>Objetos de la Base de Datos </li> 
-                <li>Definición del objeto TABLE </li> 
-                <li>Tipos de datos </li> 
-                <li>Creando y eliminando objetos TABLE´s </li> 
-                <li>Poblar tablas (INSERT  INTO) </li> 
-                <li>Restricciones NOT NULL, UNIQUE, DEFAULT, PRIMARY KEY </li> 
-                <li>Modificando datos (UPDATE DELETE) </li> 
-                <li>Modificación de la estructura de una tabla (ALTER TABLE) </li> 
-                <li>Consultas con filtros (WHERE  IN  BETWEEN) </li> 
-                <li>Alias en los nombres de columna </li> 
-                <li>Funciones de agregado COUNT() SUM() AVG() MIN() MAX() </li> 
-            </ul>
-            
-            <p>SQL Intermedio</p>
-            
-            
-            <ul>
-                <li>Restricción CHECK </li> 
-                <li>Llave primaria de identidad y compuesta </li> 
-                <li>Consultas con columnas calculadas </li> 
-                <li>Tipos de relaciones </li> 
-                <li>Creación de llaves secundarias </li> 
-                <li>Control en los nombres de los CONSTRAINTS </li> 
-                <li>Funciones de fecha </li> 
-                <li>Consultas con unión de tablas (WHERE  INNER JOIN) </li> 
-                <li>Uniones externas LEFT, RIGHT, FULL </li> 
-                <li>Consultas con funciones de agregado y GROUP BY </li> 
-                <li>Uso de la cláusula HAVING </li> 
-                <li>Consultas avanzadas (sub-consultas) </li> 
-                <li>Creación y eliminación de Vistas VIEW </li> 
-                <li>Usar consultas complejas para crear vistas </li> 
-            </ul>
-            
-            <p>2. Programación en la capa de la base de datos</p>
-            <ul>
-                <li>¿Qué es Transact-SQL? </li> 
-                <li>Introducción a los procedimientos almacenados (STORE PROCEDURE) </li> 
-                <li>Parámetros de entrada y salida en los procedimientos </li> 
-                <li>Usar consultas complejas para crear procedimientos almacenados </li> 
-                <li>Declaración y uso de variables </li> 
-                <li>Estructura de control IF…ELSE </li> 
-                <li>Construcción y eliminación de funciones FUNCTION </li> 
-                <li>Lógica en funciones </li> 
-                <li>Estructura de control CASE </li> 
-                <li>Estructura de control GO TO </li> 
-                <li>Estructura de control WHILE </li> 
-                <li>Prácticas con funciones </li> 
-                <li>Tipos de datos definidos por el usuario </li> 
-                <li>Tablas temporales locales y globales </li> 
-                <li>Clausula TOP </li> 
-                <li>SQL Dinámico </li> 
-                <li>Uso de Cursores </li> 
-                <li>Manejo y control de errores </li> 
-                <li>¿Qué es una transacción? </li> 
-                <li>BEGIN TRANSACTION, ROLLBACK TRANSACTION, COMMIT </li> 
-                <li>Introducción a los desencadenadores (TRIGGER) </li> 
-                <li>Tipos de Triggers. FOR y AFTER </li> 
-                <li>Los Triggers y la integridad de datos </li> 
-                <li>Tablas virtuales DELETED E INSERTED </li> 
-                <li>Niveles de servidor y base de datos </li> 
-                <li>Autenticación  Windows  y  SQL Server </li> 
-            
-            </ul>
-            
-            <p>3.  Administración de bases de datos</p>
-            <ul>
-                <li>Bases de datos de sistema </li> 
-                <li>Concepto y consulta de la Meta-data </li> 
-                <li>Esquemas </li> 
-                <li>Usuarios, roles y grupos </li> 
-                <li>GRANT, DENY, REVOKE </li> 
-                <li>Respaldos completos y diferenciales </li> 
-            </ul>
-            
-            <p>4. Optimización y Tuning</p>
-            <ul>
-                <li>Procedimiento almacenados de arranque </li> 
-                <li>Estructura física y lógica de la base de datos </li> 
-                <li>Tablas Temporales </li> 
-                <li>Grupos de archivos FILEGROUP </li> 
-                <li>Leyendo los planes de ejecución </li> 
-                <li>Índices CLUSTERED y NON CLUSTERED </li> 
-                <li>Alineamiento de índices </li> 
-                <li>SQL Server Profiler </li> 
-                <li>Usando Profiler to Detect Deadlocks </li> 
-                <li>Use Profiler to Detect a Blocked Process </li> 
-            </ul>
-
-
-	</div> <!-- Temario -->
-
-
-
-  </div>
-
-    </div>
-    
-    
-    
-    
-
+		
+		
+								<br>
+						<!-- Our Team starts -->
+				
+						<!-- Heading -->
+						<div class="block-heading-six">
+							<h2 class="bg-color">Nuestros clientes</h2>
+						</div>
+						<br>
+						
+						<!-- Our team starts -->
+						
+						<div class="team-six">
+							<div class="row">
+								<div class="col-md-3 col-sm-6">
+									<!-- Team Member -->
+									<div class="team-member">
+										<!-- Image -->
+										<img class="img-responsive" src="img/imss.jpg" alt="">
+										<!-- Name -->
+										<h4></h4>
+										<span class="deg"></span> 
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-6">
+									<!-- Team Member -->
+									<div class="team-member">
+										<!-- Image -->
+										<img class="img-responsive" src="img/qualitas.jpg" alt="">
+										<!-- Name -->
+										<h4></h4>
+										<span class="deg"></span> 
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-6">
+									<!-- Team Member -->
+									<div class="team-member">
+										<!-- Image -->
+										<img class="img-responsive" src="img/uacm.jpeg" alt="">
+										<!-- Name -->
+										
+										<span class="deg"></span> 
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-6">
+									<!-- Team Member -->
+									<div class="team-member">
+										<!-- Image -->
+										<img class="img-responsive" src="img/similares.jpg" alt="">
+										<!-- Name -->
+										<h4></h4>
+										<span class="deg"></span> 
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="team-six">
+							<div class="row">
+								<div class="col-md-3 col-sm-6">
+									<!-- Team Member -->
+									<div class="team-member">
+										<!-- Image -->
+										<img class="img-responsive" src="img/inah.jpg" alt="">
+										<!-- Name -->
+										<h4></h4>
+										<span class="deg"></span> 
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-6">
+									<!-- Team Member -->
+									<div class="team-member">
+										<!-- Image -->
+										<img class="img-responsive" src="img/segob.jpg" alt="">
+										<!-- Name -->
+										<h4></h4>
+										<span class="deg"></span> 
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-6">
+									<!-- Team Member -->
+									<div class="team-member">
+										<!-- Image -->
+										<img class="img-responsive" src="img/toluca.jpg" alt="">
+										<!-- Name -->
+										<h4> </h4>
+										<span class="deg"></span> 
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-6">
+									<!-- Team Member -->
+									<div class="team-member">
+										<!-- Image -->
+										<img class="img-responsive" src="img/notimex.png" alt="">
+										<!-- Name -->
+										<h4></h4>
+										<span class="deg"></span> 
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Our team ends -->
+					  
+						
+					</div>
+									
+				</div>
+        <!-- End Service Blcoks -->
+	<A name="contacto"></a>
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">¡Contáctanos! </h2>
+			</div>
+		</div>
+	</div>
+	</section>
+	
+	
+		<section id="content">
+	
+	<div class="container">
+		<div class="row"> 
+							<div class="col-md-12">
+								<div class="about-logo">
+									<h3>¿Te interesa más información acerca del Diplomado? .</h3>
+									<p>Dejános tus datos y te enviaremos la información completa y las próximas fechas de inicio</p>
+                                    	<p>TTT</p>
+								</div>  
+							</div>
+						</div>
+						<div class="block-heading-two">
+									<h3><span>Medios de contacto</span></h3>
+								</div>		
+								<!-- Accordion starts -->
+								<div class="panel-group" id="accordion-alt3">
+								 <!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
+								  <div class="panel">	
+									<!-- Panel heading -->
+									 <div class="panel-heading">
+										<h4 class="panel-title">
+										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
+											<i class="fa fa-angle-right"></i> Telefonos
+										  </a>
+										</h4>
+									 </div>
+									 <div id="collapseOne-alt3" class="panel-collapse collapse">
+										<!-- Panel body -->
+										<div class="panel-body">
+										  5264-4719
+										  </br>5564-79933
+										  </br> 
+										</div>
+									 </div>
+								  </div>
+								  <div class="panel">
+									 <div class="panel-heading">
+										<h4 class="panel-title">
+										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3">
+											<i class="fa fa-angle-right"></i> Correo electrónico
+										  </a>
+										</h4>
+									 </div>
+									 <div id="collapseTwo-alt3" class="panel-collapse collapse">
+										<div class="panel-body">
+											contacto@3ct.mx
+										</div>
+									 </div>
+								  </div>
+								  <div class="panel">
+									 <div class="panel-heading">
+										<h4 class="panel-title">
+										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
+											<i class="fa fa-angle-right"></i> En el plantel: 
+										  </a>
+										</h4>
+									 </div>
+									 <div id="collapseThree-alt3" class="panel-collapse collapse">
+										<div class="panel-body">
+														
+														Tuxpan 2, piso 4. Colonia Roma Sur, CDMX. Frente a insurgentes, cerca de metro y metrobús Chilpancingo.  
+														
+										</div>
+									 </div>
+								  </div>
+								  <div class="panel">
+									 <div class="panel-heading">
+										<h4 class="panel-title">
+										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
+											<i class="fa fa-angle-right"></i> WhatsApp
+										  </a>
+										</h4>
+									 </div>
+									 <div id="collapseFour-alt3" class="panel-collapse collapse">
+										<div class="panel-body">
+												04455-5406-1473 
+													</div>
+									 </div>
+								  </div>
+								</div>
+								<!-- Accordion ends -->
+	<div class="row">
+								<div class="col-md-6">
+									<p>TTT</p>
+								  	
+		   <!-- Form itself -->
+          <form name="sentMessage" id="contactForm"  novalidate>
+	       <h3>Contactanos</h3>
+		 <div class="control-group">
+                    <div class="controls">
+			<input type="text" class="form-control" 
+			   	   placeholder="Nombre Completo" id="name" required
+			           data-validation-required-message="Por favor, ingresa tu nombre" />
+			  <p class="help-block"></p>
+		   </div>
+	         </div> 	
+                <div class="control-group">
+                  <div class="controls">
+			<input type="email" class="form-control" placeholder="Email" 
+			   	            id="email" required
+			   		   data-validation-required-message="Por favor, ingresa tu correo" />
+		</div>
+	    </div> 	
+			  
+               <div class="control-group">
+                 <div class="controls">
+				 <textarea rows="10" cols="100" class="form-control" 
+                       placeholder="Comentarios" id="message" required
+		       data-validation-required-message="Ingresa tu mensaje" minlength="5" 
+                       data-validation-minlength-message="Min 5 characters" 
+                        maxlength="999" style="resize:none"></textarea>
+		</div>
+               </div> 		 
+	     <div id="success"> </div> <!-- For success/fail messages -->
+	    <button type="submit" class="btn btn-primary pull-right">Enviar</button><br />
+          </form>
+								</div>
+								<div class="col-md-6">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:500px;width:600px;"><div id="gmap_canvas" style="height:500px;width:600px;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://www.trivoo.net" id="get-map-data">trivoo</a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(19.4069893, -99.16780499999999),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(19.4069893, -99.16780499999999)});infowindow = new google.maps.InfoWindow({content:"<b>Tuxpan 2 Piso 4</b><br/>06760 Roma Sur<br/> CDMX" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+								</div>
+							</div>
+	</div>
+ 
+	</section>
+					
+					
+
+	<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-3">
+				<div class="widget">
+					<h5 class="widgetheading">Conocenos</h5>
+					<address>
+					<strong>3CT Centro de Capacitación Tecnológica S.C.</strong><br>
+					Tuxpan 2, piso 4. <br>
+					 Roma Sur, CDMX.</address>
+					<p>
+						<i class="icon-phone"></i> (55) 5264- 4719 <br>
+						<i class="icon-envelope-alt"></i> contacto@3ct.mx
+					</p>
+				</div>
+			</div>
+		
+			<div class="col-md-3 col-sm-3">
+				<div class="widget">
+					<h5 class="widgetheading">Otros Diplomados </h5>
+					<ul class="link-list">
+						<li><a href="#">Diplomado Java</a></li>
+						<li><a href="#">Diplomado Webmaster</a></li>
+						<li><a href="#">Diplomado C# </a></li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="widget">
+					<h5 class="widgetheading">Otros cursos</h5>
+					<ul class="link-list">
+						<li><a href="#">Base de Datos básico con MySQL</a></li>
+						<li><a href="#">Fundamentos de Programación</a></li>
+						<li><a href="#">Angular JS </a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="sub-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="copyright">
+						<p>
+							<span>3CT Todos los derechos reservados </span><a href="http://webthemez.com/free-bootstrap-templates/" target="_blank"></a>
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<ul class="social-network">
+						<li><a href="https://www.facebook.com/tresct/" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+						<!-- <li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li> -->
+						<li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
+					</br>
+						</br>	</br>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	</footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script>  
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<!-- Vendor Scripts -->
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script> 
 </body>
-
 </html>
-
